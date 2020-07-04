@@ -2,8 +2,7 @@
 $page_id = 6;
 if(!isset($_GET['gcid']))
 {
-    echo "<script>window.open('./404.php','_SELF')</script>";
-    exit();
+    $gcid = 0;
 }
 else
 {
@@ -30,10 +29,6 @@ else
     $cat_name = "Gallery";
 }
 ?>
-
-<!--gallery popup-->
-<link rel="stylesheet" href="dist/css/lightbox.min.css">
-
 
 <div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
     <div id="divImg">
@@ -63,6 +58,8 @@ else
         </div>
     </div>
 </section>
+
+
 <!-- MAIN PART END -->
 
 
@@ -70,8 +67,5 @@ else
 
 
 <?php include 'footer2.php'; ?>
-<script src="dist/js/lightbox-plus-jquery.min.js"></script>
-<script src="js/scroll.js" id="helper" cat_id="<?echo $cat_id?>" file-name="getgallery.php" limit="20"
+<script src="js/scroll.js" id="helper" cat_id="<?echo $cat_id?>" file-name="getgallerycategory.php" limit="20"
     pid="0"  ></script>
-<!--gallery popup-->
-

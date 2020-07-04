@@ -1,98 +1,140 @@
-<?php include 'header.php'; ?>
+<?
+$page_id = 5;
+include_once("header.php");
+$sql = $cn->selectdb("select * from tbl_page where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?>
 
 <div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
-           
-<div id="divImg">
-        
-        <h1 class="raleway">Contact Us</h1>
-       
+
+    <div id="divImg">
+
+        <h1 class="raleway"><?echo $page_name?></h1>
+
     </div>
-               
-                    <div id="imgBreadcum2" style="height: 40vh;"><img src="images/breadcum/b1.jpg" height="100%" width="100%" alt="img"></div>
-                
+
+    <div id="imgBreadcum2" style="height: 40vh;"><img src="page/big_img/<?echo $image?>" height="100%" width="100%"
+            alt="<?echo $page_name?>"></div>
+
+</div>
+<?
+$sqlContact = $cn->selectdb("SELECT `con_id`, `maptag`, `contact_desc`, `email`, `contact_no`, `opening_hours`, `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_contact` where con_id=1" );
+//	echo $cn->numRows($sql2);
+if ($cn->numRows($sqlContact) > 0) 
+{
+    $rowContact = $cn->fetchAssoc($sqlContact);
+    extract($rowContact);
+
+    $contact_no = explode(',',$contact_no);
+    if(sizeof($contact_no) > 2)
+    {
+        $helpline_no = $contact_no[0];
+        $landline_no = $contact_no[1];
+    }
+    else
+    {
+        $helpline_no = "298-844-0468";
+        $landline_no = "298-844-0468";
+    }
+}
+?>
+
+<section class="contact_info_banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact_info">
+                    <ul>
+                        <li><span class="icofont icofont-envelope"></span><span><?echo $email ?></span></li>
+                        <li><span class="icofont icofont-iphone"></span><span>Landline Number : <?echo $landline_no ?></span>
+                        </li>
+                        <li><span class="icofont icofont-iphone"></span><span>Helpline Number : <?echo $helpline_no ?></span></li>
+                    </ul>
+                </div>
             </div>
-       
+        </div>
+    </div>
+</section>
 
-
-
-
-
-
-
-
-
-  
-            <section class="contact_info_banner">
-       <div class="container">
-           <div class="row">
-               <div class="col-md-12">
-                   <div class="contact_info">
-                       <ul>
-                           <li><span class="icofont icofont-envelope"></span><span>metas1923@gmail.com</span></li>
-                           <li><span class="icofont icofont-iphone"></span><span>Landline Number : 0261-7160-300</span></li>
-                           <li><span class="icofont icofont-iphone"></span><span>Helpline Number : 96245-55777</span></li>
-                       </ul>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section> 
-    
-    <!--================================
+<!--================================
         3.START MAP
     =================================-->
-    <section id="map_contact">
+<section id="map_contact">
+    <div class="container">
+        <div class="row social_contact">
+            <div class="col-md-6 social">
+                <div class="social_link">
+                    <ul>
+                        <?
+                            $sql = $cn->selectdb("select * from tbl_socialmedia Order by recordListingID");
+                            while($row = $cn->fetchAssoc($sql))
+                            {
+                                extract($row);
+                        ?>
+                        <li> <a href="<?echo $link_url?>" target="_BLANK"> <span class="icofont <?echo $icon_name?>"></span> <?echo $social_title ?></a></li>
+                        <?
+                            }
+                        ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
         <div class="container">
-            <div class="row social_contact">
-                <div class="col-md-6 social">
-                    <div class="social_link">
-                        <ul>
-                            <li><a href="#"><span class="icofont icofont-social-facebook"></span>facebook</a></li>
-                            <li><a href="#"><span class="icofont icofont-social-google-plus"></span>google+</a></li>
-                            <li><a href="#"><span class="icofont icofont-social-twitter"></span>twitter</a></li>
-                            <li><a href="#"><span class="icofont icofont-social-behance"></span>behance</a></li>
-                            <li><a href="#"><span class="icofont icofont-social-dribble"></span>dribble</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6  col-sm-6 contact_form">
-                        <!-- SECTION TITLE -->
-                        <div class="section_title contact_title">
-                            <div class="title">
-                                <h1>GET <span class="title_word_2">IN TOUCH</span></h1>
-                            </div>
-                            <div class="title_subtext">
-                                <span>Feel free to contact with us</span>
-                            </div>
-                        </div><!-- /SECTION TITLE ENDS -->
-                        
-                        <form action="#" class="message_form">
-                            <input type="text" placeholder="Your Name">
-                            <input type="text" placeholder="Email address">
-                            <textarea name="textarea"  cols="30" rows="3" placeholder="Message"></textarea>
-                            <a href="" class="btn arrow_btn btn_messaging"><span class="btn-text" data-hover="SEnd now">SEnd now</span> <span class="icofont icofont-paper-plane btn_icon"></span></a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="google_map">
-        
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.206012495161!2d72.80662281424803!3d21.18397358783882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e76ce2b893d%3A0x2fff111c9cc03364!2sMetas%20Of%20Seventh%20-%20Day%20Adventists%20Hospital%20(Mission%20hospital)!5e0!3m2!1sen!2sin!4v1588145557606!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="row">
+                <div class="col-md-6  col-sm-6 contact_form">
+                    <!-- SECTION TITLE -->
+                    <div class="section_title contact_title">
+                        <div class="title">
+                            <h1 style="margin:0">GET <span class="title_word_2">IN TOUCH</span></h1>
+                        </div>
+                    </div><!-- /SECTION TITLE ENDS -->
 
+                    <form id="contactForm" class="message_form">
+                        <input type="text" placeholder="Your Name" name="contact_name" required>
+                        <input type="text" placeholder="Email address" name="contact_address" required>
+                        <textarea cols="30" rows="2" placeholder="Message" name="contact_message" required></textarea>
+                        
+
+                        <div class="col-sm-6">
+                            <input type="text" placeholder="Code" name="verif_box" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group mb-20">
+                            <img style="width:100px;height:50px"
+                                src="verificationimage.php?<?php echo rand(0,9999);?>"
+                                alt="verification image, type it in the box" width="50px" height="50px"
+                                align="absbottom" />  
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mb-10" style="padding: 0;">
+                            <div id="result_contactForm" ></div>
+                        </div>
+                        <button type="submit" class="btn arrow_btn btn_messaging btn_submit_contact"><span class="btn-text" data-hover="SEnd now">SEnd
+                                now</span> <span class="icofont icofont-paper-plane btn_icon"></span></button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </section>
-    <!--================================
+    </div>
+    <div id="google_map">
+        <?echo $maptag ?>
+        
+
+    </div>
+</section>
+<!--================================
         3.END MAP
     =================================-->
-    
-    
-   
 
 
-<?php include 'footer2.php'; ?>
+
+
+
+<?php 
+include 'footer2.php'; 
+?>
+
+<script src="js/forms.js"></script>

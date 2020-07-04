@@ -2756,7 +2756,7 @@ span[class^="char"]{
 }
 .contact_title{
     text-align: left;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 .contact_title .title h1::before,
 .contact_title .title h1::after{

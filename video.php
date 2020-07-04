@@ -1,14 +1,18 @@
-<?php include 'header.php'; ?>
-
-
+<?
+$page_id = 7;
+include_once("header.php");
+$sql = $cn->selectdb("select * from tbl_page where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?>
 
 
 <div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
     <div id="divImg">    
-        <h1 class="raleway">Video</h1>
+        <h1 class="raleway"><?echo $page_name ?></h1>
     </div>           
     <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="images/breadcum/b1.jpg" height="100%" width="100%" alt="img">
+        <img src="page/big_img/<?echo $image?>"  alt="<?echo $page_name?>">
     </div>            
 </div>
        
@@ -19,34 +23,15 @@
 
 <section id="portfolio" class="section-padding">
     <div class="container">
-        <div class="row text-center">
+        <div class="row text-center" id="results">
              
-             <div class="col-sm-12 col-md-6 col-lg-6">
-             <iframe width="100%" height="315" src="https://www.youtube.com/embed/p6beQKZDNSw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-6">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/OuVe4YgdalM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-6">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/BCUN2U7twWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-6">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/UU5oaa7te8c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-6">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/PVdHUOy7ms4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-6">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/HLgT0ZGSUKE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
 
 
         </div>  
+        <br/>
+        <div id="loader_image text-center row" style="width:100%; text-align: center;">
+            <img id="loader_image" src="./images/loader.gif" style="width:30px;" />
+        </div>
     </div>
 </section>
 
@@ -58,3 +43,5 @@
 
 
 <?php include 'footer2.php'; ?>
+<script src="js/scroll.js" id="helper" cat_id="0" file-name="getvideos.php" limit="6"
+    pid="0"  ></script>

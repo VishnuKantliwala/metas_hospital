@@ -4376,7 +4376,7 @@ html.no-touch .round-btn-icon:hover div:after {
 }
 
 .desktop-logo-btn {
-    display: block;
+    display: none;
     position: absolute;
     top: 20px;
     left: 50%;
@@ -5405,7 +5405,7 @@ html.no-touch .mobile-menu-content-under-fold a.mobile-ib-gsa:hover {
         display: none
     }
     .desktop-logo-btn-large {
-        display: block
+        display: none
     }
     .bottom-left-links {
         font-size: 16px;

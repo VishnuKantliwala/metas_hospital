@@ -1,11 +1,15 @@
-<?php include 'header.php'; ?>
+<?php 
+$page_id = 1;
+include 'header.php'; ?>
 <div class="hero-image-area">
   
+    
     <div id="divlogo">
         <img src="images/logo.png">
         <h1 class="raleway">METAS ADVENTIST HOSPITAL</h1>
         <hr>
     </div>
+    
     
     <div class="loader"></div>
     
@@ -22,13 +26,21 @@
     Metas Adventist Hospital, Surat
     </marquee>
        
+
+<!-- MAIN PART -->
+<?
+$sql = $cn->selectdb("select slug, page_name, page_desc, image, page_id from tbl_page where page_id =3");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?> 
+
 <section id="about_us" class="section-padding reveal animated" data-reveal-anim="fadeIn">
   <div class="container">
       <div class="about_us_wrapper">
           <div class="col-md-6 col-sm-6 v_middle">
               <div class="image-container">
                   <div class="image">
-                      <img src="images/about_us.jpg" alt="">
+                      <img src="page/big_img/<?echo $image?>"  alt="<?echo $page_name?>">
                   </div>
               </div>
           </div>
@@ -36,59 +48,58 @@
              <!-- SECTION TITLE -->
               <div class="section_title">
                   <div class="title_subtext">
-                      <span>know more about us</span>
+                      <span><?echo $slug ?></span>
                   </div>
                   <div class="title">
-                      <h1>about <span class="title_word_2">us</span></h1>
+                      <h1><?echo $page_name ?></h1>
                   </div>
               </div><!-- /SECTION TITLE ENDS -->
 
               <!-- ABOUT US CONTENT-->
               <div class="about_us_text">
-                  <p>Metas Adventist Hospital, Surat is one of the oldest and well known organizations with its wings spread in the fields of education and health care system. It’s a like gem studded in the crown of Seventh – Day Adventist World organization. Some important facts about this institution are as described below.
-                  </p>
-                 <p>
-                     Seventh Day Adventists – Worldwide out of 815 Seventh Day Adventist operated hospitals, 80% of them are JCI approved. 
-                 </p>
-                 <p>
-                     In 1985 the first infant heart transplant was done at Loma Linda University which is world renowned for pediatric cardiac surgery.
-                 </p>
-
-                 <div class="read_more">
+                  <?echo $page_desc ?>
+                  <div class="read_more">
                      <a href="#">Read More <span class="icofont icofont-long-arrow-right"></span></a>
                  </div>
               </div><!-- /ABOUT US CONTENT ENDS -->
           </div>
       </div>
+      <?
+      $sqlExtraAbout = $cn->selectdb("select title, small_desc from tbl_addmore where page_id = ".$page_id);
+      if( $cn->numRows($sqlExtraAbout) > 0 )
+      {
+          $icons = array('icofont-eye-alt', 'icofont-bullseye', 'icofont-key');
+      
+      ?>
       <div class="about_us_detail">
           <div class="row">
+            <?
+            $i=0;
+            while($rowExtraAbout = $cn->fetchAssoc($sqlExtraAbout))
+            {
+                extract($rowExtraAbout);
+            ?>
             <div class="col-md-4 col-sm-4">
                 <div class="about_us_point">
-                    <h4 class="about_us_point_title"><span class="icofont icofont-eye-alt"></span> Our Vision</h4>
+                    <h4 class="about_us_point_title"><span class="icofont <?echo $icons[$i]?>"></span> <?echo $title ?></h4>
 
-                    <p class="point_in_detail">  To become a dynamic global institution and a centre of excellence.</p>
+                    <p class="point_in_detail">  <?echo strip_tags($small_desc) ?></p>
                 </div>
             </div>
+            <?
+                $i++;
+            }
+            ?>
 
-            <div class="col-md-4 col-sm-4">
-                <div class="about_us_point">
-                    <h4 class="about_us_point_title"><span class="icofont icofont-bullseye"></span> Our Mission</h4>
-
-                    <p class="point_in_detail">  To touch the lives and to transform people by teaching, by healing and by creating a better community for man and god.</p>
-                </div>
-            </div>
             
-            <div class="col-md-4 col-sm-4">
-                <div class="about_us_point">
-                    <h4 class="about_us_point_title"><span class="icofont icofont-key"></span> Core Value</h4>
-
-                    <p class="point_in_detail"> Compassionate in all dealings, Loyal to Organizational goals, Hard work with Passion and Productivity, Continuous Self-renewal, Honesty and Integrity in all aspects.</p>
-                </div>
-            </div>
           </div>
       </div>
+      <?
+      }
+      ?>
   </div>
 </section>
+
 <section id="clients">
   <div class="container">
       <div class="row">

@@ -68,9 +68,9 @@ else
 
 
 
-
-<?php include 'footer2.php'; ?>
 <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+<?php include 'footer2.php'; ?>
+
 <script src="js/scroll.js" id="helper" cat_id="<?echo $cat_id?>" file-name="getgallery.php" limit="20"
     pid="0"  ></script>
 <!--gallery popup-->

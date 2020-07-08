@@ -168,7 +168,7 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                 </li>
 
                 <li>
-                    <h4 class="page-title-main">Service</h4>
+                    <h4 class="page-title-main">Centre of Excellence</h4>
                 </li>
     
             </ul>
@@ -192,7 +192,7 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                     <div class="row">
                         <div class="col-12">
                             <div class="card-box">
-                                <h4 class="mt-0 header-title">Service Form</h4>
+                                <h4 class="mt-0 header-title">Centre of Excellence Form</h4>
                                 <form class="form-horizontal" method="post" action="service_upload.php" id="myform" name="myform" enctype="multipart/form-data">
                                     <input type="hidden" name="page" id="page" value="<? echo isset($_GET['page']);?>">
                                     
@@ -205,7 +205,7 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                                     <input type="hidden" name="cat_id" id="cat_id" value="<?php echo $row[4]; ?>" />
                     
                                 
-                                    <div class="form-group">
+                                    <div class="form-group" style="display:none">
                                         <label for="inputEmail3" class="col-sm-12 control-label">Category List</label>
                                         <div class="col-sm-12">
                                             <div class="panel-body">

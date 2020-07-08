@@ -21,6 +21,7 @@ $con->connectdb();
 	  {	    
 	  //print_r($_POST);die;
 	  		$service_title=$_POST['service_title'];
+	  		$team_speciality=$_POST['team_speciality'];
 			$Image = createImage('image_name',"../team/");
 			$description = $_POST['description'];
 			$slug = $_POST['slug'];
@@ -31,7 +32,7 @@ $con->connectdb();
 			
 
 					  		
-		$con->insertdb("INSERT INTO `tbl_team` (`team_title`, `description`, `image_name`,`meta_tag_title`, `meta_tag_description`, `meta_tag_keywords`, `slug`) VALUES ('".$service_title."', '".$description."', '".$Image."', '".$meta_tag_title."', '".$meta_tag_description."', '".$meta_tag_keywords."', '".$slug."');");
+		$con->insertdb("INSERT INTO `tbl_team` (`team_title`, `description`, `image_name`,`meta_tag_title`, `meta_tag_description`, `meta_tag_keywords`, `slug`, `team_speciality`) VALUES ('".$service_title."', '".$description."', '".$Image."', '".$meta_tag_title."', '".$meta_tag_description."', '".$meta_tag_keywords."', '".$slug."', '".$team_speciality."');");
 				
 				
 			
@@ -137,7 +138,14 @@ $con->connectdb();
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" id="service_title" name="service_title" placeholder="Name">
                                         </div>
-                                    </div>										
+                                    </div>	
+                                    
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Speciality</label>
+                                        <div class="col-sm-12">
+                                            <input type="text" class="form-control" id="team_speciality" name="team_speciality" placeholder="Speciality">
+                                        </div>
+                                    </div>	
                                     
                                     
                                     <div class="form-group">

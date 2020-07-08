@@ -24,6 +24,7 @@ if(isset($_POST['updateSlider']))
 {
 		
 			$service_title = $_POST['service_title'];
+            $team_speciality=$_POST['team_speciality'];
 			$description = $_POST['description'];
 			$meta_tag_title=$_POST['meta_tag_title'];
 			$meta_tag_description=$_POST['meta_tag_description'];
@@ -38,7 +39,7 @@ if(isset($_POST['updateSlider']))
 				if($_FILES["image_name"]['error']>0)
 				
 				{
-				$con->insertdb("UPDATE `tbl_team` SET `team_title` = '".$service_title."', `description` = '".$description."', `image_name` = '".$frontimg2."', meta_tag_title='".$meta_tag_title."',meta_tag_description='".$meta_tag_description."',meta_tag_keywords='".$meta_tag_keywords."',slug='".$slug."' WHERE `tbl_team`.`team_id` = '".$team_id."'");
+				$con->insertdb("UPDATE `tbl_team` SET `team_title` = '".$service_title."', `description` = '".$description."', `image_name` = '".$frontimg2."', meta_tag_title='".$meta_tag_title."',meta_tag_description='".$meta_tag_description."',meta_tag_keywords='".$meta_tag_keywords."',slug='".$slug."', team_speciality= '".$team_speciality."' WHERE `tbl_team`.`team_id` = '".$team_id."'");
 				}
 				else
 				{
@@ -46,7 +47,7 @@ if(isset($_POST['updateSlider']))
 				@unlink("../team/". $frontimg2);
 				$sliderImage = createImage('image_name',"../team/");
 				
-				$con->insertdb("UPDATE `tbl_team` SET `team_title` = '".$service_title."', `description` = '".$description."', `image_name` = '".$sliderImage."',meta_tag_title='".$meta_tag_title."',meta_tag_description='".$meta_tag_description."',meta_tag_keywords='".$meta_tag_keywords."',slug='".$slug."' WHERE `tbl_team`.`team_id` = '".$team_id."'");
+				$con->insertdb("UPDATE `tbl_team` SET `team_title` = '".$service_title."', `description` = '".$description."', `image_name` = '".$sliderImage."',meta_tag_title='".$meta_tag_title."',meta_tag_description='".$meta_tag_description."',meta_tag_keywords='".$meta_tag_keywords."',slug='".$slug."', team_speciality= '".$team_speciality."' WHERE `tbl_team`.`team_id` = '".$team_id."'");
 				}
 				
 
@@ -133,7 +134,7 @@ if(isset($_GET["Image"]))
                 </li>
 
                 <li>
-                    <h4 class="page-title-main">Team</h4>
+                    <h4 class="page-title-main">Administrative Body</h4>
                 </li>
     
             </ul>
@@ -157,7 +158,7 @@ if(isset($_GET["Image"]))
                     <div class="row">
                         <div class="col-12">
                             <div class="card-box">
-                                <h4 class="mt-0 mb-2 header-title">Team Form</h4>
+                                <h4 class="mt-0 mb-2 header-title">Administrative Body Form</h4>
                                 <form class="form-horizontal" method="post" action="#" id="myform" name="myform" enctype="multipart/form-data">
 									 <input type="hidden" name="page" id="page" value="<? echo $_GET['page'];?>">
 									 
@@ -179,7 +180,14 @@ if(isset($_GET["Image"]))
                                             <div class="col-sm-10">
                                                 <input type="text" class="form-control" id="service_title" name="service_title" placeholder="Name" value="<? echo $row['team_title']; ?>">
                                             </div>
-                                        </div>										
+                                        </div>	
+                                        
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Speciality</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="team_speciality" name="team_speciality" placeholder="Speciality" value="<? echo $row['team_speciality']; ?>">
+                                            </div>
+                                        </div>	
 										
 										
 										<div class="form-group">

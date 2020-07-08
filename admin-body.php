@@ -1,103 +1,98 @@
-<?php include 'header.php'; ?>
-
-
+<?
+$page_id = 9;
+include_once("header.php");
+$sql = $cn->selectdb("select * from tbl_page where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?>
 
 
 <div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
-    <div id="divImg">    
-        <h1 class="raleway">Administrative Body</h1>
-    </div>           
+    <div id="divImg">
+        <h1 class="raleway">
+            <?echo $page_name ?>
+        </h1>
+    </div>
     <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="images/breadcum/b1.jpg" height="100%" width="100%" alt="img">
-    </div>            
+        <img src="page/big_img/<?echo $image?>" alt="<?echo $page_name?>">
+    </div>
 </div>
-       
-
-
 
 <!-- MAIN PART -->
 
 <section id="testimonial_area" class="section-padding">
-  <div class="container">
-    
+    <div class="container">
 
-  <div class="row">
-         <div class="testimonial_wrapper">
-              <div class="col-md-10 col-sm-8 col-sm-offset-2 col-md-offset-1 text-center">
-                  <!-- testimonial slider -->
-                  <div class="row">
-                      <!-- slider 1 -->
-                      <div class="col-sm-12 col-md-6 col-lg-4 col-lg-offset-4" style="padding-bottom: 45px;">
-                          <div class="images" style="padding-bottom: 15px;">
-                              <img src="images/dr1.jpg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
-                          </div>
-                          <h4>DR.ANURAG BANKA</h4>
-                          <span>OPHTHALMOLOGISTS</span>
-                      </div>
-         
-                  </div>
-              </div>
-          </div>
-      </div>
 
-      <div class="row">
-         <div class="testimonial_wrapper">
-              <div class="col-md-10 col-sm-8 col-sm-offset-2 col-md-offset-1 text-center">
-                  <!-- testimonial slider -->
-                  <div class="row">
-                      <!-- slider 1 -->
-                      <div class="col-sm-12 col-md-6 col-lg-4" style="padding-bottom: 45px;">
-                          <div class="images" style="padding-bottom: 15px;">
-                              <img src="images/dr1.jpg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
-                          </div>
-                          <h4>DR.ANURAG BANKA</h4>
-                          <span>OPHTHALMOLOGISTS</span>
-                      </div>
-                      <div class="col-sm-12 col-md-6 col-lg-4" style="padding-bottom: 45px;">
-                          <div class="images" style="padding-bottom: 15px;">
-                              <img src="images/dr2.jpg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
-                          </div>
-                          <h4>DR. RAMESH SURATI</h4>
-                          <span>GENERAL PHYSICIAN</span>
-                      </div>
-                      <div class="col-sm-12 col-md-6 col-lg-4" style="padding-bottom: 45px;">
-                          <div class="images" style="padding-bottom: 15px;">
-                              <img src="images/dr3.jpg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
-                          </div>
-                          <h4>DR. SANJAY DHAR</h4>
-                          <span>ENT SURGEON</span>
-                      </div>
-                      <div class="col-sm-12 col-md-6 col-lg-4" style="padding-bottom: 45px;">
-                          <div class="images" style="padding-bottom: 15px;">
-                              <img src="images/dr4.jpg" alt="" style="border-bottom: 2px solid #996c2b;border-radius:20px">   
-                          </div>
-                          <h4>DR. PARTHIV DESAI</h4>
-                          <span>NEURO – PHYSICIAN</span>
-                      </div>
-                      <div class="col-sm-12 col-md-6 col-lg-4" style="padding-bottom: 45px;">
-                          <div class="images" style="padding-bottom: 15px;">
-                              <img src="images/dr2.jpg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
-                          </div>
-                          <h4>DR. RAMESH SURATI</h4>
-                          <span>GENERAL PHYSICIAN</span>
-                      </div>
-                      <div class="col-sm-12 col-md-6 col-lg-4" style="padding-bottom: 45px;">
-                          <div class="images" style="padding-bottom: 15px;">
-                              <img src="images/dr3.jpg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
-                          </div>
-                          <h4>DR. SANJAY DHAR</h4>
-                          <span>ENT SURGEON</span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+        <?
+        $sqlAB1 = $cn->selectdb("SELECT team_title, image_name, team_speciality FROM tbl_team ORDER BY recordListingID LIMIT 1");
+        if( $cn->numRows($sqlAB1) > 0 )
+        {
+            while($rowAB1 = $cn->fetchAssoc($sqlAB1))
+            {
+                extract($rowAB1);
+        ?>
+        <div class="row">
+            <div class="testimonial_wrapper">
+                <div class="col-md-10 col-sm-8 col-sm-offset-2 col-md-offset-1 text-center">
+                    <!-- testimonial slider -->
+                    <div class="row">
+                        <!-- slider 1 -->
+                        <div class="col-sm-12 col-md-6 col-lg-4 col-lg-offset-4" style="padding-bottom: 45px;">
+                            <div class="images" style="padding-bottom: 15px;">
+                                <img class="team_img" src="team/big_img/<?echo $image_name?>" alt="<?echo $team_title ?>"
+                                    >
+                            </div>
+                            <h4><?echo $team_title ?></h4>
+                            <span><?echo $team_speciality ?></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?        
+            }
+        }
+        ?>
+
+        <div class="row">
+            <div class="testimonial_wrapper">
+                <div class="col-md-10 col-sm-8 col-sm-offset-2 col-md-offset-1 text-center">
+                    <!-- testimonial slider -->
+                    <div class="row">
+                        <!-- slider 1 -->
+                        <?
+                        $sqlAB1 = $cn->selectdb("SELECT team_title, image_name, team_speciality FROM tbl_team ORDER BY recordListingID LIMIT 100 OFFSET 1");
+                        if( $cn->numRows($sqlAB1) > 0 )
+                        {
+                            while($rowAB1 = $cn->fetchAssoc($sqlAB1))
+                            {
+                                extract($rowAB1);
+                        ?>
+                        <div class="col-sm-12 col-md-6 col-lg-4 " style="padding-bottom: 45px;">
+                            <div class="images" style="padding-bottom: 15px;">
+                                <img class="team_img" src="team/big_img/<?echo $image_name?>" alt="<?echo $team_title ?>"
+                                    >
+                            </div>
+                            <h4><?echo $team_title ?></h4>
+                            <span><?echo $team_speciality ?></span>
+                        </div>
+                        <?
+                            }
+                        }
+                        ?>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- MAIN PART END -->
-    
-    
-   
+
+
+
 
 
 <?php include 'footer2.php'; ?>

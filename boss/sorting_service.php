@@ -84,7 +84,7 @@ $pageID= 'page21';
                 </li>
 
                 <li>
-                    <h4 class="page-title-main">Service</h4>
+                    <h4 class="page-title-main">Centres of Excellence</h4>
                 </li>
     
             </ul>
@@ -107,7 +107,7 @@ $pageID= 'page21';
                 
                     <div class="row">
                         <div class="col-12">
-                            <h4 class="mt-0 header-title">Service List</h4>
+                            <h4 class="mt-0 header-title">Centre of Excellence List</h4>
                             <div class="card-box">
                             <div class="sortable">
                                 <?php

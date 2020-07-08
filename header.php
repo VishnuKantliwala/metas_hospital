@@ -55,20 +55,9 @@ if(isset($gcid))
 }
 ?>
 <?
-if(isset($tcid))
+if(isset($sid))
 {
-    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_team_category` where slug='".$tcid."'" );
-//	echo $cn->numRows($sql2);
-    if ($cn->numRows($sql) > 0) 
-    {
-        $row1 = $cn->fetchAssoc($sql);
-    }
-}
-?>
-<?
-if(isset($tid))
-{
-    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_team` where slug='".$tid."'" );
+    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_service` where slug='".$sid."'" );
 //	echo $cn->numRows($sql2);
     if ($cn->numRows($sql) > 0) 
     {
@@ -234,16 +223,16 @@ if(isset($tid))
                                 <div class="menu-display-table-cell">
                                     <ul>
                                         <li><a href="who-we-are">Who We Are</a>
-                                        <li><a href="admin-body.php">Administrative Body</a>
-                                        <li><a href="#">Accreditation</a>
+                                        <li><a href="administrative-body">Administrative Body</a>
+                                        <li><a href="accreditation">Accreditation</a>
                                         <li><a href="#">Corporate</a>
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
-                                                        <li><a href="#">Organogram</a>
-                                                        <li><a href="nurseaward.php">Nurses Award</a>
-                                                        <li><a href="doctoraward.php">Doctors Award</a>
-                                                        <li><a href="#">Clinical Excellence</a>
+                                                        <li><a href="organogram">Organogram</a>
+                                                        <li><a href="nurses-award">Nurses Award</a>
+                                                        <li><a href="doctors-award">Doctors Award</a>
+                                                        
                                                     </ul>
                                                 </div>
                                             </div>
@@ -251,8 +240,8 @@ if(isset($tid))
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
-                                                        <li><a href="health-checkup.php">Health Camps</a>
-                                                        <li><a href="total-health-program.php">Total Health
+                                                        <li><a href="health-camps">Health Camps</a>
+                                                        <li><a href="total-health-programme">Total Health
                                                                 Programme</a>
 
                                                     </ul>
@@ -266,31 +255,31 @@ if(isset($tid))
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
-                                        <li><a href="find-doctor.php">Find a Doctor</a>
+                                        <li><a href="find-a-doctor">Find a Doctor</a>
                                         <li><a href="opd-schedule.php">OPD Schedule</a>
                                         <li><a href="#">Clinical Quality</a>
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
-                                                        <li><a href="patient-safety.php">Patient Safety</a>
-                                                        <li><a href="infection-control.php">Infection Control</a>
-                                                        <li><a href="it-excellence.php">IT Excellence</a>
+                                                        <li><a href="patient-safety">Patient Safety</a>
+                                                        <li><a href="infection-control">Infection Control</a>
+                                                        <li><a href="it-excellence">IT Excellence</a>
                                                     </ul>
                                                 </div>
                                             </div>
 
-                                        <li><a href="#">Lab Reports</a>
-                                        <li><a href="#">International Patients</a>
+                                        <!-- <li><a href="#">Lab Reports</a> -->
+                                        <li><a href="international-patients">International Patients</a>
 
 
                                         <li><a href="#">Chaplaincy</a>
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
-                                                        <li><a href="#">What We Do</a>
-                                                        <li><a href="#">Health Talks</a>
+                                                        <li><a href="what-we-do">What We Do</a>
+                                                        <li><a href="health-talk">Health Talks</a>
                                                         <li><a href="health-well.php">Health & Wellness </a>
-                                                        <li><a href="#">NEWSTART Programme </a>
+                                                        <li><a href="newstart-programme">NEWSTART Programme </a>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -300,38 +289,24 @@ if(isset($tid))
                                 </div>
                             </div>
 
-                        <li><a href="#">Centres of Excellence</a>
+                        <li><a href="javascript:void(0)">Centres of Excellence</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
-                                        <li><a href="service.php">Orthopaedic</a></li>
-                                        <li><a href="service.php">Paediatrics</a></li>
-                                        <li><a href="service.php">Diabetology</a></li>
-                                        <li><a href="service.php"> Maternity </a></li>
-                                        <li><a href="service.php"> CT Scan </a></li>
-                                        <li><a href="service.php"> Pharmacy </a></li>
-                                        <li><a href="service.php"> Urology </a></li>
-                                        <li><a href="service.php"> Intensive Care </a></li>
-                                        <li><a href="service.php"> General Surgery </a></li>
-                                        <li><a href="service.php"> Physiotherapy </a></li>
-                                        <li><a href="service.php"> Neurology </a></li>
-                                        <li><a href="service.php"> ENT </a></li>
-                                        <li><a href="service.php"> Nutrition </a></li>
-                                        <li><a href="service.php"> Surgery </a></li>
-                                        <li><a href="service.php"> Anaesthesiology </a></li>
-                                        <li><a href="service.php"> Bariatric Surgery </a></li>
-                                        <li><a href="service.php"> Dermatology </a></li>
-                                        <li><a href="service.php"> Dentistry </a></li>
-                                        <li><a href="service.php"> Minor Surgery </a></li>
-                                        <li><a href="service.php"> Oncology </a></li>
-                                        <li><a href="service.php"> Onco-Surgery </a></li>
-                                        <li><a href="service.php"> Ophthalmology </a></li>
-                                        <li><a href="service.php"> Neuro Surgery </a></li>
-                                        <li><a href="service.php"> Nephrology </a></li>
-                                        <li><a href="service.php"> Psychiatry </a></li>
-                                        <li><a href="service.php"> Plastic Surgery </a></li>
-
-
+                                        <?
+                                        $sqlServices = $cn->selectdb("SELECT service_title, slug from tbl_service order by recordListingID");
+                                        if( $cn->numRows($sqlServices) > 0 )
+                                        {
+                                            while($rowServices = $cn->fetchAssoc($sqlServices))
+                                            {
+                                                extract($rowServices);
+                                                $href = "centre-of-excellence/".urlencode($slug);
+                                        ?>
+                                        <li><a href="<?echo $href?>"> <?echo $service_title ?> </a></li>
+                                        <?
+                                            }
+                                        }
+                                        ?>
                                     </ul>
                                 </div>
                             </div>
@@ -426,16 +401,16 @@ if(isset($tid))
                         <div class="menu-display-table-cell">
                             <ul>
                                 <li><a href="about.php">Who We Are</a>
-                                <li><a href="admin-body.php">Administrative Body</a>
-                                <li><a href="#">Accreditation</a>
+                                <li><a href="administrative-body">Administrative Body</a>
+                                <li><a href="accreditation">Accreditation</a>
                                 <li><a href="#">Corporate</a>
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
-                                                <li><a href="#">Organogram</a>
-                                                <li><a href="nurseaward.php">Nurses Award</a>
-                                                <li><a href="doctoraward.php">Doctors Award</a>
-                                                <li><a href="#">Clinical Excellence</a>
+                                                <li><a href="organogram">Organogram</a>
+                                                <li><a href="nurses-award">Nurses Award</a>
+                                                <li><a href="doctors-award">Doctors Award</a>
+                                                
                                             </ul>
                                         </div>
                                     </div>
@@ -443,8 +418,8 @@ if(isset($tid))
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
-                                                <li><a href="health-checkup.php">Health Camps</a>
-                                                <li><a href="total-health-program.php">Total Health Programme</a>
+                                                <li><a href="health-camps">Health Camps</a>
+                                                <li><a href="total-health-programme">Total Health Programme</a>
 
                                             </ul>
                                         </div>
@@ -457,31 +432,31 @@ if(isset($tid))
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
-                                <li><a href="find-doctor.php">Find a Doctor</a>
+                                <li><a href="find-a-doctor">Find a Doctor</a>
                                 <li><a href="opd-schedule.php">OPD Schedule</a>
                                 <li><a href="#">Clinical Quality</a>
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
-                                                <li><a href="patient-safety.php">Patient Safety</a>
-                                                <li><a href="infection-control.php">Infection Control</a>
-                                                <li><a href="it-excellence.php">IT Excellence</a>
+                                                <li><a href="patient-safety">Patient Safety</a>
+                                                <li><a href="infection-control">Infection Control</a>
+                                                <li><a href="it-excellence">IT Excellence</a>
                                             </ul>
                                         </div>
                                     </div>
 
-                                <li><a href="#">Lab Reports</a>
-                                <li><a href="#">International Patients</a>
+                                <!-- <li><a href="#">Lab Reports</a> -->
+                                <li><a href="international-patients">International Patients</a>
 
 
                                 <li><a href="#">Chaplaincy</a>
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
-                                                <li><a href="#">What We Do</a>
-                                                <li><a href="#">Health Talks</a>
+                                                <li><a href="what-we-do">What We Do</a>
+                                                <li><a href="health-talk">Health Talks</a>
                                                 <li><a href="health-well.php">Health & Wellness </a>
-                                                <li><a href="#">NEWSTART Programme </a>
+                                                <li><a href="newstart-programme">NEWSTART Programme </a>
                                             </ul>
                                         </div>
                                     </div>
@@ -495,34 +470,20 @@ if(isset($tid))
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
-                                <li><a href="service.php">Orthopaedic</a></li>
-                                <li><a href="#">Paediatrics</a></li>
-                                <li><a href="#">Diabetology</a></li>
-                                <li><a href="#"> Maternity </a></li>
-                                <li><a href="#"> CT Scan </a></li>
-                                <li><a href="#"> Pharmacy </a></li>
-                                <li><a href="#"> Urology </a></li>
-                                <li><a href="#"> Intensive Care </a></li>
-                                <li><a href="#"> General Surgery </a></li>
-                                <li><a href="#"> Physiotherapy </a></li>
-                                <li><a href="#"> Neurology </a></li>
-                                <li><a href="#"> ENT </a></li>
-                                <li><a href="#"> Nutrition </a></li>
-                                <li><a href="#"> Surgery </a></li>
-                                <li><a href="#"> Anaesthesiology </a></li>
-                                <li><a href="#"> Bariatric Surgery </a></li>
-                                <li><a href="#"> Dermatology </a></li>
-                                <li><a href="#"> Dentistry </a></li>
-                                <li><a href="#"> Minor Surgery </a></li>
-                                <li><a href="#"> Oncology </a></li>
-                                <li><a href="#"> Onco-Surgery </a></li>
-                                <li><a href="#"> Ophthalmology </a></li>
-                                <li><a href="#"> Neuro Surgery </a></li>
-                                <li><a href="#"> Nephrology </a></li>
-                                <li><a href="#"> Psychiatry </a></li>
-                                <li><a href="#"> Plastic Surgery </a></li>
-
-
+                                <?
+                                $sqlServices = $cn->selectdb("SELECT service_title, slug from tbl_service order by recordListingID");
+                                if( $cn->numRows($sqlServices) > 0 )
+                                {
+                                    while($rowServices = $cn->fetchAssoc($sqlServices))
+                                    {
+                                        extract($rowServices);
+                                        $href = "centre-of-excellence/".urlencode($slug);
+                                ?>
+                                <li><a href="<?echo $href?>"> <?echo $service_title ?> </a></li>
+                                <?
+                                    }
+                                }
+                                ?>
                             </ul>
                         </div>
                     </div>
@@ -595,7 +556,7 @@ if(isset($tid))
                                         <li><a href="#">Organogram</a>
                                         <li><a href="#">Nurses Award</a>
                                         <li><a href="#">Doctors Award</a>
-                                        <li><a href="#">Clinical Excellence</a>
+                                        
                                     </ul>
                                 </div>
                             </div>

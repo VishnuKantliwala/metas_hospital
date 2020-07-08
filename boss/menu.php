@@ -44,6 +44,30 @@
                             </li>
 
                             <li>
+                                <a href="doctorCatView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Doctor </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="doctorCatView.php"> Category </a></li>
+                                    <li><a href="doctorView.php"> Doctors </a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a >
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Awards </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="nurseawardsView.php"> Nurse Awards </a></li>
+                                    <li><a href="doctorawardsView.php"> Doctor Awards </a></li>
+                                </ul>
+                            </li>
+
+                            <li>
                                 <a href="projectCatView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Project </span>
@@ -56,15 +80,35 @@
                             </li>
 
                             <li>
-                                <a href="serviceCatView.php">
+                                <a href="serviceView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Service </span>
-                                    <span class="menu-arrow"></span>
+                                    <span> Centre of Excellence </span>
+                                    
                                 </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="serviceCatView.php"> Category </a></li>
-                                    <li><a href="serviceView.php"> Service </a></li>
-                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="accreditation.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Accreditation </span>
+                                    
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="health_talk.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Health talk </span>
+                                    
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="international_patients.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> International Patients </span>
+                                    
+                                </a>
                             </li>
 
                             <li>
@@ -202,7 +246,7 @@
                             <li>
                                 <a href="teamView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Team </span>
+                                    <span> Administrative Body </span>
                                 </a>
                             </li>
 

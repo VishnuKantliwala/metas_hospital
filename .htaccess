@@ -18,7 +18,27 @@ RewriteRule ^500/?  500.php [L]
 RewriteRule ^404/?  404.php [L]
 
 RewriteRule ^who-we-are/? about.php [L]
+RewriteRule ^administrative-body/? admin-body.php [L]
+RewriteRule ^organogram/? organogram.php [L]
 RewriteRule ^contact-us/? contact.php [L]
+RewriteRule ^accreditation/? accreditation.php [L]
+RewriteRule ^international-patients/? international_patients.php [L]
+RewriteRule ^health-talk/? health_talk.php [L]
+
+RewriteRule ^find-a-doctor/? find-doctor.php [L]
+RewriteRule ^nurses-award/? nurseaward.php [L]
+RewriteRule ^doctors-award/? doctoraward.php [L]
+
+RewriteRule ^health-camps/? health-checkup.php [L]
+RewriteRule ^total-health-programme/? total-health-program.php [L]
+
+RewriteRule ^patient-safety/? patient-safety.php [L]
+RewriteRule ^infection-control/? infection-control.php [L]
+RewriteRule ^it-excellence/? it-excellence.php [L]
+
+RewriteRule ^what-we-do/? what-we-do.php [L]
+RewriteRule ^newstart-programme/? newstart-programme.php [L]
+
 
 RewriteRule ^galleries/(.*)/? gallery_category.php?gcid=$1 [L]
 RewriteRule ^galleries/? gallery_category.php [L]
@@ -26,7 +46,8 @@ RewriteRule ^gallery-detail/(.*)/? gallery.php?gcid=$1 [L]
 
 RewriteRule ^videos/? video.php [L]
 
-RewriteRule ^faculties/(.*)/? faculties.php?tcid=$1 [L]
+RewriteRule ^centre-of-excellence/(.*)/? service.php?sid=$1 [L]
+
 RewriteRule ^faculty/(.*)/? faculty.php?tid=$1 [L]
 RewriteRule ^course-category/(.*)/? course_categories.php?cid=$1 [L]
 RewriteRule ^institute-details/? institute-details.php [L]

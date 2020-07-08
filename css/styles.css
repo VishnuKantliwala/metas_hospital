@@ -44,6 +44,142 @@
 
 }
 
+
+.team_img {
+    border-bottom: 2px solid #996c2b;
+    border-radius: 25px;
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+    width:100%;
+}
+
+.doctor_img {
+    width: 100%;
+    height: 470px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.list-active ::after
+{
+    content: "\ed88"; /* FontAwesome Unicode */
+    color: #9f7939;
+    font-family: 'IcoFont' !important;
+    display: inline-block;
+    margin-left: 1.4em;
+}
+.list-active a {
+    color: #9f7939 !important;
+}
+
+.my_desc p {
+    text-align: justify;
+} 
+.my_desc  ul li {
+    margin-left : 16px;
+}
+
+.my_desc  ul li::before {
+    content: "\ed88"; /* FontAwesome Unicode */
+    color: #9f7939;
+    font-family: 'IcoFont' !important;
+  display: inline-block;
+  margin-left: -1.4em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
+.my_desc  ul li ul li::before {
+    content: "\ed89"; /* FontAwesome Unicode */
+    color: #9f7939;
+    font-family: 'IcoFont' !important;
+  display: inline-block;
+  margin-left: -1.4em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
+.my_desc  ol li {
+    margin-left : 16px;
+}
+
+.my_desc  ol li::before {
+    content: "\ed27"; /* FontAwesome Unicode */
+    color: #9f7939;
+    font-family: 'IcoFont' !important;
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+}
+
+.my_desc table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+  
+.my_desc table tbody tr:first-child  {
+    background-color: #9f7939 !important;
+    border-bottom: 3px solid #473516 !important;
+}
+
+.my_desc table tbody tr:first-child td span {
+    color: #fff !important;
+}
+
+.my_desc th, td {
+    text-align: left;
+    padding: 8px !important;
+    white-space: inherit !important;
+    vertical-align: top !important;
+    border-right: 1px solid #473516 !important;
+    border-bottom: 1px solid #473516 !important;
+}
+
+.my_desc__table {
+    overflow-x:auto;
+    padding: 5px;
+    margin-bottom: 50px;
+}
+  
+.my_desc__about ul li {
+    margin-bottom : 16px;
+}
+
+.my_desc_listing {
+    height:74px;
+    overflow:hidden;
+    /* font-size: 12px !important; */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.btn__pdfs {
+    background-color: #9f7939;
+    border-radius: 15px;
+    color: #fff !important;
+    font-size: 20px;
+    width: 200px;
+    /* height: 100px; */
+    padding: 20px 30px !important;
+    border-left: 3px solid #473516 !important;
+    text-align: center;
+    vertical-align: center;
+    align-content: center;
+    text-decoration: none;
+    transition: 0.3s;  
+}
+.btn__pdfs:focus{
+    color: #fff;
+}
+.btn__pdfs:hover {
+    background-color: #473516;
+    color: #fff;
+    border-left: 3px solid #9f7939 !important;
+}  
+
 @media only screen and (min-width: 601px) {
     
 #divOverlay{
@@ -62,12 +198,19 @@
 
 /* If the screen size is 600px or less, set the font-size of <div> to 30px */
 @media only screen and (max-width: 600px) {
+    .mobile_col_md_8{
+        width:100%;
+        margin-top: -60px;
+    }
     .gallery_cat_img, .galley_img {
         width:100% ;
         height: 220px ;
         object-fit: cover;
         overflow: hidden;
     
+    }
+    .my_desc table {
+        width: 500px !important;
     }
 
     .social::before {
@@ -110,5 +253,10 @@
     }
     .TinyMenu{
         display:none;
+    }
+
+    .btn__pdfs { 
+        padding: 26px 100px;
+
     }
 }

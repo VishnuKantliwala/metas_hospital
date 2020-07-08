@@ -1,23 +1,34 @@
-<?php include 'header.php'; ?>
 
+<?
+$page_id = 19;
+include_once("header.php");
+$sql = $cn->selectdb("select extra_icon from tbl_addmore where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?> 
+<?
+$sql = $cn->selectdb("select * from tbl_page where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?>
 
 
 
 <div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
     <div id="divImg">    
-        <h1 class="raleway">Patient Safety</h1>
+        <h1 class="raleway"><?echo $page_name ?></h1>
     </div>           
     <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="images/breadcum/b1.jpg" height="100%" width="100%" alt="img">
+        <img src="icon/big_img/<?echo $extra_icon?>" height="100%" width="100%" alt="<?echo $page_name?>">
     </div>            
 </div>
        
 
 
 
-<!-- MAIN PART -->
 
-    <!--================================
+
+     <!--================================
         2.START BLOG SECTION
     =================================-->
     <section id="blog" class="section-padding">
@@ -28,21 +39,18 @@
                     
                     <div class="widget reveal animated" data-reveal-anim="fadeInRight">
                         <div class="widget_heading">
-                            <h4>Patient Safety</h4>
+                            <h4><?echo $page_name ?></h4>
                         </div>
                         <div class="recent_posts">
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <img src="images/blogs/b3.jpg" alt="" style="border-radius: 20px;"> 
+                                    <img src="page/big_img/<?echo $image?>"  alt="<?echo $page_name?>"> 
                                 </div>
                                 <div class="col-lg-8">
                                     <ul>
                                         <li><a >
                                                 <div class="single_recent_post v_middle" style="width: 100%;">
-                                                <p>Metas Adventist Hospital’s mission of “To Teach, To Heal, And To Creat A Better Community” focuses on providing all our patients with best practice health care in a caring, supportive and safe environment. To achieve this a number of key departments work together as a team under the Director of Risk Management.</p></br>
-                                                <p>This department supports and encourages organisation wide process improvement from all departments through an internal quality awards program.  The department encourages consumer feedback through patient satisfaction surveys and patient feedback. This information is vital to our quality improvement program.</p></br>
-                                                <p>The Quality Management Department oversees a comprehensive program to monitor assess and improve the quality of patient care across the organisation. The department also provides support to executive and directors to ensure the high standards set by our accrediting bodies are being achieved.</p>
-                                                
+                                                <?echo $page_desc ?>
                                             </div>
                                         </a></li>
                                     </ul>
@@ -61,9 +69,9 @@
     =================================-->
 
 <!-- MAIN PART END -->
-    
-    
-   
+    <!--================================
+        2.END BLOG SECTION
+    =================================-->
 
 
 <?php include 'footer2.php'; ?>

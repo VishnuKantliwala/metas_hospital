@@ -59,7 +59,7 @@ extract($row);
               <div class="about_us_text">
                   <?echo $page_desc ?>
                   <div class="read_more">
-                     <a href="#">Read More <span class="icofont icofont-long-arrow-right"></span></a>
+                     <a href="who-we-are">Read More <span class="icofont icofont-long-arrow-right"></span></a>
                  </div>
               </div><!-- /ABOUT US CONTENT ENDS -->
           </div>

@@ -1,14 +1,44 @@
-<?php include 'header.php'; ?>
+
+<?
+$page_id = 8;
+if(!isset($_GET['sid']))
+{
+    echo "<script>window.open('./404.php','_SELF')</script>";
+    exit();
+}
+else
+{
+    $sid = urldecode($_GET['sid']);
+}
+include_once("header.php");
+
+
+$sqlService = $cn->selectdb("select * from tbl_service where slug='".$sid."' ");
+if( $cn->numRows($sqlService) > 0 )
+{
+    $rowService = $cn->fetchAssoc($sqlService);
+    extract($rowService);
+}
+else
+{
+    echo "<script>window.open('./404.php','_SELF')</script>";
+    exit();
+}
+
+$sql = $cn->selectdb("select image from tbl_page where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?> 
 
 
 
 
 <div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
     <div id="divImg">    
-        <h1 class="raleway">Orthopaedic</h1>
+        <h1 class="raleway"><?echo $service_title ?></h1>
     </div>           
     <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="images/breadcum/b1.jpg" height="100%" width="100%" alt="img">
+        <img src="page/big_img/<?echo $image?>" height="100%" width="100%" alt="img">
     </div>            
 </div>
        
@@ -26,32 +56,25 @@
             <div class="row">
 
                 <!-- left blog posts -->
-                <div class="col-md-8 col-sm-8 pull-right">
+                <div class="col-md-8 col-sm-8 pull-right mobile_col_md_8">
                     
                     <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
                         <div class="single_blog_header">
                             <div class="single_blog_img">
-                                <img src="images/blogs/a7.jpg" alt="Images">
+                                <img src="service/big_img/<?echo $image_name?>" alt="<?echo $service_title ?>">
                             </div>
                             <div class="blog_title_meta" style="padding: 0px 30px;">
                                 <div class="blog_title">
-                                    <h4>Orthopaedic</h4>
+                                    <h4><?echo $service_title ?></h4>
                                     <ul class=single></ul>
                                 </div>
                             </div>
                         </div>
                     
                         <!-- single blog post -->
-                        <div class="single_blog_post">
-                        <p align="justify">
-                        Our team of surgeons, specialty nurses, physiotherapists and support staﬀ are dedicated to managing your Orthopedic treatment and work together to ensure your needs are met prior to admission, whilst in hospital and following discharge. Our goal is to deliver premium 
-                        </p>
-                            <blockquote>
-                            The Institutes are at the forefront in oﬀering the latest in Orthopedic tr eatments and Orthopedic surgical advancements on par with the best centers in the world.
-                            </blockquote>
-                            <p align="justify">
-                            Our Orthopedicians trained at the top centers worldwide, bring with them the lat est and best techniques and work in our facilities that have the latest cutting edge technology in terms of equipment, operating rooms, recovery areas and advanced Physical therapy facilities. We have dedicated & well equipped Orthopedic
-                            </p>
+                        <div class="single_blog_post my_desc my_desc__table">
+                            <br/>
+                            <?echo $description ?>
                         </div>
                     </div>
                 </div>
@@ -65,17 +88,21 @@
 
                         <div class="catagory_list">
                             <ul>
-                                                <li><a href="#">Paediatrics</a></li>
-                                                <li><a href="#">Diabetology</a></li>
-                                                <li><a href="#"> Maternity </a></li>
-                                                <li><a href="#"> CT Scan </a></li>
-                                                <li><a href="#"> Pharmacy </a></li>
-                                                <li><a href="#"> Urology </a></li>
-                                                <li><a href="#"> Intensive Care </a></li>
-                                                <li><a href="#"> General Surgery </a></li>
-                                                <li><a href="#"> Physiotherapy </a></li>
-                                                <li><a href="#"> Neurology </a></li>
-                                                <li><a href="#"> ENT </a></li>
+                                <?
+                                
+                                $sqlServices = $cn->selectdb("SELECT service_title, slug from tbl_service  order by service_title");
+                                if( $cn->numRows($sqlServices) > 0 )
+                                {
+                                    while($rowServices = $cn->fetchAssoc($sqlServices))
+                                    {
+                                        extract($rowServices);
+                                        $href = "centre-of-excellence/".urlencode($slug);
+                                ?>
+                                <li <?  if($slug == $sid) {?> class="list-active" <?}?> ><a href="<?echo $href?>"><?echo $service_title ?></a></li>
+                                <?
+                                    }
+                                }
+                                ?>
                                                
                             </ul>
                         </div>

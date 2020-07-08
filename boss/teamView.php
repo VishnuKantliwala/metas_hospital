@@ -95,7 +95,7 @@ $cn->selectdb("delete from tbl_team where team_id=$id");
                 </li>
 
                 <li>
-                    <h4 class="page-title-main">Team</h4>
+                    <h4 class="page-title-main">Administrative Body</h4>
                 </li>
     
             </ul>
@@ -119,7 +119,7 @@ $cn->selectdb("delete from tbl_team where team_id=$id");
                     <div class="row">
                         <div class="col-12">
                             <div class="card-box">
-                                <h4 class="mt-0 header-title">Team View</h4>
+                                <h4 class="mt-0 header-title">Administrative Body View</h4>
                                 <?php
 									if(isset($_POST['delete']))
 									{

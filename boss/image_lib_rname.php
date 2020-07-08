@@ -256,6 +256,31 @@ if ( isset( $inputName ) )
 }
 }
 
+
+function createPPT($inputName, $uploadDir)
+{
+
+	if ( isset( $inputName ) ) 
+	{
+		
+		$source_file = $_FILES[$inputName]['tmp_name'];
+		$dest_file = $uploadDir.$_FILES[$inputName]['name'];
+
+		if (file_exists($dest_file)) {
+			print "The file name already exists!!";
+		}
+		else {
+			move_uploaded_file( $source_file, $dest_file )
+			or die ("Error!!");
+			if($_FILES[$inputName]['error'] == 0) 
+			{
+				return $_FILES[$inputName]['name'];
+			}
+		}
+		
+	}
+}
+
 function createMultiIcon($inputName, $uploadDir,$i)
 {
 //print_r($_FILES[$inputName]);die;

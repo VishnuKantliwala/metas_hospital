@@ -1,16 +1,22 @@
-<?php include 'header.php'; ?>
-
+<?
+$page_id = 25;
+include_once("header.php");
+$sql = $cn->selectdb("select * from tbl_page where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?> 
 
 
 
 <div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
     <div id="divImg">    
-        <h1 class="raleway">OPD Schedule</h1>
+        <h1 class="raleway"><?echo $page_name ?></h1>
     </div>           
     <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="images/breadcum/b1.jpg" height="100%" width="100%" alt="img">
+        <img src="page/big_img/<?echo $image?>" height="100%" width="100%" alt="<?echo $page_name?>">
     </div>            
 </div>
+       
        
 
 
@@ -24,88 +30,60 @@
         <div class="container">
             <div class="row">
                 <div class="col">
+                    <?
+                    $sqlOPDCategories = $cn->selectdb("select cat_name, cat_id from tbl_opd_category order by recordListingID");
+                    if( $cn->numRows($sqlOPDCategories) > 0 )
+                    {
+                        while($rowOPDCategories = $cn->fetchAssoc($sqlOPDCategories))
+                        {
+                            extract($rowOPDCategories);
+                    ?>
+                    <div class="widget reveal animated" data-reveal-anim="fadeInRight">
+                        <div class="widget_heading">
+                            <h4><?echo $cat_name ?></h4>
+                        </div>
+                        <div class="recent_posts">
+                           <div class="row">
+                                <?
+                                $sqlOPDs = $cn->selectdb("SELECT opd_name, doctor_name, day1, time1, day2, time2 FROM tbl_opd WHERE cat_id like '%".$cat_id.",%' ORDER BY recordListingID ");
+                                if( $cn->numRows($sqlOPDs) > 0 )
+                                {
+                                    while($rowOPDs = $cn->fetchAssoc($sqlOPDs))
+                                    {
+                                        extract($rowOPDs);
+                                ?>
+                                
+                                
+                                <div class="col">
+                                    <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
+                                        <div class="single_blog_post">
+                                            <blockquote>
+                                                <ul class="text-center">
+                                                    <li><strong>OPD :</strong> <?echo $opd_name ?></li>
+                                                    <li><strong>DOCTOR’S NAME :</strong> <?echo $doctor_name ?></li>
+                                                    <li><strong>DAYS :</strong>	<?echo $day1 ?> <strong>TIME :</strong> <?echo $time1 ?> </li>
+                                                    <li><strong>DAYS :</strong>	<?echo $day2 ?> <strong>TIME :</strong> <?echo $time2 ?> </li>
+                                                </ul>
+                                            </blockquote> 
+                                        </div>
+                                    </div> 
+                                </div>
+                                <?
+                                    }
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <div class="widget reveal animated" data-reveal-anim="fadeInRight">
-                        <div class="widget_heading">
-                            <h4>OPHTHALMOLOGISTS</h4>
-                        </div>
-                        <div class="recent_posts">
-                           <div class="row">
-                                <div class="col">
-                                    <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
-                                        <div class="single_blog_post">
-                                            <blockquote>
-                                                <ul class="text-center">
-                                                    <li><strong>OPD :</strong> 1</li>
-                                                    <li><strong>DOCTOR’S NAME :</strong> DR. ANURAG BANKA</li>
-                                                    <li><strong>DAYS :</strong>	MON TO THU <strong>TIME :</strong> 9:30 AM TO 1:30 PM & 5 PM TO 7 PM </li>
-                                                    <li><strong>DAYS :</strong>	FRI & SUN <strong>TIME :</strong> 10 AM TO 1 PM </li>
-                                                </ul>
-                                            </blockquote> 
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?
+                        }
+                    }
+                    ?>
+                    
 
 
-                    <div class="widget reveal animated" data-reveal-anim="fadeInRight">
-                        <div class="widget_heading">
-                            <h4>GENERAL PHYSICIAN</h4>
-                        </div>
-                        <div class="recent_posts">
-                           <div class="row">
-                                <div class="col">
-                                    <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
-                                        <div class="single_blog_post">
-                                            <blockquote>
-                                                <ul class="text-center">
-                                                    <li><strong>OPD :</strong> 2</li>
-                                                    <li><strong>DOCTOR’S NAME :</strong> DR. J. F. PATEL</li>
-                                                    <li><strong>DAYS :</strong>	MON TO THU <strong>TIME :</strong> 9:30 AM TO 1:30 PM & 5 PM TO 7 PM </li>
-                                                    <li><strong>DAYS :</strong>	FRI & SUN <strong>TIME :</strong> 10 AM TO 1 PM </li>
-                                                </ul>
-                                            </blockquote> 
-                                        </div>
-                                    </div> 
-                                </div>
-
-                                <div class="col">
-                                    <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
-                                        <div class="single_blog_post">
-                                            <blockquote>
-                                                <ul class="text-center">
-                                                    <li><strong>OPD :</strong> 17</li>
-                                                    <li><strong>DOCTOR’S NAME :</strong> DR. RAMESH SURATI</li>
-                                                    <li><strong>DAYS :</strong>	MON TO THU <strong>TIME :</strong> 9:30 AM TO 1:30 PM & 5 PM TO 7 PM </li>
-                                                    <li><strong>DAYS :</strong>	FRI & SUN <strong>TIME :</strong> 10 AM TO 1 PM </li>
-                                                </ul>
-                                            </blockquote> 
-                                        </div>
-                                    </div> 
-                                </div>
-
-
-                                <div class="col">
-                                    <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
-                                        <div class="single_blog_post">
-                                            <blockquote>
-                                                <ul class="text-center">
-                                                    <li><strong>OPD :</strong> 4</li>
-                                                    <li><strong>DOCTOR’S NAME :</strong> DR. AMIT SHAH</li>
-                                                    <li><strong>DAYS :</strong>	MON TO THU <strong>TIME :</strong> 9:30 AM TO 1:30 PM & 5 PM TO 7 PM </li>
-                                                    <li><strong>DAYS :</strong>	FRI & SUN <strong>TIME :</strong> 10 AM TO 1 PM </li>
-                                                </ul>
-                                            </blockquote> 
-                                        </div>
-                                    </div> 
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
+                    
 
 
 

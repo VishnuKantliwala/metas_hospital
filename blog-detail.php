@@ -1,17 +1,34 @@
-<?php include 'header.php'; ?>
+<?
+$page_id = 28;
+$bid = urldecode($_GET['bid']);
 
 
-
-
+include_once("header.php");
+$sqlWorkshop = $cn->selectdb("select * from tbl_blog where slug = '".$bid."' ");
+if( $cn->numRows($sqlWorkshop) > 0 )
+{
+    $rowWorkshop = $cn->fetchAssoc($sqlWorkshop);
+    extract($rowWorkshop);
+}
+else
+{
+    echo "<script>window.open('./404','_SELF')</script>";
+    exit();
+}
+$sql = $cn->selectdb("select image from tbl_page where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?>
 <div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
-    <div id="divImg">    
-        <h1 class="raleway">News</h1>
-    </div>           
+    <div id="divImg">
+        <h1 class="raleway">
+            <?echo $blog_name ?>
+        </h1>
+    </div>
     <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="images/breadcum/b1.jpg" height="100%" width="100%" alt="img">
-    </div>            
+        <img src="page/big_img/<?echo $image?>" height="100%" width="100%" alt="<?echo $blog_name?>">
+    </div>
 </div>
-       
 
 
 
@@ -31,11 +48,11 @@
                     <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
                         <div class="single_blog_header">
                             <div class="single_blog_img">
-                                <img src="images/blogs/a5.jpg" alt="Images">
+                                <img src="blog/big_img/<?echo $blog_image?>" alt="Images">
                             </div>
                             <div class="blog_title_meta" style="padding: 5px 30px">
                                 <div class="blog_title">
-                                    <h4>Covid 19</h4>
+                                    <h4><?echo $blog_name ?></h4>
                                     <ul class=single></ul>
                                 </div>
                             </div>
@@ -43,21 +60,22 @@
                     
                         <!-- single blog post -->
                         <div class="single_blog_post">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                            <blockquote>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit an im id est laborum. 
-                            </blockquote>
+                            <?echo $description ?>
                         
 
                             <div class="tag_share">
                                 <div class="tags">
                                     <ul>
                                         <li>TAGS</li>
-                                        <li><a href="#">design</a></li>
-                                        <li><a href="#">graphic</a></li>
-                                        <li><a href="#">UI/UX</a></li>
+                                        <?
+                                        $tags = explode(',',$blog_video);
+                                        foreach($tags as $tag)
+                                        {
+                                        ?>
+                                        <li><a href="javascript:void(0)"><?echo trim($tag) ?></a></li>
+                                        <?
+                                        }
+                                        ?>
                                     </ul>
                                 </div>
 
@@ -76,43 +94,42 @@
 
                         <div class="recent_posts">
                             <ul>
-                                <li><a href="#">
-                                    <span class="recent_blog_img v_middle"><img src="images/blogs/a1.jpg" alt="Image"></span>
+                                <?
+                                
+                                $sqlBlogs = $cn->selectdb("SELECT blog_name, blog_image, slug, bdate from tbl_blog WHERE blog_id != ".$blog_id."  order by bdate");
+                                if( $cn->numRows($sqlBlogs) > 0 )
+                                {
+                                    while($rowBlogs = $cn->fetchAssoc($sqlBlogs))
+                                    {
+                                        extract($rowBlogs);
+                                        $href = "blogs/".urlencode($slug);
+                                        $date = date("M d, Y",strtotime($bdate));
+                                ?>
+                                <li><a href="<?echo $href?>">
+                                    <span class="recent_blog_img v_middle">
+                                        <img 
+                                            src="blog/<?echo $blog_image?>" 
+                                            alt="<?echo $blog_name ?>"
+                                            style=""
+                                            class="blog_img--suggetions"
+                                            >
+                                    </span>
 
                                      <div class="single_recent_post v_middle">
-                                        <p>Lorem ipsum dolor sit amet, tota accusam.</p>
-                                        <span class="recent_post_meta">February 14, 2016</span>
+                                        <p><?echo $blog_name ?></p>
+                                        <span class="recent_post_meta"><?echo $date ?></span>
                                      </div>
                                 </a></li>
-                                <li><a href="#">
-                                    <span class="recent_blog_img v_middle"><img src="images/blogs/a2.jpg" alt="Image"></span>
-
-                                     <div class="single_recent_post v_middle">
-                                        <p>Lorem ipsum dolor sit amet, tota accusam.</p>
-                                        <span class="recent_post_meta">May 15, 2016</span>
-                                     </div>
-                                </a></li>
-                                <li><a href="#">
-                                    <span class="recent_blog_img v_middle"><img src="images/blogs/a3.jpg" alt="Image"></span>
-
-                                     <div class="single_recent_post v_middle">
-                                        <p>Lorem ipsum dolor sit amet, tota accusam.</p>
-                                        <span class="recent_post_meta">May 28, 2016</span>
-                                     </div>
-                                </a></li>
-                                <li><a href="#">
-                                    <span class="recent_blog_img v_middle"><img src="images/blogs/a4.jpg" alt="Image"></span>
-
-                                     <div class="single_recent_post v_middle">
-                                        <p>Lorem ipsum dolor sit amet, tota accusam.</p>
-                                        <span class="recent_post_meta">May 15, 2016</span>
-                                     </div>
-                                </a></li>
+                                <?
+                                    }
+                                }
+                                ?>
+                                
                             </ul>
                         </div>
                     </div>
 
-                    <div class="recent_tags reveal animated" data-reveal-anim="fadeInBottomShort">
+                    <!-- <div class="recent_tags reveal animated" data-reveal-anim="fadeInBottomShort">
                         <h4 class="recent_tg_title">Recent Tags</h4>
                         <ul>
                             <li><a href="#">Adventure</a></li>
@@ -120,7 +137,7 @@
                             <li><a href="#">Technology</a></li>
                             <li><a href="#">Culture</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -1,17 +1,30 @@
-<?php include 'header.php'; ?>
 
+<?
+$page_id = 29;
+include_once("header.php");
+$sql = $cn->selectdb("select extra_icon from tbl_addmore where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?> 
+<?
+$sql = $cn->selectdb("select * from tbl_page where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?>
 
 
 
 <div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
     <div id="divImg">    
-        <h1 class="raleway">Clinical Research</h1>
+        <h1 class="raleway"><?echo $page_name ?></h1>
     </div>           
     <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="images/breadcum/b1.jpg" height="100%" width="100%" alt="img">
+        <img src="icon/big_img/<?echo $extra_icon?>" height="100%" width="100%" alt="<?echo $page_name?>">
     </div>            
 </div>
        
+
+
 
 
 
@@ -26,7 +39,7 @@
                 <div class="col-md-6 col-sm-6 v_middle">
                     <div class="image-container">
                         <div class="image">
-                            <img src="images/blogs/a9.jpg" alt="">
+                            <img src="page/big_img/<?echo $image?>"  alt="<?echo $page_name?>">
                         </div>
                     </div>
                 </div>
@@ -34,17 +47,13 @@
                    <!-- SECTION TITLE -->
                     <div class="section_title" style="padding-bottom:0px">
                         <div class="title">
-                            <h1>Clinial <span class="title_word_2">Research</span></h1>
+                            <h1><span class="title_word_2"><?echo $page_name ?></span></h1>
                         </div>
                     </div><!-- /SECTION TITLE ENDS -->
 
                     <!-- ABOUT US CONTENT-->
                     <div class="about_us_text">
-                        <p>To maintain objectivity, Arrow Finance Services has access to over 40 different Banks and Lenders, and with so many options available, we will find the most suitable mortgage for you from this panel.
-                        </p>
-                       <p>
-                           Pro solet mucius euismod eu. Cu mel nullam eruditi consectetuer, ad cum graeci malorum, qui ex mandamus sadipscing. 
-                       </p>
+                        <?echo $page_desc ?>
 
                       
                     </div><!-- /ABOUT US CONTENT ENDS -->

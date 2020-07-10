@@ -1,17 +1,34 @@
-<?php include 'header.php'; ?>
+<?
+$page_id = 28;
+$wid = urldecode($_GET['wid']);
 
 
-
-
+include_once("header.php");
+$sqlWorkshop = $cn->selectdb("select * from tbl_workshop where slug = '".$wid."' ");
+if( $cn->numRows($sqlWorkshop) > 0 )
+{
+    $rowWorkshop = $cn->fetchAssoc($sqlWorkshop);
+    extract($rowWorkshop);
+}
+else
+{
+    echo "<script>window.open('./404','_SELF')</script>";
+    exit();
+}
+$sql = $cn->selectdb("select image from tbl_page where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?>
 <div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
-    <div id="divImg">    
-        <h1 class="raleway">MEDICAL GAS SUPPLY</h1>
-    </div>           
+    <div id="divImg">
+        <h1 class="raleway">
+            <?echo $workshop_title ?>
+        </h1>
+    </div>
     <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="images/breadcum/b1.jpg" height="100%" width="100%" alt="img">
-    </div>            
+        <img src="page/big_img/<?echo $image?>" height="100%" width="100%" alt="<?echo $workshop_title?>">
+    </div>
 </div>
-       
 
 
 
@@ -32,7 +49,7 @@
                         <div class="single_blog_header">
                             <div class="blog_title_meta" style="padding: 0px 30px;">
                                 <div class="blog_title">
-                                    <h4>MEDICAL GAS SUPPLY</h4>
+                                    <h4><?echo $workshop_title ?></h4>
                                     <ul class=single></ul>
                                 </div>
                             </div>
@@ -40,21 +57,7 @@
                     
                         <!-- single blog post -->
                         <div class="single_blog_post">
-                        <p align="justify" style="padding-top: 20px;">
-                        Our team of surgeons, specialty nurses, physiotherapists and support staﬀ are dedicated to managing your Orthopedic treatment and work together to ensure your needs are met prior to admission, whilst in hospital and following discharge. Our goal is to deliver premium 
-                        </p>
-                            <blockquote>
-                            The Institutes are at the forefront in oﬀering the latest in Orthopedic tr eatments and Orthopedic surgical advancements on par with the best centers in the world.
-                            </blockquote>
-                            <p align="justify">
-                            Our Orthopedicians trained at the top centers worldwide, bring with them the lat est and best techniques and work in our facilities that have the latest cutting edge technology in terms of equipment, operating rooms, recovery areas and advanced Physical therapy facilities. We have dedicated & well equipped Orthopedic
-                            </p>
-                            <p align="justify" style="padding-top: 20px;">
-                        Our team of surgeons, specialty nurses, physiotherapists and support staﬀ are dedicated to managing your Orthopedic treatment and work together to ensure your needs are met prior to admission, whilst in hospital and following discharge. Our goal is to deliver premium 
-                        </p>
-                            <blockquote>
-                            The Institutes are at the forefront in oﬀering the latest in Orthopedic tr eatments and Orthopedic surgical advancements on par with the best centers in the world.
-                            </blockquote>
+                            <?echo $description ?>
                         </div>
                     </div>
                 </div>
@@ -63,21 +66,31 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 col-md-offset-0 pull-left">
 
                     <div class="widget reveal animated" data-reveal-anim="fadeInLeft" style="margin-top:0px;border: 0px">
-                    <img src="images/work/a5.jpg" alt="" style="border-radius: 20px;"> 
+                    <img src="workshop/big_img/<?echo $image_name?>" alt="<?echo $workshop_title?>" style="border-radius: 20px;"> 
                     </div>
 
                     <div class="widget reveal animated" data-reveal-anim="fadeInLeft" style="margin-top:20px">
                         <div class="widget_heading">
-                            <h4>Related Workshop</h4>
+                            <h4>Related Workshops</h4>
                         </div>
 
                         <div class="catagory_list">
                             <ul>
-                                                <li><a href="#">X-RAY PHANTOM IN A CD CASE</a></li>
-                                                <li><a href="#">ECG PATIENT SIMULATOR</a></li>
-                                                <li><a href="#"> LABORATORY BALANCES </a></li>
-                                                <li><a href="#"> CARDIAC OUTPUT COMPUTER SIMULATOR </a></li>
-                                                <li><a href="#"> OXYGEN CONCENTRATORS </a></li>
+                            <?
+                                
+                                $sqlServices = $cn->selectdb("SELECT workshop_title, slug from tbl_workshop  order by workshop_title");
+                                if( $cn->numRows($sqlServices) > 0 )
+                                {
+                                    while($rowServices = $cn->fetchAssoc($sqlServices))
+                                    {
+                                        extract($rowServices);
+                                        $href = "workshops/".urlencode($slug);
+                                ?>
+                                <li <?  if($slug == $wid) {?> class="list-active" <?}?> ><a href="<?echo $href?>"><?echo $workshop_title ?></a></li>
+                                <?
+                                    }
+                                }
+                                ?>
                                                
                             </ul>
                         </div>

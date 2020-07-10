@@ -65,6 +65,41 @@ if(isset($sid))
     }
 }
 ?>
+<?
+if(isset($hid))
+{
+    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_handw` where slug='".$hid."'" );
+//	echo $cn->numRows($sql2);
+    if ($cn->numRows($sql) > 0) 
+    {
+        $row1 = $cn->fetchAssoc($sql);
+    }
+}
+?>
+
+<?
+if(isset($coid))
+{
+    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_course` where slug='".$coid."'" );
+//	echo $cn->numRows($sql2);
+    if ($cn->numRows($sql) > 0) 
+    {
+        $row1 = $cn->fetchAssoc($sql);
+    }
+}
+?>
+
+<?
+if(isset($wid))
+{
+    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_workshop` where slug='".$wid."'" );
+//	echo $cn->numRows($sql2);
+    if ($cn->numRows($sql) > 0) 
+    {
+        $row1 = $cn->fetchAssoc($sql);
+    }
+}
+?>
 
 
     <title>| Metas Adventist Hospital |
@@ -256,7 +291,7 @@ if(isset($sid))
                                 <div class="menu-display-table-cell">
                                     <ul>
                                         <li><a href="find-a-doctor">Find a Doctor</a>
-                                        <li><a href="opd-schedule.php">OPD Schedule</a>
+                                        <li><a href="opd-schedule">OPD Schedule</a>
                                         <li><a href="#">Clinical Quality</a>
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
@@ -278,7 +313,7 @@ if(isset($sid))
                                                     <ul>
                                                         <li><a href="what-we-do">What We Do</a>
                                                         <li><a href="health-talk">Health Talks</a>
-                                                        <li><a href="health-well.php">Health & Wellness </a>
+                                                        <li><a href="health-and-wellness">Health & Wellness </a>
                                                         <li><a href="newstart-programme">NEWSTART Programme </a>
                                                     </ul>
                                                 </div>
@@ -328,13 +363,26 @@ if(isset($sid))
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
-                                                        <li><a href="course.php">GNM</a>
+                                                        <?
+                                                        $sqlCourses = $cn->selectdb("SELECT course_title, slug FROM tbl_course ORDER BY recordListingID");
+                                                        if( $cn->numRows($sqlCourses) > 0 )
+                                                        {
+                                                            while($rowCourses = $cn->fetchAssoc($sqlCourses))
+                                                            {
+                                                                extract($rowCourses);
+                                                                $href="course-detail/".urlencode($slug);
+                                                        ?>
+                                                        <li><a href="<?echo $href?>"><?echo $course_title ?></a>
+                                                        <?
+                                                            }
+                                                        }
+                                                        ?>
 
                                                     </ul>
                                                 </div>
                                             </div>
-                                        <li><a href="clinical-research.php">Clinical Research</a>
-                                        <li><a href="workshop.php">Workshop</a>
+                                        <li><a href="clinical-research">Clinical Research</a>
+                                        <li><a href="workshops">Workshop</a>
 
                                     </ul>
                                 </div>
@@ -343,8 +391,8 @@ if(isset($sid))
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
-                                        <li><a href="blog.php">News</a>
-                                        <li><a href="event.php">Events</a>
+                                        <li><a href="blogs">News</a>
+                                        <li><a href="events">Events</a>
                                         <li><a href="journal.php">Journal</a>
                                     </ul>
                                 </div>
@@ -433,7 +481,7 @@ if(isset($sid))
                         <div class="menu-display-table-cell">
                             <ul>
                                 <li><a href="find-a-doctor">Find a Doctor</a>
-                                <li><a href="opd-schedule.php">OPD Schedule</a>
+                                <li><a href="opd-schedule">OPD Schedule</a>
                                 <li><a href="#">Clinical Quality</a>
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
@@ -455,7 +503,7 @@ if(isset($sid))
                                             <ul>
                                                 <li><a href="what-we-do">What We Do</a>
                                                 <li><a href="health-talk">Health Talks</a>
-                                                <li><a href="health-well.php">Health & Wellness </a>
+                                                <li><a href="health-and-wellness">Health & Wellness </a>
                                                 <li><a href="newstart-programme">NEWSTART Programme </a>
                                             </ul>
                                         </div>
@@ -505,13 +553,26 @@ if(isset($sid))
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
-                                                <li><a href="course.php">GNM</a>
+                                                <?
+                                                $sqlCourses = $cn->selectdb("SELECT course_title, slug FROM tbl_course ORDER BY recordListingID");
+                                                if( $cn->numRows($sqlCourses) > 0 )
+                                                {
+                                                    while($rowCourses = $cn->fetchAssoc($sqlCourses))
+                                                    {
+                                                        extract($rowCourses);
+                                                        $href="course-detail/".urlencode($slug);
+                                                ?>
+                                                <li><a href="<?echo $href?>"><?echo $course_title ?></a>
+                                                <?
+                                                    }
+                                                }
+                                                ?>
 
                                             </ul>
                                         </div>
                                     </div>
-                                <li><a href="clinical-research.php">Clinical Research</a>
-                                <li><a href="workshop.php">Workshop</a>
+                                <li><a href="clinical-research">Clinical Research</a>
+                                <li><a href="workshops">Workshop</a>
 
                             </ul>
                         </div>
@@ -520,8 +581,8 @@ if(isset($sid))
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
-                                <li><a href="blog.php">News</a>
-                                <li><a href="event.php">Events</a>
+                                <li><a href="blogs">News</a>
+                                <li><a href="events">Events</a>
                                 <li><a href="journal.php">Journal</a>
                             </ul>
                         </div>

@@ -9,7 +9,7 @@ $offset = (intval($_GET['offset']) != 0 ) ? $_GET['offset'] : 0;
 
 $cat_id = $_GET['cat_id'];
 
-$sql1 = $cn->selectdb("select * from tbl_gallery where cat_id like  '%".$cat_id.",%'   order by recordListingID DESC LIMIT $limit OFFSET $offset");
+$sql1 = $cn->selectdb("select * from tbl_gallery where cat_id like  '%".$cat_id.",%'   order by recordListingID ASC LIMIT $limit OFFSET $offset");
 
 if ($cn->numRows($sql1) > 0) 
 {

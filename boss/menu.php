@@ -66,6 +66,19 @@
                                     <li><a href="doctorawardsView.php"> Doctor Awards </a></li>
                                 </ul>
                             </li>
+                            
+                            <li>
+                                <a href="projectCatView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> OPD </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="opdCatView.php"> Category </a></li>
+                                    <li><a href="opdView.php"> OPDs </a></li>
+                                </ul>
+                            </li>
+
 
                             <li>
                                 <a href="projectCatView.php">
@@ -83,6 +96,46 @@
                                 <a href="serviceView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Centre of Excellence </span>
+                                    
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="handwView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Health and Wellness </span>
+                                    
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="eventView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Events </span>
+                                    
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="courseView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Courses </span>
+                                    
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="workshopView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Workshops </span>
+                                    
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="blogView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Blogs </span>
                                     
                                 </a>
                             </li>
@@ -182,19 +235,6 @@
                                     <li><a href="productView.php">Product</a></li>
                                 </ul>
                             </li>
-
-                            <li>
-                                <a href="blogCatView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Blog </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="blogCatView.php">Category</a></li>
-                                    <li><a href="blogView.php">Blogs</a></li>
-                                </ul>
-                            </li>
-
                             
                             <li>
                                 <a href="sliderView.php">

@@ -1,6 +1,6 @@
 Options +FollowSymlinks
-ErrorDocument 404 http://localhost/metas_college/404/
-ErrorDocument 500 http://localhost/metas_college/500/
+ErrorDocument 404 http://localhost/metas_hospital/404/
+ErrorDocument 500 http://localhost/metas_hospital/500/
 
 
 RewriteEngine On
@@ -38,6 +38,19 @@ RewriteRule ^it-excellence/? it-excellence.php [L]
 
 RewriteRule ^what-we-do/? what-we-do.php [L]
 RewriteRule ^newstart-programme/? newstart-programme.php [L]
+RewriteRule ^opd-schedule/? opd-schedule.php [L]
+RewriteRule ^health-and-wellness/(.*)/? health-well-detail.php?hid=$1 [L]
+RewriteRule ^health-and-wellness/? health-well.php [L]
+
+RewriteRule ^workshops/(.*)/? workshop-detail.php?wid=$1 [L]
+RewriteRule ^workshops/? workshop.php [L]
+
+RewriteRule ^blogs/(.*)/? blog-detail.php?bid=$1 [L]
+RewriteRule ^blogs/? blog.php [L]
+
+RewriteRule ^clinical-research/? clinical-research.php [L]
+
+RewriteRule ^events/? event.php [L]
 
 
 RewriteRule ^galleries/(.*)/? gallery_category.php?gcid=$1 [L]
@@ -47,6 +60,7 @@ RewriteRule ^gallery-detail/(.*)/? gallery.php?gcid=$1 [L]
 RewriteRule ^videos/? video.php [L]
 
 RewriteRule ^centre-of-excellence/(.*)/? service.php?sid=$1 [L]
+RewriteRule ^course-detail/(.*)/? course.php?coid=$1 [L]
 
 RewriteRule ^faculty/(.*)/? faculty.php?tid=$1 [L]
 RewriteRule ^course-category/(.*)/? course_categories.php?cid=$1 [L]

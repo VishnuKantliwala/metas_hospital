@@ -8,7 +8,7 @@ $limit = (intval($_GET['limit']) != 0 ) ? $_GET['limit'] : 1;
 $offset = (intval($_GET['offset']) != 0 ) ? $_GET['offset'] : 0;
 
 
-$sql1 = $cn->selectdb("select video_url from tbl_video  order by recordListingID DESC LIMIT $limit OFFSET $offset");
+$sql1 = $cn->selectdb("select video_url from tbl_video  order by recordListingID ASC LIMIT $limit OFFSET $offset");
 
 if ($cn->numRows($sql1) > 0) 
 {

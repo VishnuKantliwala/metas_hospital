@@ -227,7 +227,7 @@
     /* team  member info sliders */
     var teamMemberInfo = $('.team_member_info_slider');
     teamMemberInfo.owlCarousel({
-        loop: true,
+        loop: false,
         margin: 30,
         nav: false,
         autoplay: false,
@@ -238,7 +238,7 @@
     /*team  member image sliders */
     var teamMemberImage = $('.team_member_image_slider');
     teamMemberImage.owlCarousel({
-        loop: true,
+        loop: false,
         margin: 30,
         nav: false,
         autoplay: false,
@@ -250,7 +250,7 @@
     var teamThumbnail = $('.team_thumbnail_slider');
     teamThumbnail.owlCarousel({
         items: 3,
-        loop: true,
+        loop: false,
         dots: true,
         center: true
     })

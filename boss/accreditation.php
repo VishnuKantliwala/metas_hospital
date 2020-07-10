@@ -13,7 +13,7 @@ $pageID= 'page29';
 $auto_code = 0;
 
 include_once("../connect.php");
-include_once("image_lib.php");
+include_once("image_lib_rname.php");
 $con=new connect();
 $con->connectdb();
     $error = "";
@@ -30,22 +30,39 @@ $con->connectdb();
         //pdf
         //------------------------
         
-        if($_FILES["download_file"]["name"]!="")
-        {
-            if ( $_FILES["download_file"]['type'] != "application/pdf") 
-            {
-                $error = "Please select PDF file";
-            }
-            else
-            {
-                //-----
-                @unlink("../accreditation_pdf/". $frontimgpdf2);
+        // if($_FILES["download_file"]["name"]!="")
+        // {
+        //     if ( $_FILES["download_file"]['type'] != "application/pdf") 
+        //     {
+        //         $error = "Please select PDF file";
+        //     }
+        //     else
+        //     {
+        //         //-----
+        //         @unlink("../accreditation_pdf/". $frontimgpdf2);
 
-                $pdf_file = createPDF('download_file',"../accreditation_pdf/");
+        //         $pdf_file = createPDF('download_file',"../accreditation_pdf/");
 
-                $sqlFile = ",pdf_file='".$pdf_file."'";
-            }
-        }
+        //         $sqlFile = ",pdf_file='".$pdf_file."'";
+        //     }
+        // }
+
+        //-----------------				
+	  //multi pdf
+	  //--------------------
+				  
+	  $size_sum_pdf = array_sum($_FILES['download_file']['size']);
+	  if ($size_sum_pdf > 0) 
+	  // if($_FILES["download_file"]["name"]=="")
+	  {
+		  $pdf_file = createMultiPDF('download_file', "../accreditation_pdf/");
+		  $records=$con->selectdb("select * from tbl_pdf where pdf_id=1");
+		  $row=mysqli_fetch_assoc($records);
+		  $final= $row['pdf_file'].$pdf_file;
+		  
+		  
+		  $sqlFile = " ,pdf_file='".$final."'" ;
+	  }
         
         
 		$con->insertdb("UPDATE `tbl_pdf` SET pdf_name='".$pdf_name."', `description`='".$description."' ".$sqlFile." where pdf_id =  1");
@@ -61,6 +78,33 @@ $con->connectdb();
         @unlink("../accreditation_pdf/". $frontimgpdf2);   
         $con->insertdb("UPDATE `tbl_pdf` SET pdf_file='' where pdf_id =  1");	
 
+    }
+    //multiple pdf delete project..
+    if(isset($_REQUEST["btnDeletepdfs"]))
+    {
+        // $project_id = $_POST['project_id'];
+        $page = $_POST['page'];
+    
+        $pdf = $_POST['frontpdf'];
+        $pdf_list = explode(',',$pdf);
+        $new_pdf_list = '';
+        
+        if(isset($_REQUEST["pdfEdit"]))
+        {
+            foreach($_REQUEST['pdfEdit'] as $row)
+            {
+                $pdf = str_replace($row.',' , '' ,$pdf);
+                @unlink('../accreditation_pdf/'.$row);
+            }
+            
+            $con->selectdb("update tbl_pdf set pdf_file='".$pdf."' where pdf_id = 1");
+            header("location:accreditation.php");
+        }
+        else
+        {
+            echo 'No pdf selected';
+        }
+            
     }
     
 
@@ -181,8 +225,50 @@ $con->connectdb();
                                             </textarea>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-12 control-label">PDF File</label>
+                                        <input type="hidden" class="form-control" id="frontpdf" name="frontpdf" placeholder="Multiple pdfs" value="<? echo $rowPdf['pdf_file']; ?>">
+                                        <div class="col-sm-12">
+                                            <input type="file" id="download_file" name="download_file[]" class="dropify" multiple />
+                                            <div class="attached-files mt-4">
+                                                <div class="task-tags mt-2">
+                                                    <?
+                                                    
+                                                    $pdf = $rowPdf['pdf_file'];
+                                                        
+                                                        if($pdf!="" || $pdf!=NULL)
+                                                        {
+                                                    ?>
+                                                    <h5>PDF's</h5>
+                                                    <?
+                                                            $pdf_list = explode(',',$pdf);
+                                                            $cnt = 1;
+                                                                
+                                                            for($i=0;$i<count($pdf_list)-1;$i++)
+                                                            {
+                                                    ?>
+                                                                <div class="bootstrap-tagsinput">
+                                                                    <span class="tag label label-info bg-light">
+                                                                        <div class=" custom-control custom-switch">
+                                                                            <input class="custom-control-input" type="checkbox" id="<?php echo $pdf_list[$i]; ?>" name="pdfEdit[]" value="<?php echo $pdf_list[$i]; ?>">
+                                                                            <label class="custom-control-label" for="<?php echo $pdf_list[$i]; ?>"><?echo $pdf_list[$i];?></label>
+                                                                        </div>
+                                                                    </span>
+                                                                </div>
+                                                    <?php
+                                                            }
+                                                            echo '<div class="row mt-2 mb-2"><div class="col-12"><input type="submit" class="btn btn-lighten-danger" name="btnDeletepdfs" value="Delete Selected pdfs"></div></div>';
+                                                        }
+                                                    
+                                                    ?>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" id="frontimgpdf2" name="frontimgpdf2" value="<?php echo $rowPdf['pdf_file']?>" />
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-2 control-label">PDF</label>
                                         <div class="col-sm-4">
                                             <input type="file" id="download_file" name="download_file" class="dropify" />
@@ -200,7 +286,7 @@ $con->connectdb();
                                         <?
                                         }
                                         ?>
-                                    </div>
+                                    </div> -->
                                     
                                     
                                     

@@ -25,7 +25,7 @@ RewriteRule ^accreditation/? accreditation.php [L]
 RewriteRule ^international-patients/? international_patients.php [L]
 RewriteRule ^health-talk/? health_talk.php [L]
 
-RewriteRule ^find-a-doctor/? find-doctor.php [L]
+RewriteRule ^find-a-doctor/(.*)/? find-doctor.php?page=$1 [L]
 RewriteRule ^nurses-award/? nurseaward.php [L]
 RewriteRule ^doctors-award/? doctoraward.php [L]
 

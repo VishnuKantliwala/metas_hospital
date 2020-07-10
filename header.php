@@ -248,7 +248,7 @@ if(isset($wid))
                     <ul class="main-menu-items">
 
 
-                        <li class="no-menu"><a href="index.php">Home</a>
+                        <li class="no-menu"><a href="./">Home</a>
                             <div class="menu-display-table"></div>
                         </li>
 
@@ -264,9 +264,10 @@ if(isset($wid))
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
-                                                        <li><a href="organogram">Organogram</a>
-                                                        <li><a href="nurses-award">Nurses Award</a>
-                                                        <li><a href="doctors-award">Doctors Award</a>
+                                                        <!-- <li><a href="organogram">Organogram</a> -->
+                                                        <li><a href="javascript:void(0)">Organogram</a>
+                                                        <!-- <li><a href="nurses-award">Nurses Award</a>
+                                                        <li><a href="doctors-award">Doctors Award</a> -->
                                                         
                                                     </ul>
                                                 </div>
@@ -290,7 +291,7 @@ if(isset($wid))
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
-                                        <li><a href="find-a-doctor">Find a Doctor</a>
+                                        <li><a href="find-a-doctor/1">Find a Doctor</a>
                                         <li><a href="opd-schedule">OPD Schedule</a>
                                         <li><a href="#">Clinical Quality</a>
                                             <div class="menu-display-table">
@@ -393,7 +394,7 @@ if(isset($wid))
                                     <ul>
                                         <li><a href="blogs">News</a>
                                         <li><a href="events">Events</a>
-                                        <li><a href="journal.php">Journal</a>
+                                        <li><a href="javascript:void(0)">Journal</a>
                                     </ul>
                                 </div>
                             </div>
@@ -402,7 +403,7 @@ if(isset($wid))
                                 <div class="menu-display-table-cell">
                                     <ul>
                                         <li><a href="#">HR Portal</a>
-                                        <li><a href="current-opening.php">Current Openings</a>
+                                        <li><a href="javascript:void(0)">Current Openings</a>
 
                                     </ul>
                                 </div>
@@ -439,7 +440,7 @@ if(isset($wid))
             <ul class="main-menu-items">
 
 
-                <li class="no-menu"><a href="index.php">Home</a>
+                <li class="no-menu"><a href="./">Home</a>
                     <div class="menu-display-table"></div>
                 </li>
 
@@ -455,9 +456,10 @@ if(isset($wid))
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
-                                                <li><a href="organogram">Organogram</a>
-                                                <li><a href="nurses-award">Nurses Award</a>
-                                                <li><a href="doctors-award">Doctors Award</a>
+                                                <!-- <li><a href="organogram">Organogram</a> -->
+                                                <li><a href="javascript:void(0)">Organogram</a>
+                                                <!-- <li><a href="nurses-award">Nurses Award</a>
+                                                <li><a href="doctors-award">Doctors Award</a> -->
                                                 
                                             </ul>
                                         </div>
@@ -480,7 +482,7 @@ if(isset($wid))
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
-                                <li><a href="find-a-doctor">Find a Doctor</a>
+                                <li><a href="find-a-doctor/1">Find a Doctor</a>
                                 <li><a href="opd-schedule">OPD Schedule</a>
                                 <li><a href="#">Clinical Quality</a>
                                     <div class="menu-display-table">
@@ -583,7 +585,7 @@ if(isset($wid))
                             <ul>
                                 <li><a href="blogs">News</a>
                                 <li><a href="events">Events</a>
-                                <li><a href="journal.php">Journal</a>
+                                <li><a href="javascript:void(0)">Journal</a>
                             </ul>
                         </div>
                     </div>
@@ -592,7 +594,7 @@ if(isset($wid))
                         <div class="menu-display-table-cell">
                             <ul>
                                 <li><a href="#">HR Portal</a>
-                                <li><a href="current-opening.php">Current Openings</a>
+                                <li><a href="javascript:void(0)">Current Openings</a>
 
                             </ul>
                         </div>

@@ -50,18 +50,24 @@ extract($row);
                                                 
                                             </div>
                                         </a>
-                                        <?
-                                        if(file_exists('./accreditation_pdf/'.$pdf_file))
-                                        {
-                                        ?>
-                                        <div style="text-align:center;    margin-top: 40px;">
-                                        <a class="btn__pdfs" download href="<?echo './accreditation_pdf/'.$pdf_file?>"><i class="icofont icofont-file-pdf"></i> Donload PDF</a>
-                                        </div>
-                                        <?
-                                        }
-                                        ?>
                                         </li>
+
                                     </ul>
+                                    <?
+                                        $pdf_list = explode(',',$pdf_file);
+                                        $cnt = 1;
+                                        for($i=0;$i<count($pdf_list)-1;$i++)
+                                        {
+                                            if(file_exists('./accreditation_pdf/'.$pdf_list[$i]))
+                                            {
+                                                ?>
+                                                <div class="col-md-3" style="   margin-top: 40px;">
+                                                <a class="btn__pdfs" download href="<?echo './accreditation_pdf/'.$pdf_list[$i]?>"><i class="icofont icofont-file-pdf"></i> Donload PDF <?echo $i+1?></a>
+                                                </div>
+                                                <?
+                                            }
+                                        }
+                                    ?>
                                 </div>
 
                             </div>    

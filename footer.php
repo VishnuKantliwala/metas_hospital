@@ -138,6 +138,60 @@
 
     <!-- Main js -->
     <script src="js/main.js"></script>  
+    <?
+for($i=1 ; $i<=5 ;$i++)
+{
+?>
+<script>
+
+    /* team  member info sliders */
+    var teamMemberInfo<?echo $i?> = $('.team_member_info_slider<?echo $i?>');
+    teamMemberInfo<?echo $i?>.owlCarousel({
+        loop: false,
+        margin: 30,
+        nav: false,
+        autoplay: false,
+        items: 1,
+        dots: true
+    });
+
+    /*team  member image sliders */
+    var teamMemberImage<?echo $i?> = $('.team_member_image_slider<?echo $i?>');
+    teamMemberImage<?echo $i?>.owlCarousel({
+        loop: false,
+        margin: 30,
+        nav: false,
+        autoplay: false,
+        items: 1,
+        dots: true
+    });
+
+    /*team slider thumbnail*/
+    var teamThumbnail<?echo $i?> = $('.team_thumbnail_slider<?echo $i?>');
+    teamThumbnail<?echo $i?>.owlCarousel({
+        items: 3,
+        loop: false,
+        dots: true,
+        center: true
+    })
+    /* custom nav trigger for team slider*/
+    customTrigger(".team_slider_control<?echo $i?> .right_arrow", ".team_slider_control<?echo $i?> .left_arrow", teamMemberImage<?echo $i?>);
+    customTrigger(".team_slider_control<?echo $i?> .right_arrow", ".team_slider_control<?echo $i?> .left_arrow", teamThumbnail<?echo $i?>);
+
+    /* TEAM SLIDER ALL TRANSLATE TOGETHER */
+    function teamTranslated(selectedSlider, target1, target2) {
+        selectedSlider.on('translate.owl.carousel', function (property) {
+            target1.find('.owl-dot:eq(' + property.page.index + ')').click();
+            target2.find('.owl-dot:eq(' + property.page.index + ')').click();
+        });
+    }
+    teamTranslated(teamMemberInfo<?echo $i?>, teamMemberImage<?echo $i?>, teamThumbnail<?echo $i?>);
+    teamTranslated(teamMemberImage<?echo $i?>, teamMemberInfo<?echo $i?>, teamThumbnail<?echo $i?>);
+    teamTranslated(teamThumbnail<?echo $i?>, teamMemberInfo<?echo $i?>, teamMemberImage<?echo $i?>);
+</script>
+<?
+}
+?>
        
         <script src="jsmenu.js"></script>
 

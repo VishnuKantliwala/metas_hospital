@@ -44,23 +44,26 @@ extract($row);
     <section class="about_us reveal fadeIns section-padding">
         <div class="container">
             <div class="about_us_wrapper">
-                <div class="col-md-6 col-sm-6 v_middle">
-                    <div class="image-container">
-                        <div class="image">
-                            <img src="course/big_img/<?echo $image_name?>" alt="<?echo $course_title?>">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 v_middle">
-                   <!-- SECTION TITLE -->
+                <div class="col-md-12 col-sm-12 ">
                     <div class="section_title" style="padding-bottom:5px;">
                         <div class="title">
                             <h1><span class="title_word_2"><?echo $course_title?></span></h1>
                         </div>
                     </div><!-- /SECTION TITLE ENDS -->
+                </div>
+                <div class="col-md-3 col-sm-6 ">
+                    <div class="">
+                        <div class="image">
+                            <img style="width:100%" src="course/big_img/<?echo $image_name?>" alt="<?echo $course_title?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-6 v_middle">
+                   <!-- SECTION TITLE -->
+                    
 
                     <!-- ABOUT US CONTENT-->
-                    <div class="about_us_text">
+                    <div class="single_blog_post  my_desc">
                         <?echo $description ?>
 
                         

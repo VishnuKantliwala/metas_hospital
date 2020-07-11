@@ -142,7 +142,26 @@
     border-bottom: 3px solid #473516 !important;
 }
 
+.my_desc--vtable table tbody tr:first-child  {
+    background-color: white !important;
+    border-bottom: 0px !important;
+}
+
+.my_desc--vtable table tbody tr td:first-child  {
+    background-color: #9f7939 !important;
+    border-bottom: 3px solid #473516 !important;
+    border-right: 3px solid #473516 !important;
+}
+
 .my_desc table tbody tr:first-child td span {
+    color: #fff !important;
+}
+
+.my_desc--vtable table tbody tr:first-child td span {
+    color: #000 !important;
+}
+
+.my_desc--vtable table tbody tr td:first-child span {
     color: #fff !important;
 }
 
@@ -253,6 +272,9 @@
 
 /* If the screen size is 600px or less, set the font-size of <div> to 30px */
 @media only screen and (max-width: 600px) {
+    .my-div-100 {
+        width:100%;
+    }
     .mobile_col_md_8{
         width:100%;
         margin-top: -60px;

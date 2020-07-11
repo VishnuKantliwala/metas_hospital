@@ -139,6 +139,7 @@ function deleteOPD($id){
                                                     <th><input type="checkbox" id="checkall" class="checkall" name="sample"/> Select all</th>
                                                     <th>ID</th>
                                                     <th>Name</th>
+                                                    <th>Doctor</th>
                                                     <th>Edit</th>
                                                     <th>Delete</th>
                                                 </tr>
@@ -148,6 +149,7 @@ function deleteOPD($id){
                                                     <th><input type="checkbox" id="checkall" class="checkall" name="sample"/> Select all</th>
                                                     <th>ID</th>
                                                     <th>Name</th>
+                                                    <th>Doctor</th>
                                                     <th>Edit</th>
                                                     <th>Delete</th>
                                                 </tr>
@@ -166,6 +168,7 @@ function deleteOPD($id){
                                                         <td><input type="checkbox" name="chkbox[]" id="chkbox" class="chkbox"  value="<?echo $opd_id?>"/></td>
                                                         <th><? echo $opd_id; ?></th>
                                                         <td><?php echo $opd_name; ?></td>
+                                                        <td><?php echo $doctor_name; ?></td>
                                                         <td><a href='opd_up.php?opd_id=<?php echo $opd_id ?>&page=<?  if (isset($_GET['page']) && !empty($_GET['page'])) echo $_GET['page'];?>'><i class="fa fa-edit"></i></a></td>
                                                         <td><a href='deleteopd.php?Del=del&id=<?php echo $opd_id ?>&page=<?  if (isset($_GET['page']) && !empty($_GET['page'])) echo $_GET['page'];?>' onClick="return confirm('Are you sure want to delete?');"><i class="fa fa-trash"></i></a></td>
                                                     </tr>

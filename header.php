@@ -388,7 +388,7 @@ if(isset($wid))
                                     </ul>
                                 </div>
                             </div>
-                        <li><a href="#">Blog</a>
+                        <!-- <li><a href="#">Blog</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
@@ -397,7 +397,7 @@ if(isset($wid))
                                         <li><a href="javascript:void(0)">Journal</a>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                         <li><a href="#">Career</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
@@ -449,7 +449,7 @@ if(isset($wid))
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
-                                <li><a href="about.php">Who We Are</a>
+                                <li><a href="who-we-are">Who We Are</a>
                                 <li><a href="administrative-body">Administrative Body</a>
                                 <li><a href="accreditation">Accreditation</a>
                                 <li><a href="#">Corporate</a>
@@ -579,7 +579,7 @@ if(isset($wid))
                             </ul>
                         </div>
                     </div>
-                <li><a href="#">Blog</a>
+                <!-- <li><a href="#">Blog</a>
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
@@ -588,7 +588,7 @@ if(isset($wid))
                                 <li><a href="javascript:void(0)">Journal</a>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 <li><a href="#">Career</a>
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">

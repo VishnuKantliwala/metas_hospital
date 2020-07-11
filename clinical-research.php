@@ -52,7 +52,7 @@ extract($row);
                     </div><!-- /SECTION TITLE ENDS -->
 
                     <!-- ABOUT US CONTENT-->
-                    <div class="about_us_text">
+                    <div class=" single_blog_post  my_desc">
                         <?echo $page_desc ?>
 
                       

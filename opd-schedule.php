@@ -62,7 +62,14 @@ extract($row);
                                                     <li><strong>OPD :</strong> <?echo $opd_name ?></li>
                                                     <li><strong>DOCTOR’S NAME :</strong> <?echo $doctor_name ?></li>
                                                     <li><strong>DAYS :</strong>	<?echo $day1 ?> <strong>TIME :</strong> <?echo $time1 ?> </li>
+                                                    <?
+                                                    if($day2!="")
+                                                    {
+                                                    ?>
                                                     <li><strong>DAYS :</strong>	<?echo $day2 ?> <strong>TIME :</strong> <?echo $time2 ?> </li>
+                                                    <?
+                                                    }
+                                                    ?>
                                                 </ul>
                                             </blockquote> 
                                         </div>

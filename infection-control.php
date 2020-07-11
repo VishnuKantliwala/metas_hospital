@@ -49,7 +49,7 @@ extract($row);
                                 <div class="col-lg-8">
                                     <ul>
                                         <li><a >
-                                                <div class="single_recent_post v_middle" style="width: 100%;">
+                                                <div class="my_desc single_blog_post v_middle" style="width: 100%;padding:10px">
                                                 <?echo $page_desc ?>
                                             </div>
                                         </a></li>

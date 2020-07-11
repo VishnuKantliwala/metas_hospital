@@ -43,7 +43,7 @@ extract($row);
             <div class="row">
 
                 <!-- left blog posts -->
-                <div class="col-md-8 col-sm-8 pull-right">
+                <div class="col-md-8 col-sm-8 pull-right my-div-100" >
                     
                     <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
                         <div class="single_blog_header">
@@ -56,7 +56,8 @@ extract($row);
                         </div>
                     
                         <!-- single blog post -->
-                        <div class="single_blog_post">
+                        <div class=" single_blog_post my_desc my_desc--vtable my_desc__table">
+                            <br/>
                             <?echo $description ?>
                         </div>
                     </div>

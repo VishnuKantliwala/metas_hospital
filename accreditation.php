@@ -6,14 +6,12 @@ $row = $cn->fetchAssoc($sql);
 extract($row);
 ?> 
 
-<div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
-    <div id="divImg">    
-        <h1 class="raleway"><?echo $page_name ?></h1>
-    </div>           
-    <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="page/big_img/<?echo $image?>" height="100%" width="100%" alt="img">
-    </div>            
+<div class="header-div" style="background:url('page/big_img/<?echo $image?>')">
+    <div class="header-div--title">
+        <?echo $page_name ?>
+    </div>
 </div>
+
        
 
 
@@ -61,8 +59,10 @@ extract($row);
                                             if(file_exists('./accreditation_pdf/'.$pdf_list[$i]))
                                             {
                                                 ?>
-                                                <div class="col-md-3" style="   margin-top: 40px;">
-                                                <a class="btn__pdfs" download href="<?echo './accreditation_pdf/'.$pdf_list[$i]?>"><i class="icofont icofont-file-pdf"></i> Donload PDF <?echo $i+1?></a>
+                                                <div class="col-md-3 btn__pdf_container" style="   margin-top: 40px;">
+                                                    <div class="btn__pdfs">
+                                                    <a class="" download href="<?echo './accreditation_pdf/'.$pdf_list[$i]?>"><i class="icofont icofont-file-pdf"></i> <? echo substr($pdf_list[$i], 0, strlen($pdf_list[$i]) - 9) ?></a>
+                                                    </div>
                                                 </div>
                                                 <?
                                             }

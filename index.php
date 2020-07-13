@@ -409,7 +409,7 @@ extract($row);
                           <h3>Covid-19 government of india guidelines</h3>
                       </div>
                       <div class="price_feature">
-                          <p align="justify" style="padding: 0 20px;">The new decade has shown us how vulnerable we are to diseases and how rapidly a new disease can take root and spread...</p>
+                          <p align="justify" style="padding: 0 20px;">The new decade has shown us how vulnerable we are to diseases and how rapidly a new disease can take root...</p>
                       </div>
                       <a href="" class="btn arrow_btn btn_pricing"><span class="btn-text" data-hover="Read More">Read More</span></a>
                   </div>

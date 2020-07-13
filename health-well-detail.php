@@ -19,18 +19,12 @@ $sql = $cn->selectdb("select image from tbl_page where page_id =$page_id");
 $row = $cn->fetchAssoc($sql);
 extract($row);
 ?>
-
-
-<div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
-    <div id="divImg">
-        <h1 class="raleway">
-            <?echo $handw_title ?>
-        </h1>
-    </div>
-    <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="page/big_img/<?echo $image?>" height="100%" width="100%" alt="<?echo $handw_title?>">
+<div class="header-div" style="background:url('page/big_img/<?echo $image?>')">
+    <div class="header-div--title">
+        <?echo $handw_title ?>
     </div>
 </div>
+
 
 
 
@@ -45,7 +39,7 @@ extract($row);
         <div class="row">
 
             <!-- left blog posts -->
-            <div class="col-md-8 col-sm-8 pull-right">
+            <div class="col-md-8 col-sm-8 pull-right mobile_col_md_8">
 
 
                 <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
@@ -63,7 +57,7 @@ extract($row);
 
                     <!-- single blog post -->
                     <div class="single_blog_post my_desc" style="padding:10px">
-                        
+                            <br/>
                             <?echo $description ?>
                         
 

@@ -7,15 +7,11 @@ extract($row);
 ?>
 
 
-<div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
-    <div id="divImg">    
-        <h1 class="raleway"><?echo $page_name ?></h1>
-    </div>           
-    <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="page/big_img/<?echo $image?>"  alt="<?echo $page_name?>">
-    </div>            
+<div class="header-div" style="background:url('page/big_img/<?echo $image?>')">
+    <div class="header-div--title">
+        <?echo $page_name ?>
+    </div>
 </div>
-       
 
 
 

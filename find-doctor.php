@@ -2,7 +2,7 @@
 $page_id = 14;
 include_once("header.php");
 $page = $_GET['page'];
-$page = trim($page, '/');
+// $page = trim($page, '/');
 
 $sql = $cn->selectdb("select * from tbl_page where page_id =$page_id");
 $row = $cn->fetchAssoc($sql);
@@ -21,20 +21,13 @@ extract($row);
         8.START TEAM SECTION
     =================================-->
 <?
-$limit = 5;
-if($page == 1)
-    $offset = 0;
-else
-    $offset = $limit * $page - $limit;
 
+
+$sqlDoctorCategory = $cn->selectdb("SELECT * FROM tbl_doctor_category ORDER BY recordListingID");
+$totRec=$cn->numRows($sqlDoctorCategory);
 $i=0;
-
-$sqlDoctorCategory = $cn->selectdb("SELECT * FROM tbl_doctor_category ORDER BY recordListingID LIMIT $limit OFFSET $offset");
 if( $cn->numRows($sqlDoctorCategory) > 0 )
 {
-    $sqlNoOfPages = $cn->selectdb('SELECT cat_id from tbl_doctor_category');
-    $count = $cn->numRows($sqlNoOfPages);
-    $page_count = ceil($count / $limit);
     while($rowDoctorCategory = $cn->fetchAssoc($sqlDoctorCategory))
     {
         $i++;
@@ -61,7 +54,7 @@ if( $cn->numRows($sqlDoctorCategory) > 0 )
             <div class="row">
                 <div class="team_sliders_wrapper">
                     <div class="col-md-5 col-xs-12 col-sm-push-6 col-md-push-0 col-sm-6 v_middle">
-                        <div class="team_member_info_slider">
+                        <div class="team_member_info_slider<?echo $i?>">
                             <!-- info slider 1 -->
                             <?
                                 $imgs = array();
@@ -129,7 +122,7 @@ if( $cn->numRows($sqlDoctorCategory) > 0 )
                     </div>
 
                     <div class="col-md-4 col-xs-12 col-sm-pull-6 col-md-pull-0 col-sm-6 test v_middle">
-                        <div class="team_member_image_slider">
+                        <div class="team_member_image_slider<?echo $i?>">
                             <?
                                 foreach ($imgs as $img ) 
                                 {
@@ -143,7 +136,7 @@ if( $cn->numRows($sqlDoctorCategory) > 0 )
                         </div>
 
                         <!-- custom team slider control -->
-                        <div class="team_slider_control">
+                        <div class="team_slider_control<?echo $i?>">
                             <div class="left_arrow">
                                 <span class="icofont-long-arrow-left icofont"></span>
                             </div>
@@ -154,7 +147,7 @@ if( $cn->numRows($sqlDoctorCategory) > 0 )
                     </div>
 
                     <div class="col-md-3 navigation_slider col-md-6 col-sm-3 col-md-offset-4 v_middle">
-                        <div class="team_thumbnail_slider">
+                        <div class="team_thumbnail_slider<?echo $i?>">
                             <?
                                 foreach ($imgs as $img ) 
                                 {
@@ -196,86 +189,6 @@ else
 }
 ?>
 
-<?
-if($page_count > 0)
-{
-?>
-<section id="team" class="section-padding">
-<div class="container">
-<div class="row">
-    <div class="col-sm-12">
-        <nav>
-            <ul class="pagination xs-pull-center m-0">
-                <?
-                        
-                $pn = $page;
-                
-                $totalPages = $page_count;
-                $page = $cn->numRows($sqlDoctorCategory);
-                if ( ($pn > 1)) 
-                {
-                echo "<li><a href='find-a-doctor/".($pn-1)."'> < </a></li>"; 
-                }
-                ?>
-                <?
-                if (($pn - 1) > 2) 
-                {
-                echo "<li><a href='find-a-doctor/1'> 1 </a></li>"; 
-                echo "<li ><a href='javacript:void(0)'>...</a></li>";
-                }
-                ?>
-
-                <?
-                for ($i = ($pn - 2); $i <= ($pn + 2); $i ++) 
-                {
-                if ($i < 1)
-                    continue;
-                if ($i > $totalPages)
-                    break;
-                if ($i == $pn) {
-                    $class = "active";
-                } else {
-                    $class = " page-a-link";
-                }
-
-                echo "<li class='".$class."'><a  href='find-a-doctor/".$i."'> ".$i." </a></li>";  
-                }
-                ?>
-
-                <?
-                if (($totalPages - ($pn + 1)) >= 2) 
-                {
-                echo "<li ><a href='javacript:void(0)'>...</a></li>";
-                }
-                ?>
-
-                <?
-                if (($totalPages - ($pn + 2)) > 0) 
-                {
-                    if ($pn == $totalPages) {
-                        $class = "active";
-                    } else {
-                        $class = "page-a-link";
-                    }
-                    echo "<li><a class='".$class."' href='find-a-doctor/".$totalPages."'> ".$totalPages." </a></li>";  
-                }
-                ?>
-
-                <?
-                if ( ($pn < $totalPages)) 
-                {
-                echo "<li><a href='find-a-doctor/".($pn+1)."'> > </a></li>"; 
-                }
-                ?>
-            </ul>
-        </nav>
-    </div>
-</div>
-</div>
-</section>
-<?
-}
-?>
 
 
 
@@ -286,6 +199,8 @@ if($page_count > 0)
 
 
 
-
-
 <?php include 'footer2.php'; ?>
+
+
+
+

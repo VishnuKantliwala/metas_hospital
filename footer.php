@@ -137,7 +137,7 @@
     <script src="js/jquery.camera.min.js"></script>
 
     <!-- Main js -->
-    <script src="js/main.js"></script>  
+    <script src="js/main.js"></script> 
     <?
 for($i=1 ; $i<=5 ;$i++)
 {
@@ -147,7 +147,7 @@ for($i=1 ; $i<=5 ;$i++)
     /* team  member info sliders */
     var teamMemberInfo<?echo $i?> = $('.team_member_info_slider<?echo $i?>');
     teamMemberInfo<?echo $i?>.owlCarousel({
-        loop: false,
+        loop: true,
         margin: 30,
         nav: false,
         autoplay: false,
@@ -158,7 +158,7 @@ for($i=1 ; $i<=5 ;$i++)
     /*team  member image sliders */
     var teamMemberImage<?echo $i?> = $('.team_member_image_slider<?echo $i?>');
     teamMemberImage<?echo $i?>.owlCarousel({
-        loop: false,
+        loop: true,
         margin: 30,
         nav: false,
         autoplay: false,
@@ -170,7 +170,7 @@ for($i=1 ; $i<=5 ;$i++)
     var teamThumbnail<?echo $i?> = $('.team_thumbnail_slider<?echo $i?>');
     teamThumbnail<?echo $i?>.owlCarousel({
         items: 3,
-        loop: false,
+        loop: true,
         dots: true,
         center: true
     })

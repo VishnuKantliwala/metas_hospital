@@ -1,5 +1,3 @@
-
-
 <footer id="footer_area">
     <div class="section-padding">
         <div class="container">
@@ -16,7 +14,7 @@
             
             <div class="col-md-2 col-xs-12 col-sm-3">
                 <div class="footer_column_title">
-                    <h5>Units</h5>
+                    <h5>Hospital</h5>
                 </div>
                 <span class="title_underline"></span>
                 <ul class="quick_link">
@@ -138,11 +136,93 @@
     <script src="js/jquery.camera.min.js"></script>
 
     <!-- Main js -->
-    <script src="js/main.js"></script>  
-       
-        <script src="newjs.js"></script>
+  
+
+
 
 <script>
+
+
+
+function customTrigger(slideNext, slidePrev, targetSlider) {
+        $(slideNext).on('click', function () {
+            targetSlider.trigger('next.owl.carousel');
+        });
+        $(slidePrev).on('click', function () {
+            targetSlider.trigger('prev.owl.carousel');
+        });
+    }
+
+
+<?
+for($i=1 ; $i<=$totRec ;$i++)
+{
+
+  
+?>
+
+    /* team  member info sliders */
+    var teamMemberInfo<?echo $i?> = $('.team_member_info_slider<?echo $i?>');
+    teamMemberInfo<?echo $i?>.owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: false,
+        autoplay: false,
+        items: 1,
+        dots: true
+    });
+
+    /*team  member image sliders */
+    var teamMemberImage<?echo $i?> = $('.team_member_image_slider<?echo $i?>');
+    teamMemberImage<?echo $i?>.owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: false,
+        autoplay: false,
+        items: 1,
+        dots: true
+    });
+
+    /*team slider thumbnail*/
+    var teamThumbnail<?echo $i?> = $('.team_thumbnail_slider<?echo $i?>');
+    teamThumbnail<?echo $i?>.owlCarousel({
+        items: 3,
+        loop: true,
+        dots: true,
+        center: true
+    })
+    /* custom nav trigger for team slider*/
+    customTrigger(".team_slider_control<?echo $i?> .right_arrow", ".team_slider_control<?echo $i?> .left_arrow", teamMemberImage<?echo $i?>);
+    customTrigger(".team_slider_control<?echo $i?> .right_arrow", ".team_slider_control<?echo $i?> .left_arrow", teamThumbnail<?echo $i?>);
+
+
+    /* TEAM SLIDER ALL TRANSLATE TOGETHER */
+    function teamTranslated<?echo $i?>(selectedSlider, target1, target2) {
+        selectedSlider.on('translate.owl.carousel', function (property) {
+            target1.find('.owl-dot:eq(' + property.page.index + ')').click();
+            target2.find('.owl-dot:eq(' + property.page.index + ')').click();
+        });
+    }
+    teamTranslated<?echo $i?>(teamMemberInfo<?echo $i?>, teamMemberImage<?echo $i?>, teamThumbnail<?echo $i?>);
+    teamTranslated<?echo $i?>(teamMemberImage<?echo $i?>, teamMemberInfo<?echo $i?>, teamThumbnail<?echo $i?>);
+    teamTranslated<?echo $i?>(teamThumbnail<?echo $i?>, teamMemberInfo<?echo $i?>, teamMemberImage<?echo $i?>);
+
+
+    <?
+}
+?>
+
+</script>
+
+
+
+
+
+
+<script>
+
+
+
 /*$('#about').hover(function(){
 $('#about').addClass('active');
 }, function(){
@@ -167,6 +247,8 @@ $(document).ready(function() {
     });
 });
 </script>
-
+<script src="js/main.js"></script>  
+       
+<script src="newjs.js"></script>
       </body>  
       </html>

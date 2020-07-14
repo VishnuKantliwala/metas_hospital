@@ -74,7 +74,7 @@
 .header-div--title
 {
     position: absolute;
-    /* top: 30%; */
+    top: 57%;
     background: #9f7939;
     color: #fff;
     font-family: "poppinsRegular",sans-serif;
@@ -422,7 +422,7 @@
         padding-top: 1%;
         padding-bottom: 1%;
         padding-right: 0px;
-        top:auto;
+
         vertical-align: center;
         width: 90vw;
     }
@@ -511,5 +511,12 @@
     }
     .container__image{
         width:100%
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .header-div{
+        background:#222 !important;
     }
 }

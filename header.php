@@ -473,6 +473,8 @@ if(isset($wid))
                                         <div class="menu-display-table-cell">
                                             <ul>
                                                 <li><a href="health-camps">Health Camps</a>
+                                                        <li><a href="health-awareness-programme">Health Awareness Programme</a>
+                                                        <li><a href="rallies">Rally</a>
                                                 <li><a href="total-health-programme">Total Health Programme</a>
 
                                             </ul>

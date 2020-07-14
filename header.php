@@ -102,7 +102,7 @@ if(isset($wid))
 ?>
 
 
-    <title>| Metas Adventist Hospital |
+    <title>| Metas Adventist Hospital ||
         <?echo $row1['meta_tag_title']?>
     </title>
     <meta name="description" content="<?echo $row1['meta_tag_description']?>">

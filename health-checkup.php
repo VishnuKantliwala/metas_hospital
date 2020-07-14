@@ -25,12 +25,12 @@ extract($row);
 <!--================================
         2.START BLOG SECTION
     =================================-->
-    <section id="blog" class="section-padding">
+    <section id="blog" class="section-padding pt-20">
         <div class="container">
             <div class="row">
 
                 <!-- left blog posts -->
-                <div class="col-md-12 col-sm-12 pull-right">
+                <div class="col-md-12 col-sm-12 pull-right" style="width:100%">
                     
                     <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
                         <div class="single_blog_header">
@@ -46,7 +46,7 @@ extract($row);
                         </div>
                     
                         <!-- single blog post -->
-                        <div class="single_blog_post">
+                        <div class="single_blog_post my_desc my_desc__table">
                         <?echo $page_desc ?>
                         </div>
                     </div>

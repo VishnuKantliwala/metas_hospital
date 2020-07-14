@@ -238,6 +238,10 @@
     border-bottom: 3px solid #473516 !important;
 }
 
+.my_desc table tbody tr:first-child td  {
+    background-color: #9f7939 !important;
+}
+
 .my_desc--vtable table tbody tr:first-child  {
     background-color: white !important;
     border-bottom: 0px !important;
@@ -272,7 +276,7 @@
 
 .my_desc__table {
     overflow-x:auto;
-    padding: 5px;
+    padding: 5px 0px;
     margin-bottom: 50px;
 }
   
@@ -364,6 +368,14 @@
     overflow: hidden;
 }
 
+.container__image {
+    width: 250px;
+    margin: 30px 30px 30px 0;
+    float: left;
+  }
+  .container__text {
+    display: inline;
+  }
 
 @media only screen and (min-width: 601px) {
     
@@ -383,6 +395,15 @@
 
 /* If the screen size is 600px or less, set the font-size of <div> to 30px */
 @media only screen and (max-width: 600px) {
+    .pt-20 {
+        padding-top: 20px !important;
+    }
+    .mt-0 {
+        margin-top: 0px !important;
+    }
+    .vbox-mobile {
+        display: block;
+    }
     .widget_heading {
         background: none;
     }
@@ -487,5 +508,8 @@
     .btn__pdfs { 
         padding: 26px 100px;
 
+    }
+    .container__image{
+        width:100%
     }
 }

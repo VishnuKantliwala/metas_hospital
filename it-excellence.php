@@ -23,13 +23,13 @@ extract($row);
      <!--================================
         2.START BLOG SECTION
     =================================-->
-    <section id="blog" class="section-padding">
+    <section id="blog" class="section-padding pt-20">
         <div class="container">
             <div class="row">
 
                 <div class="col">
                     
-                    <div class="widget reveal animated" data-reveal-anim="fadeInRight">
+                    <div class="widget reveal animated mt-0" data-reveal-anim="fadeInRight">
                         <div class="widget_heading">
                             <h4><?echo $page_name ?></h4>
                         </div>

@@ -1,26 +1,23 @@
 
 <?
-$page_id = 18;
+$page_id = 34;
 include_once("header.php");
 $sql = $cn->selectdb("select extra_icon from tbl_addmore where page_id =$page_id");
 $row = $cn->fetchAssoc($sql);
 extract($row);
 ?> 
-        <?
-        $sql = $cn->selectdb("select * from tbl_page where page_id =$page_id");
-        $row = $cn->fetchAssoc($sql);
-        extract($row);
-        ?>
-
-
+<?
+$sql = $cn->selectdb("select * from tbl_page where page_id =$page_id");
+$row = $cn->fetchAssoc($sql);
+extract($row);
+?>
+ 
 
 <div class="header-div" style="background:url('icon/big_img/<?echo $extra_icon?>')">
     <div class="header-div--title">
         <?echo $page_name ?>
     </div>
 </div>
-       
-
 
 
 
@@ -33,7 +30,7 @@ extract($row);
             <div class="row">
 
                 <!-- left blog posts -->
-                <div class="col-md-12 col-sm-12 pull-right">
+                <div class="col-md-12 col-sm-12 pull-right" style="width:100%">
                     
                     <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
                         <div class="single_blog_header">
@@ -49,8 +46,7 @@ extract($row);
                         </div>
                     
                         <!-- single blog post -->
-                        <div class="single_blog_post">
-                            <br/>
+                        <div class="single_blog_post my_desc my_desc__table">
                         <?echo $page_desc ?>
                         </div>
                     </div>

@@ -21,9 +21,9 @@ extract($row);
 <!--================================
         2.START BLOG SECTION
     =================================-->
-<section id="blog" class="section-padding">
+<section id="blog" class="section-padding pt-20">
     <div class="container">
-        <div class="row vbox">
+        <div class="row vbox vbox-mobile">
             <div class="col-md-offset-3"></div>
             <div class="col-md-6 ddl__container">
 

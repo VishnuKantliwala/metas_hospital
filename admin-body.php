@@ -15,7 +15,7 @@ extract($row);
 
 <!-- MAIN PART -->
 
-<section id="testimonial_area" class="section-padding">
+<section id="testimonial_area" class="section-padding pt-20">
     <div class="container">
 
 

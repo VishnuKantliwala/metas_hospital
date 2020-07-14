@@ -30,6 +30,8 @@ RewriteRule ^nurses-award/? nurseaward.php [L]
 RewriteRule ^doctors-award/? doctoraward.php [L]
 
 RewriteRule ^health-camps/? health-checkup.php [L]
+RewriteRule ^health-awareness-programme/? health-awareness.php [L]
+RewriteRule ^rallies/? rally.php [L]
 RewriteRule ^total-health-programme/? total-health-program.php [L]
 
 RewriteRule ^patient-safety/? patient-safety.php [L]

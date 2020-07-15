@@ -20,11 +20,11 @@ if ($cn->numRows($sql1) > 0)
         $sqlHaveSubCat = $cn->selectdb('select cat_id from tbl_project_category where cat_parent_id ='.$cat_id);
         if( $cn->numRows($sqlHaveSubCat) > 0 )
         {
-            $href = "project/".urlencode($slug);    
+            $href = "project-category/".urlencode($slug);    
         }
         else
         {
-            $href = "project/".urlencode($slug);
+            $href = "projects/".urlencode($slug);
         }
         
         

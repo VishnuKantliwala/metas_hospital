@@ -399,7 +399,7 @@ if(isset($wid))
                                     </ul>
                                 </div>
                             </div>
-                            <li class="no-menu"><a href="#">Project</a>
+                            <li class="no-menu"><a href="project-category">Project</a>
                             <div class="menu-display-table"></div>
                         </li>
                         <li><a href="#">Blog</a>
@@ -602,7 +602,7 @@ if(isset($wid))
                             </ul>
                         </div>
                     </div>
-                    <li class="no-menu"><a href="#">Project</a>
+                    <li class="no-menu"><a href="project-category">Project</a>
                             <div class="menu-display-table"></div>
                         </li>
                 <li><a href="#">Blog</a>

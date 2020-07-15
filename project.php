@@ -2,7 +2,8 @@
 $page_id = 35;
 if(!isset($_GET['projectid']))
 {
-    $gcid = 0;
+    echo "<script>window.open('./404.php','_SELF')</script>";
+    exit();
 }
 else
 {
@@ -30,6 +31,10 @@ else
 }
 ?>
 
+<!--gallery popup-->
+<link rel="stylesheet" href="dist/css/lightbox.min.css">
+
+
 
 <div class="header-div" style="background:url('page/big_img/<?echo $image?>')">
     <div class="header-div--title">
@@ -40,7 +45,6 @@ else
 
 
 
-<!-- MAIN PART -->
 
 <section id="portfolio" class="section-padding">
     <div class="container">
@@ -58,12 +62,12 @@ else
 </section>
 
 
-<!-- MAIN PART END -->
 
 
-
-
-
+<script src="dist/js/lightbox-plus-jquery.min.js"></script>
 <?php include 'footer2.php'; ?>
-<script src="js/scroll.js" id="helper" cat_id="<?echo $cat_id?>" file-name="getprojectcategory.php" limit="20"
+
+<script src="js/scroll.js" id="helper" cat_id="<?echo $cat_id?>" file-name="getproject.php" limit="20"
     pid="0"  ></script>
+<!--gallery popup-->
+

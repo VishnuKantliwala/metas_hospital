@@ -102,7 +102,7 @@ if(isset($wid))
 ?>
 
 
-    <title>| Metas Adventist Hospital ||
+    <title>| Metas Adventist Hospital |
         <?echo $row1['meta_tag_title']?>
     </title>
     <meta name="description" content="<?echo $row1['meta_tag_description']?>">
@@ -276,13 +276,13 @@ if(isset($wid))
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
-                                                        <li><a href="health-camps">Health Camps</a>
+                                                        <li><a href="health-camps">Health Check Up Camps</a>
                                                         <li><a href="health-awareness-programme">Health Awareness Programme</a>
                                                         <li><a href="rallies">Rally</a>
                                                         
                                                         
-                                                        <li><a href="total-health-programme">Total Health
-                                                                Programme</a>
+                                                        <!-- <li><a href="total-health-programme">Total Health
+                                                                Programme</a> -->
 
                                                     </ul>
                                                 </div>
@@ -309,7 +309,14 @@ if(isset($wid))
                                             </div>
 
                                         <!-- <li><a href="#">Lab Reports</a> -->
-                                        <li><a href="international-patients">International Patients</a>
+                                        <li><a href="javascript:void(0)">International Patients</a>
+                                            <div class="menu-display-table">
+                                                <div class="menu-display-table-cell">
+                                                    <ul>
+                                                        <li><a href="international-patients">International Patient Safely Protocol</a>
+                                                    </ul>
+                                                </div>
+                                            </div>
 
 
                                         <li><a href="#">Chaplaincy</a>
@@ -392,7 +399,7 @@ if(isset($wid))
                                     </ul>
                                 </div>
                             </div>
-                        <!-- <li><a href="#">Blog</a>
+                        <li><a href="#">Blog</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
@@ -401,7 +408,7 @@ if(isset($wid))
                                         <li><a href="javascript:void(0)">Journal</a>
                                     </ul>
                                 </div>
-                            </div> -->
+                            </div>
                         <li><a href="#">Career</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
@@ -472,10 +479,10 @@ if(isset($wid))
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
-                                                <li><a href="health-camps">Health Camps</a>
+                                                <li><a href="health-camps">Health Check Up Camps</a>
                                                         <li><a href="health-awareness-programme">Health Awareness Programme</a>
                                                         <li><a href="rallies">Rally</a>
-                                                <li><a href="total-health-programme">Total Health Programme</a>
+                                                <!-- <li><a href="total-health-programme">Total Health Programme</a> -->
 
                                             </ul>
                                         </div>
@@ -502,7 +509,14 @@ if(isset($wid))
                                     </div>
 
                                 <!-- <li><a href="#">Lab Reports</a> -->
-                                <li><a href="international-patients">International Patients</a>
+                                <li><a href="javascript:void(0)">International Patients</a>
+                                    <div class="menu-display-table">
+                                                <div class="menu-display-table-cell">
+                                                    <ul>
+                                                        <li><a href="international-patients">International Patient Safely Protocol</a>
+                                                    </ul>
+                                                </div>
+                                            </div>
 
 
                                 <li><a href="#">Chaplaincy</a>
@@ -585,7 +599,7 @@ if(isset($wid))
                             </ul>
                         </div>
                     </div>
-                <!-- <li><a href="#">Blog</a>
+                <li><a href="#">Blog</a>
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
@@ -594,7 +608,7 @@ if(isset($wid))
                                 <li><a href="javascript:void(0)">Journal</a>
                             </ul>
                         </div>
-                    </div> -->
+                    </div>
                 <li><a href="#">Career</a>
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">

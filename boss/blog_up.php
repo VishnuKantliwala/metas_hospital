@@ -262,7 +262,7 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                                         </div>
                                     </div>
                                     
-                                    <div class="form-group" style="display:none">
+                                    <div class="form-group" >
                                         <label for="inputEmail3" class="col-sm-12 control-label">Multiple Images</label>
                                         <input type="hidden" class="form-control" id="frontimg1" name="frontimg1" placeholder="Multiple Images" value="<? echo $row['multi_images']; ?>">
                                         <div class="col-sm-4">

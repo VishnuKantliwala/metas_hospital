@@ -29,10 +29,18 @@ if ($cn->numRows($sql1) > 0)
                     <div class="single_recent_post v_middle" style="width: 100%;">
                         <?echo $description ?>
                         <span class="recent_post_meta">Date of Event: <?echo $date ?></span>
+                        
+                           
+                        
                     </div>
-                </a></li>
+                </a>
+                
+                </li>
 
         </ul>
+        <div class="read_more my_read_more">
+            <a href="<?echo $href?>">Read More <span class="icofont icofont-long-arrow-right"></span></a>
+        </div>
     </div>
 </div>
 

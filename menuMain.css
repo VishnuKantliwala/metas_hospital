@@ -1006,9 +1006,9 @@ ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a:after,
 .ds-LG_GB_mobile-desktop-logo,
 .mobile-logo-btn,
 .sticky-mobile-brandlg {
-    width: 181px;
-    height: 34px;
-    background-position: -138px -137px
+    width: 213px;
+    height: 60px;
+    background-position: -90px -147px
 }
 
 .dsb-LG_GB_mobile-desktop-logo:before {
@@ -4386,7 +4386,7 @@ html.no-touch .round-btn-icon:hover div:after {
 .sticky-mobile-brandlg {
     display: none;
     position: absolute;
-    top: 20px;
+    top: 12px;
     left: 50%;
     margin-left: -90px
 }

@@ -1,0 +1,306 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.1/assets/owl.carousel.css">
+<link rel="stylesheet" href="https://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.1/owl.carousel.min.js"></script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
+.teams{
+	  font-family: 'Raleway', sans-serif;
+}
+.teams .shadow-effect {
+		    background: #fff;
+		    padding: 20px;
+		    border-radius: 20px;
+		    text-align: center;
+	border:1px solid #ECECEC;
+		    box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
+		}
+		
+		#customers-teams .item {
+			 height:470px !important;
+		    text-align: center;
+		    padding: 50px;
+				margin-bottom:80px;
+		    opacity: .2;
+		    -webkit-transform: scale3d(0.8, 0.8, 1);
+		    transform: scale3d(0.8, 0.8, 1);
+		    -webkit-transition: all 0.3s ease-in-out;
+		    -moz-transition: all 0.3s ease-in-out;
+		    transition: all 0.3s ease-in-out;
+		}
+#customers-teams .item p{
+	font-size:12px;
+}
+#customers-teams .item h2{
+	font-size:28px !important;
+	font-weight:500 !important;
+}
+#customers-teams .item .title{
+	font-size:14px;
+}
+#pastexp{
+	margin-top:20px;
+}
+#customers-teams .item h5{
+	font-size:15px !important;
+	font-weight:700 !important;
+}
+		#customers-teams .owl-item.active.center .item {
+		    opacity: 1;
+		    -webkit-transform: scale3d(1.0, 1.0, 1);
+		    transform: scale3d(1.0, 1.0, 1);
+		}
+		.teams .owl-carousel .owl-item .img-circle {
+		    transform-style: preserve-3d;
+		    max-width: 170px;
+    		margin: 0 auto 17px;
+			  transition: transform .5s;
+		}
+.teams .owl-carousel .owl-item .img-circle:hover {
+		    transform: scale(0.9);
+		}
+		#customers-teams.owl-carousel .owl-dots .owl-dot.active span,
+#customers-teams.owl-carousel .owl-dots .owl-dot:hover span {
+		    background: rgba(215,67,77,0.8);
+		    transform: translate3d(0px, -50%, 0px) scale(0.7);
+		}
+#customers-teams.owl-carousel .owl-dots{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+#customers-teams.owl-carousel .owl-dots .owl-dot{
+	display: inline-block;
+}
+		#customers-teams.owl-carousel .owl-dots .owl-dot span {
+		    background: rgba(215,67,77,0.8);
+		    display: inline-block;
+		    height: 20px;
+		    margin: 0 2px 5px;
+			  margin-top:50px;
+		    transform: translate3d(0px, -50%, 0px) scale(0.3);
+		    transform-origin: 50% 50% 0;
+		    transition: all 250ms ease-out 0s;
+		    width: 20px;
+			  outline: none;
+				border-radius:50% !important;
+		}
+.owl-dot, .owl-dot:active, .owl-dot:focus { 
+	outline: 0 !important;
+}
+
+@media only screen and (max-width: 1000px){
+	#customers-teams.owl-carousel .owl-dots .owl-dot span {
+	height:20px;
+	width:20px;
+	margin-top:30px;
+	}
+}
+
+
+ #teamsocial {
+   align-items: center;
+	 justify-content: center;
+	 display: flex;
+	 margin:10px auto;
+	 margin-top:20px;
+  
+}
+  #teamsocial #socialicon {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 position: relative;
+	 width:40px;
+	 height: 40px;
+	 margin: 0 0.5rem;
+	 border-radius: 50%;
+	 cursor: pointer;
+	 font-size: 1.5rem;
+	 text-decoration: none;
+	 transition: all 0.3s ease;
+	
+}
+  #teamsocial #socialicon:hover {
+	 font-size: 2rem;
+	 width:50px;
+	 height: 50px;
+}
+ 
+
+
+
+</style>
+
+<!-- teams -->
+<section class="teams" style="width:100%;">
+	<div class="container">
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="customers-teams" class="owl-carousel">
+
+            <!--team 1 -->
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="http://homedroidtech.com/assets/images/team/ankurgupta.jpeg" alt="ankurgupta">
+                <h2>Ankur Gupta</h2>
+								<p class="title">Director, Founder & CEO</p>
+									<div id="pastexp">
+										<h5 id="pastexphead">RESEARCH SCHOLAR</h5>
+										<p>Dept. of CSE</p>
+										<p style="margin-top:-5px;">Indian Institute of Technology (IIT) Roorkee</p>
+									</div>
+										<div class="social-icons" id="teamsocial">
+														<a class="social-icon social-icon--facebook" id="socialicon">
+															<img src="https://i.imgur.com/c9JxYPS.png">
+														</a>
+														
+														<a class="social-icon social-icon--twitter" id="socialicon">
+															<img src="https://i.imgur.com/VHB4APa.png">
+														</a>
+														<a class="social-icon social-icon--linkedin" id="socialicon">
+															<img src="https://i.imgur.com/egfJ4V2.png">
+														</a>
+														
+														<a class="social-icon social-icon--instagram" id="socialicon">
+															<img src="https://i.imgur.com/cgH07pQ.png">
+														</a>
+														
+
+									</div>  <!--Social Icons End Here-->
+								
+								
+								
+								
+								
+								
+              </div>
+           
+            </div>
+            <!--END OF team 1 -->
+						
+						
+						
+                       <!--team 2 -->
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="http://homedroidtech.com/assets/images/team/sushilgupta.jpeg" alt="ankurgupta">
+                <h2>Sushil Gupta</h2>
+								<p class="title">Co-Founder & Managing Director</p>
+									<div id="pastexp">
+										<h5 id="pastexphead">EMBEDDED EXPERT</h5>
+										<p>20+ Years of Experience</p>
+										<p style="margin-top:-5px;">Businessman</p>
+									</div>
+										<div class="social-icons" id="teamsocial">
+														<a class="social-icon social-icon--facebook" id="socialicon">
+															<img src="https://i.imgur.com/c9JxYPS.png">
+														</a>
+														
+														<a class="social-icon social-icon--twitter" id="socialicon">
+															<img src="https://i.imgur.com/VHB4APa.png">
+														</a>
+														<a class="social-icon social-icon--linkedin" id="socialicon">
+															<img src="https://i.imgur.com/egfJ4V2.png">
+														</a>
+														
+														<a class="social-icon social-icon--instagram" id="socialicon">
+															<img src="https://i.imgur.com/cgH07pQ.png">
+														</a>
+														
+
+									</div>  <!--Social Icons End Here-->
+								
+								
+								
+								
+								
+								
+              </div>
+           
+            </div>
+            <!--END OF team 2 -->
+						
+						
+						
+                       <!--team 3 -->
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="http://homedroidtech.com/assets/images/team/parveen.jpeg" alt="ankurgupta">
+                <h2>Parveen Kumar</h2>
+								<p class="title">Member, Technical Advisory Board</p>
+									<div id="pastexp">
+										<h5 id="pastexphead">ASSISTANT PROFESSOR</h5>
+										<p>Dept. of CSE</p>
+										<p style="margin-top:-5px;">National Institute of Technology (NIT) Uttarakhand</p>
+									</div>
+										<div class="social-icons" id="teamsocial">
+														<a class="social-icon social-icon--facebook" id="socialicon">
+															<img src="https://i.imgur.com/c9JxYPS.png">
+														</a>
+														
+														<a class="social-icon social-icon--twitter" id="socialicon">
+															<img src="https://i.imgur.com/VHB4APa.png">
+														</a>
+														<a class="social-icon social-icon--linkedin" id="socialicon">
+															<img src="https://i.imgur.com/egfJ4V2.png">
+														</a>
+														
+														<a class="social-icon social-icon--instagram" id="socialicon">
+															<img src="https://i.imgur.com/cgH07pQ.png">
+														</a>
+														
+
+									</div>  <!--Social Icons End Here-->
+								
+								
+								
+								
+								
+								
+              </div>
+           
+            </div>
+            <!--END OF team 3 -->
+           
+						
+						
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- END OF teams -->
+
+    //Team Slider
+
+  <script>
+		        $('#customers-teams').owlCarousel({
+		            loop: true,
+		            center: true,
+		            items: 3,
+		            margin: 0,
+		            autoplay: true,
+		            dots:true,
+		            autoplayTimeout: 4500,
+							  checkVisibility: true,
+		            responsive: {
+		              0: {
+		                items: 1
+		              },
+		              768: {
+		                items: 2
+		              },
+		              1170: {
+		                items: 3
+		              }
+		            }
+		        });
+            </script>

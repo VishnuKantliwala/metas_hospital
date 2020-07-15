@@ -18,9 +18,9 @@
                 </div>
                 <span class="title_underline"></span>
                 <ul class="quick_link">
-                    <li><a href="#">School</a></li>
-                    <li><a href="#">College</a></li>
-                    <li><a href="#">Hospital</a></li>
+                    <li><a href="#">Surat</a></li>
+                    <li><a href="#">Nuzvid</a></li>
+                    <li><a href="#">Ranchi</a></li>
                     
                 </ul>
             </div>
@@ -139,80 +139,40 @@
   
 
 
-
+<?
+if($page_id == 14){
+for($i=1 ; $i<=$totRec ;$i++)
+{ 
+?>
 <script>
-
-
-
-function customTrigger(slideNext, slidePrev, targetSlider) {
-        $(slideNext).on('click', function () {
-            targetSlider.trigger('next.owl.carousel');
-        });
-        $(slidePrev).on('click', function () {
-            targetSlider.trigger('prev.owl.carousel');
-        });
-    }
-
+		        $('#customers-teams<?echo $i; ?>').owlCarousel({
+		            loop: true,
+		            center: true,
+		            items: 3,
+		            margin: 0,
+		            // autoplay: true,
+		          dots:false,
+                    nav:true,
+                    navText: ["<i class='icofont icofont-long-arrow-left' aria-hidden='true'></i>", "<i class='icofont icofont-long-arrow-right' aria-hidden='true'></i>"],
+		            autoplayTimeout: 4500,
+							  checkVisibility: true,
+		            responsive: {
+		              0: {
+		                items: 1
+		              },
+		              768: {
+		                items: 2
+		              },
+		              1170: {
+		                items: 3
+		              }
+		            }
+		        });
+            </script>
 
 <?
-for($i=1 ; $i<=$totRec ;$i++)
-{
-
-  
+}}
 ?>
-
-    /* team  member info sliders */
-    var teamMemberInfo<?echo $i?> = $('.team_member_info_slider<?echo $i?>');
-    teamMemberInfo<?echo $i?>.owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: false,
-        autoplay: false,
-        items: 1,
-        dots: true
-    });
-
-    /*team  member image sliders */
-    var teamMemberImage<?echo $i?> = $('.team_member_image_slider<?echo $i?>');
-    teamMemberImage<?echo $i?>.owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: false,
-        autoplay: false,
-        items: 1,
-        dots: true
-    });
-
-    /*team slider thumbnail*/
-    var teamThumbnail<?echo $i?> = $('.team_thumbnail_slider<?echo $i?>');
-    teamThumbnail<?echo $i?>.owlCarousel({
-        items: 3,
-        loop: true,
-        dots: true,
-        center: true
-    })
-    /* custom nav trigger for team slider*/
-    customTrigger(".team_slider_control<?echo $i?> .right_arrow", ".team_slider_control<?echo $i?> .left_arrow", teamMemberImage<?echo $i?>);
-    customTrigger(".team_slider_control<?echo $i?> .right_arrow", ".team_slider_control<?echo $i?> .left_arrow", teamThumbnail<?echo $i?>);
-
-
-    /* TEAM SLIDER ALL TRANSLATE TOGETHER */
-    function teamTranslated<?echo $i?>(selectedSlider, target1, target2) {
-        selectedSlider.on('translate.owl.carousel', function (property) {
-            target1.find('.owl-dot:eq(' + property.page.index + ')').click();
-            target2.find('.owl-dot:eq(' + property.page.index + ')').click();
-        });
-    }
-    teamTranslated<?echo $i?>(teamMemberInfo<?echo $i?>, teamMemberImage<?echo $i?>, teamThumbnail<?echo $i?>);
-    teamTranslated<?echo $i?>(teamMemberImage<?echo $i?>, teamMemberInfo<?echo $i?>, teamThumbnail<?echo $i?>);
-    teamTranslated<?echo $i?>(teamThumbnail<?echo $i?>, teamMemberInfo<?echo $i?>, teamMemberImage<?echo $i?>);
-
-
-    <?
-}
-?>
-
-</script>
 
 
 

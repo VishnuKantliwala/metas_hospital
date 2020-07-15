@@ -1,6 +1,14 @@
 <?php 
 $page_id = 1;
 include 'header.php'; ?>
+
+<style>
+    @media only screen and (max-width: 600px) {
+        #divlogo{
+            display:none;
+        }
+    }
+</style>
 <div class="hero-image-area">
   
     

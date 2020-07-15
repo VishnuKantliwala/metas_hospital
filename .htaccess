@@ -60,6 +60,12 @@ RewriteRule ^galleries/(.*)/? gallery_category.php?gcid=$1 [L]
 RewriteRule ^galleries/? gallery_category.php [L]
 RewriteRule ^gallery-detail/(.*)/? gallery.php?gcid=$1 [L]
 
+
+RewriteRule ^project/(.*)/? project_category.php?projectid=$1 [L]
+RewriteRule ^project/? project_category.php [L]
+RewriteRule ^project-detail/(.*)/? project.php?projectid=$1 [L]
+
+
 RewriteRule ^videos/? video.php [L]
 
 RewriteRule ^centre-of-excellence/(.*)/? service.php?sid=$1 [L]

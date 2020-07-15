@@ -16,7 +16,7 @@ extract($row);
 ?>
 
 <?
-$sqlGalleryCat = $cn->selectdb("select cat_name, cat_id from tbl_gallery_category where slug like '%".$gcid."%'" );
+$sqlGalleryCat = $cn->selectdb("select cat_name, cat_id from tbl_project_category where slug like '%".$gcid."%'" );
 if( $cn->numRows($sqlGalleryCat) > 0 )
 {
     $rowGalleryCat = $cn->fetchAssoc($sqlGalleryCat);
@@ -26,7 +26,7 @@ if( $cn->numRows($sqlGalleryCat) > 0 )
 else
 {
     $cat_id = 0;
-    $cat_name = "Gallery";
+    $cat_name = "Project";
 }
 ?>
 

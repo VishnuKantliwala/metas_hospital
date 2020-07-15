@@ -9,7 +9,7 @@ $offset = (intval($_GET['offset']) != 0 ) ? $_GET['offset'] : 0;
 
 $cat_id = $_GET['cat_id'];
 
-$sql1 = $cn->selectdb("select * from tbl_gallery_category where cat_parent_id = ".$cat_id."   order by recordListingID DESC LIMIT $limit OFFSET $offset");
+$sql1 = $cn->selectdb("select * from tbl_project_category where cat_parent_id = ".$cat_id."   order by recordListingID DESC LIMIT $limit OFFSET $offset");
 
 if ($cn->numRows($sql1) > 0) 
 {
@@ -17,19 +17,19 @@ if ($cn->numRows($sql1) > 0)
     {
         extract($row);
 
-        $sqlHaveSubCat = $cn->selectdb('select cat_id from tbl_gallery_category where cat_parent_id ='.$cat_id);
+        $sqlHaveSubCat = $cn->selectdb('select cat_id from tbl_project_category where cat_parent_id ='.$cat_id);
         if( $cn->numRows($sqlHaveSubCat) > 0 )
         {
-            $href = "galleries/".urlencode($slug);    
+            $href = "project/".urlencode($slug);    
         }
         else
         {
-            $href = "gallery-detail/".urlencode($slug);
+            $href = "project/".urlencode($slug);
         }
         
         
         if($cat_image != "")
-            $src = "gallerycategory/big_img/".$cat_image;
+            $src = "projectcategory/big_img/".$cat_image;
         else 
             $src = "./images/sample.jpg";
 

@@ -312,31 +312,31 @@ extract($row);
                       <!-- slider 1 -->
                       <div class="single_testimonial">
                           <div class="images">
-                              <img src="images/dr1.jpg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
+                              <img src="images/dr/1.jpeg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
                           </div>
                           <h4>DR.ANURAG BANKA</h4>
                           <span>OPHTHALMOLOGISTS</span>
                       </div>
                       <div class="single_testimonial">
                           <div class="images">
-                              <img src="images/dr2.jpg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
+                              <img src="images/dr/2.jpeg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
                           </div>
-                          <h4>DR. RAMESH SURATI</h4>
-                          <span>GENERAL PHYSICIAN</span>
+                          <h4>DR. AKSHAT KHEMKA</h4>
+                          <span>OPHTHALMOLOGISTS</span>
                       </div>
                       <div class="single_testimonial">
                           <div class="images">
-                              <img src="images/dr3.jpg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
+                              <img src="images/dr/3.jpeg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
                           </div>
-                          <h4>DR. SANJAY DHAR</h4>
-                          <span>ENT SURGEON</span>
+                          <h4>DR. N.J. SHAH</h4>
+                          <span>GYNAECOLOGY</span>
                       </div>
                       <div class="single_testimonial">
                           <div class="images">
-                              <img src="images/dr4.jpg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
+                              <img src="images/dr/4.jpeg" alt="" style="border-bottom: 2px solid #996c2b;border-radius: 25px;">   
                           </div>
-                          <h4>DR. PARTHIV DESAI</h4>
-                          <span>NEURO – PHYSICIAN</span>
+                          <h4>DR. YUVRAJ SINH</h4>
+                          <span>ANAESTHETIST</span>
                       </div>
 
                      

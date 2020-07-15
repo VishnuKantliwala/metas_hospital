@@ -219,7 +219,7 @@ else{
                                         </div>
                                     </div>
                                     
-                                    <div class="form-group" style="display:none">
+                                    <div class="form-group" >
                                         <label for="inputEmail3" class="col-sm-12 control-label">Multiple Images</label>
                                         <div class="col-sm-4">
                                             <input type="file" id="image_title" name="image_title[]" multiple class="dropify"/>

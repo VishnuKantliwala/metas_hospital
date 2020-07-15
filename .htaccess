@@ -52,6 +52,7 @@ RewriteRule ^blogs/? blog.php [L]
 
 RewriteRule ^clinical-research/? clinical-research.php [L]
 
+RewriteRule ^events/(.*)/? event-detail.php?eid=$1 [L]
 RewriteRule ^events/? event.php [L]
 
 

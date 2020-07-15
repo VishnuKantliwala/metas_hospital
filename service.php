@@ -66,7 +66,7 @@ extract($row);
                         </div>
                     
                         <!-- single blog post -->
-                        <div class="single_blog_post my_desc my_desc__table">
+                        <div class="single_blog_post my_desc my_desc__table pl-10">
                             <br/>
                             <?echo $description ?>
                         </div>

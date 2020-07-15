@@ -19,14 +19,12 @@ $sql = $cn->selectdb("select image from tbl_page where page_id =$page_id");
 $row = $cn->fetchAssoc($sql);
 extract($row);
 ?>
-<div class="hero-image-area" id="imgBreadcum1" style="height: 40vh;">
-    <div id="divImg">
-        <h1 class="raleway">
-            <?echo $blog_name ?>
-        </h1>
-    </div>
-    <div id="imgBreadcum2" style="height: 40vh;">
-        <img src="page/big_img/<?echo $image?>" height="100%" width="100%" alt="<?echo $blog_name?>">
+<!--gallery popup-->
+<link rel="stylesheet" href="dist/css/lightbox.min.css">
+
+<div class="header-div" style="background:url('page/big_img/<?echo $image?>')">
+    <div class="header-div--title">
+        <?echo $blog_name ?>
     </div>
 </div>
 
@@ -59,6 +57,31 @@ extract($row);
                         </div>
                     
                         <!-- single blog post -->
+                        <div class="row">
+                            
+                        <?
+                        if($multi_images != "")
+                        {
+                            $imgs=explode(",",$multi_images);
+                            for($i=0;$i<count($imgs)-1;$i++)
+                            {
+                                $src="blogF/big_img/". $imgs[$i];
+                        ?>
+                        
+                        <div class="col-md-4 col-sm-6 grid_item branding design">
+                            <div class="single_portfoilo_item">
+                                <a class="example-image-link" data-lightbox="example-set" href="<?echo $src?>"><span data-gall="portfolio" data-href="<?echo $src?>" class="venobox"></span></a>
+                                <div class="portfolio_image">
+                                    <img src="<?echo $src?>" alt="<?echo $blog_name?>" class="gallery_cat_img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <?
+                            }
+                        }
+                        ?>
+                        </div>
                         <div class="single_blog_post">
                             <?echo $description ?>
                         

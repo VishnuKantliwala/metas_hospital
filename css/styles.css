@@ -376,6 +376,12 @@
   .container__text {
     display: inline;
   }
+  .my_read_more{
+      padding-left: 20px;
+  }
+  .pl-10 {
+      padding-left: 10px;
+  }
 
 @media only screen and (min-width: 601px) {
     

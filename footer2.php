@@ -101,10 +101,14 @@
     
     <!-- bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
+
+    
     
     <!-- jquery easing 1.3 -->
     <script src="js/jquery.easing1.3.js"></script>
     
+    
+
     <!-- Owl carousel js-->
     <script src="js/owl.carousel.min.js"></script>
     
@@ -134,6 +138,15 @@
 
     <!-- jquery camera slider js -->
     <script src="js/jquery.camera.min.js"></script>
+
+    <?
+    if($page_id ==17 || $page_id == 33 || $page_id == 34 || $page_id == 30 || $page_id == 28)
+    {
+    ?>
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+    <?
+    }
+    ?>
 
     <!-- Main js -->
   

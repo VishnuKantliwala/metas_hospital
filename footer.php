@@ -15,13 +15,13 @@
             
             <div class="col-md-2 col-xs-12 col-sm-3">
                 <div class="footer_column_title">
-                    <h5>Units</h5>
+                    <h5>Hospital</h5>
                 </div>
                 <span class="title_underline"></span>
                 <ul class="quick_link">
-                    <li><a href="#">School</a></li>
-                    <li><a href="#">College</a></li>
-                    <li><a href="#">Hospital</a></li>
+                    <li><a href="#">Surat</a></li>
+                    <li><a href="#">Nuzvid</a></li>
+                    <li><a href="#">Ranchi</a></li>
                     
                 </ul>
             </div>
@@ -44,6 +44,9 @@
                  
                    <li>
                         <span class="icofont icofont-envelope"></span><p>metas1923@gmail.com</p>
+                   </li>
+                   <li>
+                        <span class="icofont icofont-envelope"></span><p>mahs@metasofsda.in</p>
                    </li>
                 </ul>
                 <div class="footer_social_links">

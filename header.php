@@ -173,8 +173,8 @@ if(isset($wid))
     }
     else
     {
-        $helpline_no = "298-844-0468";
-        $landline_no = "298-844-0468";
+        $helpline_no = "96245-55777";
+        $landline_no = "0261-7160-300";
     }
   }
   ?>

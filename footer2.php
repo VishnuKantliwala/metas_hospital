@@ -44,6 +44,9 @@
                    <li>
                         <span class="icofont icofont-envelope"></span><p>metas1923@gmail.com</p>
                    </li>
+                   <li>
+                        <span class="icofont icofont-envelope"></span><p>mahs@metasofsda.in</p>
+                   </li>
                 </ul>
                 <div class="footer_social_links">
                     <ul>

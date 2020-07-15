@@ -99,39 +99,38 @@ $con->connectdb();
 		 $catID.= $_POST['mulradio'][$attributeKey].",";
 	 } //foreach
 	 $RES = $con->insertdb("INSERT INTO `tbl_project` (
-						 `project_name` ,
-						 `description` ,
-						 `cat_id`,
-						 `project_image`,
-						 `pdf_file`,
-						 `meta_tag_title`,
-						 `meta_tag_description`,
-						 `meta_tag_keywords`,
-						 `multi_images`,
-						 `slug`,
-						 `date`,
-						 `month`,
-						 `year`,
-						 `project_video`
-						 )
-						 VALUES (
-						 '".$project_name."',
-						 '".$description."',  
-						 '".$catID."', 
-						 '".$single_image."', 
-						 '".$pdf_file."', 
-						 '".$meta_tag_title."', 
-						 '".$meta_tag_description."', 
-						 '".$meta_tag_keywords."', 
-						 '".$images_name."', 
-						 '".$slug."', 
-						 $date, 
-						 '".$month."', 
-						 $year, 
-						 '".$project_video."' 
-						 );");
+		`project_name` ,
+		`description` ,
+		`cat_id`,
+		`project_image`,
+		`pdf_file`,
+		`meta_tag_title`,
+		`meta_tag_description`,
+		`meta_tag_keywords`,
+		`multi_images`,
+		`slug`,
+		`project_video`
+		)
+		VALUES (
+		'".$project_name."',
+		'".$description."',  
+		'".$catID."', 
+		'".$single_image."', 
+		'".$pdf_file."', 
+		'".$meta_tag_title."', 
+		'".$meta_tag_description."', 
+		'".$meta_tag_keywords."', 
+		'".$images_name."', 
+		'".$slug."', 
+	 
+		'".$project_video."' 
+		);"
+	);
+
+
+
 				 
-		 header("location:projectView.php");
+	 header("location:projectView.php");
 		 }
 	
 	

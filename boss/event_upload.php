@@ -69,6 +69,11 @@ $con->connectdb();
 				
 			// end of single image
 			//-------------------------
+
+			//-------------------
+			// Multiple images
+			//-------------------
+			$images_name = createMultiImage('image_title', "../eventF/");	
 			
 		$catID = '';
 		//get multiple value of radio (multiple categories)
@@ -86,7 +91,8 @@ $con->connectdb();
 							`meta_tag_description`,
 							`meta_tag_keywords`,
 							`slug`,
-                            `event_date`
+                            `event_date`,
+							`multi_images`
                             )
 							VALUES (
 							'".$event_title."',
@@ -97,7 +103,8 @@ $con->connectdb();
 							'".$meta_tag_description."', 
 							'".$meta_tag_keywords."', 
 							'".$slug."',
-                            '".$event_date."'
+                            '".$event_date."',
+							'".$images_name."'
                             );");
 					
 			
@@ -172,6 +179,32 @@ $con->connectdb();
 				}
 
 			// end of image
+
+			//------------------------
+			//multiple images
+			//------------------------
+			
+			$size_sum = array_sum($_FILES['image_title']['size']);
+			if ($size_sum > 0) 
+			{
+			 // at least one file has been uploaded
+				
+				$images_name = createMultiImage('image_title', "../eventF/");	
+				$records=$con->selectdb("select * from tbl_event where event_id='".$event_id."'");
+				 $row=mysqli_fetch_assoc($records);
+				//echo $row[2]."<br>";
+				//echo $images; die;
+			 	$final= $row['multi_images'].$images_name;
+					
+
+				$con->insertdb("UPDATE `tbl_event` SET multi_images='".$final."'  where event_id='".$event_id."'");
+					
+			}
+
+			//-----------------				
+			//end of multiple images
+			//--------------------
+
 			header("location:eventView.php?page=$page");
 			
 			
@@ -211,5 +244,33 @@ if(isset($_GET["ProImage"]))
 
 
 }	
+//multiple image delete Product..
+if(isset($_REQUEST["btnDeleteImages"]))
+{
+	$event_id = $_POST['event_id'];
+	$page = $_POST['page'];
+
+	$image = $_POST['frontimg1'];
+	$image_list = explode(',',$image);
+	$new_image_list = '';
+	
+	if(isset($_REQUEST["imageEdit"]))
+	{
+		foreach($_REQUEST['imageEdit'] as $row)
+		{
+			 $image = str_replace($row.',' , '' ,$image);
+			 @unlink('../eventF/big_img/'.$row);
+			 @unlink('../eventF/'.$row);
+		}
+		
+		$con->selectdb("update tbl_event set multi_images='".$image."' where event_id = '".$event_id."'");
+		header("location: event_up.php?event_id=".$event_id."&page=".$page);
+	}
+	else
+	{
+		echo 'No Image selected';
+	}
+		
+}
 
 ?>

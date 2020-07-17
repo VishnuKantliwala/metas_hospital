@@ -382,6 +382,30 @@
   .pl-10 {
       padding-left: 10px;
   }
+  .my_ddl
+    {
+        width: 100%;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        border-bottom: 1px solid #eee;
+        font-family: "poppinsRegular",sans-serif;
+        color: #9f7939;
+        margin-bottom: 40px;
+        padding-bottom: 19px;
+        transition: border 0.3s;
+        outline: 0;
+    }
+    .radio_text {
+        font-family: "poppinsRegular",sans-serif;
+        /* color: #9f7939; */
+        margin-bottom: 40px !important;
+        padding-bottom: 19px !important;
+        transition: border 0.3s;
+        outline: 0;
+        cursor: pointer;
+        text-align: left;
+    }
 
 @media only screen and (min-width: 601px) {
     
@@ -518,6 +542,7 @@
     .container__image{
         width:100%
     }
+    
 }
 
 

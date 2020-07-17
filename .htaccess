@@ -72,6 +72,11 @@ RewriteRule ^videos/? video.php [L]
 RewriteRule ^centre-of-excellence/(.*)/? service.php?sid=$1 [L]
 RewriteRule ^course-detail/(.*)/? course.php?coid=$1 [L]
 
+RewriteRule ^hr-department/? hr-department.php [L]
+RewriteRule ^apply-now/? apply-now.php [L]
+RewriteRule ^current-openings/? current-openings.php [L]
+
+
 RewriteRule ^faculty/(.*)/? faculty.php?tid=$1 [L]
 RewriteRule ^course-category/(.*)/? course_categories.php?cid=$1 [L]
 RewriteRule ^institute-details/? institute-details.php [L]

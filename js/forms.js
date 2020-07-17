@@ -1,3 +1,9 @@
+$('.radio_a').click(()=>{
+    $('.rradio_a').click();
+});
+$('.radio_na').click(()=>{
+    $('.rradio_na').click();
+});
 $('#inquiry_form').submit(function (e) {
     
     e.preventDefault();
@@ -36,6 +42,53 @@ $('#inquiry_form').submit(function (e) {
     }, 500);
     
 });
+
+
+$('#applyForm').submit(function (e) {
+    
+    e.preventDefault();
+
+    let result;
+    $('.loader_contact_form').show(500);
+    $('.btn_submit_apply_form').hide(500);
+
+
+    // const formData = $(this);
+    const formData = new FormData($(this)[0]);
+    console.log(formData);
+    setTimeout(() => {
+        $.ajax({
+            url: "apply_mail.php",
+            method: "POST",
+            data: formData,
+            enctype: 'multipart/form-data',
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: (result)=>{
+                // alert(result)
+                return result;
+            }
+          }).then((result)=>{
+            if($.trim(result) == '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Message Sent Successfully! </div>')
+            {
+                $('#applyForm')[0].reset();
+
+            }
+            else
+            {
+                $('.btn_submit_apply_form').show(500);
+            }
+            $('#result_applyForm').html(result);
+            $('.loader_contact_form').hide(500);
+            
+          });
+    }, 500);
+    
+});
+
+
 
 $('#contactForm').submit(function (e) {
     

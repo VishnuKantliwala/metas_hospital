@@ -416,8 +416,9 @@ if(isset($wid))
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
+                                        <li><a href="hr-department">HR Department</a>
                                         <li><a href="#">HR Portal</a>
-                                        <li><a href="javascript:void(0)">Current Openings</a>
+                                        <li><a href="current-openings">Current Openings</a>
 
                                     </ul>
                                 </div>
@@ -619,8 +620,11 @@ if(isset($wid))
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
+                                <li><a href="hr-department">HR Department</a>
                                 <li><a href="#">HR Portal</a>
-                                <li><a href="javascript:void(0)">Current Openings</a>
+                                <li><a href="current-openings">Current Openings</a>
+                                <!-- <li><a href="#">HR Portal</a>
+                                <li><a href="javascript:void(0)">Current Openings</a> -->
 
                             </ul>
                         </div>

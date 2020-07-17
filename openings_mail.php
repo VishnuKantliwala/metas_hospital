@@ -11,6 +11,7 @@ $cn->connectdb();
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $c_job = $_POST['c_job'];
+    $openings_title = $_POST['openings_title'];
     // $file = $_POST['file'];
     $cast = $_POST['cast'];
     $verif_box = $_REQUEST["verif_box"];
@@ -33,11 +34,12 @@ $cn->connectdb();
 
     $pdf_file_link = $_SERVER['HTTP_HOST'].'download_pdf/'.$pdf_file;
 
-    $subject = "HR Department Application from ".$first_name;
+    $subject = "Job Application from ".$first_name;
 
     $html = "<table>";
     $html.= "<tr><td>Name : </td><td>".$first_name." ".$middle_name." ". $last_name ."</td></tr>";
     $html.= "<tr><td>Email : </td><td>".$email."</td></tr>";
+    $html.= "<tr><td>Applying for : </td><td>".$openings_title."</td></tr>";
     $html.= "<tr><td>Current Job : </td><td>".$c_job."</td></tr></table>";
     $html.= "<tr><td>Cast : </td><td>".$cast."</td></tr></table>";
     $html.= "<tr><td>file : </td><td>".$pdf_file_link."</td></tr></table>";

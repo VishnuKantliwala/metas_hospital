@@ -44,9 +44,9 @@ extract($row);
 
                     <div class="single_blog_contents reveal animated" data-reveal-anim="fadeInUpShort">
                         <div class="single_blog_header">
-                            <!-- <div class="single_blog_img">
-                                <img src="blog/big_img/<?echo $blog_image?>" alt="Images">
-                            </div> -->
+                            <div class="single_blog_img">
+                                <img src="event/big_img/<?echo $image_name?>" alt="Images">
+                            </div>
                             <div class="blog_title_meta" style="padding: 5px 30px">
                                 <div class="blog_title">
                                     <h4><?echo $event_title ?></h4>

@@ -74,7 +74,9 @@ RewriteRule ^course-detail/(.*)/? course.php?coid=$1 [L]
 
 RewriteRule ^hr-department/? hr-department.php [L]
 RewriteRule ^apply-now/? apply-now.php [L]
-RewriteRule ^current-openings/? current-openings.php [L]
+
+RewriteRule ^current-openings/(.*)/? current-opening-detail.php?coid=$1 [L]
+RewriteRule ^current-openings/? current-opening.php [L]
 
 
 RewriteRule ^faculty/(.*)/? faculty.php?tid=$1 [L]

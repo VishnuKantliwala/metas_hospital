@@ -93,6 +93,14 @@
                             </li>
 
                             <li>
+                                <a href="openingsView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Openings </span>
+                                    
+                                </a>
+                            </li>
+                            
+                            <li>
                                 <a href="serviceView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Centre of Excellence </span>

@@ -68,6 +68,11 @@ $con->connectdb();
 				
 			// end of single image
 			//-------------------------
+
+			//-------------------
+			// Multiple images
+			//-------------------
+			$images_name = createMultiImage('image_title', "../handwF/");	
 			
 		$catID = '';
 		//get multiple value of radio (multiple categories)
@@ -84,7 +89,9 @@ $con->connectdb();
 							`meta_tag_title`,
 							`meta_tag_description`,
 							`meta_tag_keywords`,
-							`slug`)
+							`slug`,
+							`multi_images`
+							)
 							VALUES (
 							'".$handw_title."',
 							'".$description."', 
@@ -93,7 +100,8 @@ $con->connectdb();
 							'".$meta_tag_title."', 
 							'".$meta_tag_description."', 
 							'".$meta_tag_keywords."', 
-							'".$slug."');");
+							'".$slug."',
+							'".$images_name."');");
 					
 			
 			header("location:handwView.php");
@@ -166,6 +174,32 @@ $con->connectdb();
 				}
 
 			// end of image
+
+			//------------------------
+			//multiple images
+			//------------------------
+			
+			$size_sum = array_sum($_FILES['image_title']['size']);
+			if ($size_sum > 0) 
+			{
+			 // at least one file has been uploaded
+				
+				$images_name = createMultiImage('image_title', "../handwF/");	
+				$records=$con->selectdb("select * from tbl_handw where handw_id='".$handw_id."'");
+				 $row=mysqli_fetch_assoc($records);
+				//echo $row[2]."<br>";
+				//echo $images; die;
+			 	$final= $row['multi_images'].$images_name;
+					
+
+				$con->insertdb("UPDATE `tbl_handw` SET multi_images='".$final."'  where handw_id='".$handw_id."'");
+					
+			}
+
+			//-----------------				
+			//end of multiple images
+			//--------------------
+
 			header("location:handwView.php?page=$page");
 			
 			
@@ -205,5 +239,34 @@ if(isset($_GET["ProImage"]))
 
 
 }	
+//multiple image delete Product..
+if(isset($_REQUEST["btnDeleteImages"]))
+{
+	$handw_id = $_POST['handw_id'];
+	$page = $_POST['page'];
+
+	$image = $_POST['frontimg1'];
+	$image_list = explode(',',$image);
+	$new_image_list = '';
+	
+	if(isset($_REQUEST["imageEdit"]))
+	{
+		foreach($_REQUEST['imageEdit'] as $row)
+		{
+			 $image = str_replace($row.',' , '' ,$image);
+			 @unlink('../handwF/big_img/'.$row);
+			 @unlink('../handwF/'.$row);
+		}
+		
+		$con->selectdb("update tbl_handw set multi_images='".$image."' where handw_id = '".$handw_id."'");
+		header("location: handw_up.php?handw_id=".$handw_id."&page=".$page);
+	}
+	else
+	{
+		echo 'No Image selected';
+	}
+		
+}
+
 
 ?>

@@ -15,6 +15,18 @@ $page = $_GET['page'];
 		@unlink('../handw/big_img/'.$row[1]);
 		@unlink('../handw/'.$row[1]);
 		//end of image
+
+		//multiple images
+		$image_list = explode(',',$row['multi_images']);
+
+		foreach($image_list as $rowF)
+		{
+			//print_r($image_list);die;
+			$new_image_list = '';
+			@unlink('../handwF/big_img/'.$rowF);
+			@unlink('../handwF/'.$rowF);
+		}
+		
 		
 	}
 

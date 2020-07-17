@@ -143,7 +143,8 @@
     <script src="js/jquery.camera.min.js"></script>
 
     <?
-    if($page_id ==17 || $page_id == 33 || $page_id == 34 || $page_id == 30 || $page_id == 28 || $page_id == 35)
+    $page_arr = array(17, 26, 28, 30, 33, 34, 35);
+    if(in_array ($page_id, $page_arr))
     {
     ?>
     <script src="dist/js/lightbox-plus-jquery.min.js"></script>

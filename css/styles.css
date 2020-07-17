@@ -428,11 +428,18 @@
 
 /* If the screen size is 600px or less, set the font-size of <div> to 30px */
 @media only screen and (max-width: 600px) {
+    .widget_heading h4{
+        display: inline-block;
+        width: 100%;
+    }
     .pt-20 {
         padding-top: 20px !important;
     }
     .mt-0 {
         margin-top: 0px !important;
+    }
+    .pt-m-10 {
+        padding-top: 10px !important;
     }
     .vbox-mobile {
         display: block;

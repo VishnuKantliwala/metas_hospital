@@ -117,6 +117,17 @@ $sql = $cn->selectdb("SELECT * FROM tbl_handw order by handw_id desc");
                                             @unlink('../handw/big_img/'.$row['image_name']);
                                             @unlink('../handw/'.$row['image_name']);
                                             //end of image
+
+                                            //multiple images
+                                            $image_list = explode(',',$row['multi_images']);
+
+                                            foreach($image_list as $rowF)
+                                            {
+                                                //print_r($image_list);die;
+                                                $new_image_list = '';
+                                                @unlink('../handwF/big_img/'.$rowF);
+                                                @unlink('../handwF/'.$rowF);
+                                            }
                                             
                                         }
                                         //echo "<script>alert('".$del_id."');</script>";

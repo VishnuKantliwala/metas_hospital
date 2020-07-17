@@ -18,6 +18,7 @@ else
 $sql = $cn->selectdb("select image from tbl_page where page_id =$page_id");
 $row = $cn->fetchAssoc($sql);
 extract($row);
+$date = date("M d, Y",strtotime($openings_date));
 ?>
 <!--gallery popup-->
 <link rel="stylesheet" href="dist/css/lightbox.min.css">
@@ -48,6 +49,9 @@ extract($row);
 
                     <div class="recent_posts">
                         <div class="row">
+                            <div class="col-lg-12">    
+                                <span class="recent_post_meta pl-10">Posting date: <?echo $date ?></span>
+                            </div>
                             <div class="col-lg-12">
 
                                 <ul>

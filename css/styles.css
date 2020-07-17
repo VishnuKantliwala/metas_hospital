@@ -382,6 +382,9 @@
   .pl-10 {
       padding-left: 10px;
   }
+  .pl-0 {
+    padding-left: 0px;
+  }
   .my_ddl
     {
         width: 100%;
@@ -491,6 +494,7 @@
     text-overflow: ellipsis;
     display: block;
     }
+    
     
 
     .social::before {

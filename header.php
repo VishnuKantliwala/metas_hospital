@@ -100,6 +100,18 @@ if(isset($wid))
     }
 }
 ?>
+<?
+// Current Openings
+if(isset($coid))
+{
+    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_openings` where slug='".$coid."'" );
+//	echo $cn->numRows($sql2);
+    if ($cn->numRows($sql) > 0) 
+    {
+        $row1 = $cn->fetchAssoc($sql);
+    }
+}
+?>
 
 
     <title>| Metas Adventist Hospital |
@@ -278,7 +290,7 @@ if(isset($wid))
                                                     <ul>
                                                         <li><a href="health-camps">Health Check Up Camps</a>
                                                         <li><a href="health-awareness-programme">Health Awareness Programme</a>
-                                                        <li><a href="rallies">Rally</a>
+                                                        
                                                         
                                                         
                                                         <!-- <li><a href="total-health-programme">Total Health
@@ -324,9 +336,18 @@ if(isset($wid))
                                                 <div class="menu-display-table-cell">
                                                     <ul>
                                                         <li><a href="what-we-do">What We Do</a>
+                                                       <li><a href="newstart-programme">NEWSTART Programme </a>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        
+                                        <li><a href="javascript:void(0)">Health care</a>
+                                            <div class="menu-display-table">
+                                                <div class="menu-display-table-cell">
+                                                    <ul>
                                                         <li><a href="health-talk">Health Talks</a>
                                                         <li><a href="health-and-wellness">Health & Wellness </a>
-                                                        <li><a href="newstart-programme">NEWSTART Programme </a>
+                                                        <li><a href="rallies">Rally</a>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -485,7 +506,6 @@ if(isset($wid))
                                             <ul>
                                                 <li><a href="health-camps">Health Check Up Camps</a>
                                                         <li><a href="health-awareness-programme">Health Awareness Programme</a>
-                                                        <li><a href="rallies">Rally</a>
                                                 <!-- <li><a href="total-health-programme">Total Health Programme</a> -->
 
                                             </ul>
@@ -528,14 +548,21 @@ if(isset($wid))
                                         <div class="menu-display-table-cell">
                                             <ul>
                                                 <li><a href="what-we-do">What We Do</a>
-                                                <li><a href="health-talk">Health Talks</a>
-                                                <li><a href="health-and-wellness">Health & Wellness </a>
                                                 <li><a href="newstart-programme">NEWSTART Programme </a>
                                             </ul>
                                         </div>
                                     </div>
 
-
+                                <li><a href="javascript:void(0)">Health care</a>
+                                        <div class="menu-display-table">
+                                            <div class="menu-display-table-cell">
+                                                <ul>
+                                                    <li><a href="health-talk">Health Talks</a>
+                                                    <li><a href="health-and-wellness">Health & Wellness </a>
+                                                    <li><a href="rallies">Rally</a>
+                                                </ul>
+                                            </div>
+                                        </div>
                             </ul>
                         </div>
                     </div>

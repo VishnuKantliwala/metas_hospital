@@ -117,10 +117,10 @@ extract($row);
                                         align="absbottom" />
                                 </div>
                             </div>
-                            <div class="col-sm-12 mb-10" style="padding: 0;">
+                            <div class="col-sm-12 mb-10" >
                                 <div id="result_applyForm"></div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-12 ">
                                 <div id="loader_contact_form" style="width:100%; text-align: center;">
                                     <img style="display:none;width:30px;" class="loader_contact_form" src="./images/loader.gif"  />
                                 </div>

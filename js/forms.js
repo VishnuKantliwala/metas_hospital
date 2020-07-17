@@ -51,6 +51,7 @@ $('#applyForm').submit(function (e) {
     let result;
     $('.loader_contact_form').show(500);
     $('.btn_submit_apply_form').hide(500);
+    $('#result_applyForm').html("");
 
 
     // const formData = $(this);
@@ -88,6 +89,51 @@ $('#applyForm').submit(function (e) {
     
 });
 
+
+$('#openingsForm').submit(function (e) {
+    
+    e.preventDefault();
+
+    let result;
+    $('.loader_openings_form').show(500);
+    $('.btn_submit_openings_form').hide(500);
+    $('#result_openingsForm').html("");
+
+
+    // const formData = $(this);
+    const formData = new FormData($(this)[0]);
+    console.log(formData);
+    setTimeout(() => {
+        $.ajax({
+            url: "openings_mail.php",
+            method: "POST",
+            data: formData,
+            enctype: 'multipart/form-data',
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: (result)=>{
+                // alert(result)
+                return result;
+            }
+          }).then((result)=>{
+            if($.trim(result) == '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Message Sent Successfully! </div>')
+            {
+                $('#openingsForm')[0].reset();
+
+            }
+            else
+            {
+                $('.btn_submit_openings_form').show(500);
+            }
+            $('#result_openingsForm').html(result);
+            $('.loader_openings_form').hide(500);
+            
+          });
+    }, 500);
+    
+});
 
 
 $('#contactForm').submit(function (e) {

@@ -15,7 +15,7 @@ $cn->connectdb();
 
 $pageID= 'page26';
 
-$sql = $cn->selectdb("SELECT * FROM tbl_event order by event_id desc");
+$sql = $cn->selectdb("SELECT * FROM tbl_openings order by openings_id desc");
 
 ?>
 
@@ -77,7 +77,7 @@ $sql = $cn->selectdb("SELECT * FROM tbl_event order by event_id desc");
                 </li>
 
                 <li>
-                    <h4 class="page-title-main">Events</h4>
+                    <h4 class="page-title-main">Openings</h4>
                 </li>
     
             </ul>
@@ -101,7 +101,7 @@ $sql = $cn->selectdb("SELECT * FROM tbl_event order by event_id desc");
                     <div class="row">
                         <div class="col-12">
                             <div class="card-box">
-                                <h4 class="mt-0 header-title">Events</h4>
+                                <h4 class="mt-0 header-title">Openings</h4>
                                 <?php
                                     if(isset($_POST['delete']))
                                     {
@@ -110,44 +110,20 @@ $sql = $cn->selectdb("SELECT * FROM tbl_event order by event_id desc");
                                     for($i=0;$i<$cnt;$i++)
                                     {
                                         $del_id=$_POST['chkbox'][$i];
-
-                                        $sql=  $cn->selectdb("select * from tbl_event where event_id=$del_id");
-	
-                                        while($row = $cn->fetchAssoc($sql))
-                                        {
-                                            //image
-                                            @unlink('../event/big_img/'.$row['image_name']);
-                                            @unlink('../event/'.$row['image_name']);
-                                            //end of image
-                                            
-                                            //multiple images
-                                            $image_list = explode(',',$row['multi_images']);
-
-                                            foreach($image_list as $rowF)
-                                            {
-                                                //print_r($image_list);die;
-                                                $new_image_list = '';
-                                                @unlink('../eventF/big_img/'.$rowF);
-                                                @unlink('../eventF/'.$rowF);
-                                            }
-                                            
-                                            
-                                            
-                                        }
                                         
                                         //echo "<script>alert('".$del_id."');</script>";
                                         //$query="delete from product where product_id=".$del_id;
-                                        $con->selectdb("delete from `tbl_event` where event_id=".$del_id);
+                                        $con->selectdb("delete from `tbl_openings` where openings_id=".$del_id);
                                     }
-                                        echo "<script>window.open('eventView.php','_SELF')</script>";
+                                        echo "<script>window.open('openingsView.php','_SELF')</script>";
                                     }
                                 ?>
                                 
                                 <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <a href="event.php" class="btn btn-success m-b-sm mt-2 mb-2">Add</a>
-                                            <a href="sorting_event.php" class="btn btn-success m-b-sm mt-2 mb-2">Sort</a>
+                                            <a href="openings.php" class="btn btn-success m-b-sm mt-2 mb-2">Add</a>
+                                            <a href="sorting_openings.php" class="btn btn-success m-b-sm mt-2 mb-2">Sort</a>
                                             <input type="submit" class="btn btn-danger m-b-sm mt-2 mb-2"name="delete" value="delete"/>
                                         </div>
                                     </div>
@@ -190,19 +166,19 @@ $sql = $cn->selectdb("SELECT * FROM tbl_event order by event_id desc");
                                                         //echo $cnt;
                                                 ?>
                                                     <tr>
-                                                        <td><input type="checkbox" name="chkbox[]" id="chkbox" class="chkbox"  value="<?echo $event_id?>"/></td>
-                                                        <td><?php echo $event_title ?></td>
+                                                        <td><input type="checkbox" name="chkbox[]" id="chkbox" class="chkbox"  value="<?echo $openings_id?>"/></td>
+                                                        <td><?php echo $openings_title ?></td>
                                                         <!-- <td><? for($i=0; $i<$cnt;$i++) 
                                                                 {
                                                                 ?>
                                                                 <?php 
-                                                                // echo $cn->getname('tbl_event_category','cat_id','cat_name',$catID[$i]); ?>,
+                                                                // echo $cn->getname('tbl_openings_category','cat_id','cat_name',$catID[$i]); ?>,
                                                                 
                                                                 <? } ?>
                                                         </td> -->
-                                                        <td><a href='event_copy.php?id=<?php echo $event_id ?>&page=<?php  echo isset($_GET['page']);?>'><i class="fa fa-copy"></i></a></td>
-                                                        <td><a href='event_up.php?event_id=<?php echo $event_id ?>&page=<? echo isset($_GET['page']);?>'><i class="fa fa-edit"></i></a></td>
-                                                        <td><a href='delete_event_rec.php?tablename=tbl_event&primarykey=event_id&id=<?php echo $event_id ?>&page=<? echo isset($_GET['page']);?>' onClick="return confirm('Are you sure want to delete?');"><i class="fa fa-trash"></i></a></td>
+                                                        <td><a href='openings_copy.php?id=<?php echo $openings_id ?>&page=<?php  echo isset($_GET['page']);?>'><i class="fa fa-copy"></i></a></td>
+                                                        <td><a href='openings_up.php?openings_id=<?php echo $openings_id ?>&page=<? echo isset($_GET['page']);?>'><i class="fa fa-edit"></i></a></td>
+                                                        <td><a href='delete_openings_rec.php?tablename=tbl_openings&primarykey=openings_id&id=<?php echo $openings_id ?>&page=<? echo isset($_GET['page']);?>' onClick="return confirm('Are you sure want to delete?');"><i class="fa fa-trash"></i></a></td>
                                                         
                                                     </tr>
                                                     <? } } ?>

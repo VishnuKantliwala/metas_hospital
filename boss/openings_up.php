@@ -15,9 +15,9 @@ $cn->connectdb();
 
 $pageID= 'page21';
 
-$event_id=$_GET['event_id'];
+$openings_id=$_GET['openings_id'];
 
-$query = $con->selectdb('SELECT * FROM tbl_event_category');
+$query = $con->selectdb('SELECT * FROM tbl_openings_category');
 if(mysqli_num_rows($query)>0)
 {
     while ($row = mysqli_fetch_assoc($query))
@@ -31,7 +31,7 @@ else{
 
 
 // reterive selected value
-$sqlC=$con->selectdb("SELECT cat_id FROM tbl_event where event_id=".$event_id."");
+$sqlC=$con->selectdb("SELECT cat_id FROM tbl_openings where openings_id=".$openings_id."");
 while($rowC=mysqli_fetch_assoc($sqlC))
 {
   $arraycat_id= explode(",",$rowC['cat_id']);
@@ -58,7 +58,7 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                 function generate_menu($parent)
                 {
                         $has_childs = false;
-                        //this prevents printing 'ul' if we don't have subcategories for this category
+                        //this propeningss printing 'ul' if we don't have subcategories for this category
                         global $menuItems;
                         global $parentMenuIds;
 						global $finalarray;
@@ -88,11 +88,11 @@ while($rowC=mysqli_fetch_assoc($sqlC))
 								//end of checked mark 
                                 if($value['cat_parent_id'] == 0 && in_array($key, $parentMenuIds))
                                 {
-                                    echo '<li data-jstree='.'{"opened":true}'.'><a href="eventcategory.php?id=' . $key . '">' . $value['cat_name'] . '<b class="caret"></b></a>';
+                                    echo '<li data-jstree='.'{"opened":true}'.'><a href="openingscategory.php?id=' . $key . '">' . $value['cat_name'] . '<b class="caret"></b></a>';
                                 }
                                 else if($value['cat_parent_id'] != 0 && in_array($key, $parentMenuIds))
                                 {
-                                    echo '<li data-jstree='.'{"opened":true}'.'><a href="eventcategory.php?id=' . $key . '">' . $value['cat_name'] . '</a>';
+                                    echo '<li data-jstree='.'{"opened":true}'.'><a href="openingscategory.php?id=' . $key . '">' . $value['cat_name'] . '</a>';
                                 }
                                 else
                                 {
@@ -168,7 +168,7 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                 </li>
 
                 <li>
-                    <h4 class="page-title-main">Events</h4>
+                    <h4 class="page-title-main">Openings</h4>
                 </li>
     
             </ul>
@@ -192,16 +192,16 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                     <div class="row">
                         <div class="col-12">
                             <div class="card-box">
-                                <h4 class="mt-0 header-title">Events Form</h4>
-                                <form class="form-horizontal" method="post" action="event_upload.php" id="myform" name="myform" enctype="multipart/form-data">
+                                <h4 class="mt-0 header-title">Openings Form</h4>
+                                <form class="form-horizontal" method="post" action="openings_upload.php" id="myform" name="myform" enctype="multipart/form-data">
                                     <input type="hidden" name="page" id="page" value="<? echo isset($_GET['page']);?>">
                                     
                                     <?php
-                                    $records=$con->selectdb("SELECT * FROM tbl_event where event_id=".$event_id."");
+                                    $records=$con->selectdb("SELECT * FROM tbl_openings where openings_id=".$openings_id."");
                                     while($row=mysqli_fetch_array($records))
                                     {
                                     ?>
-                                    <input type="hidden" name="event_id" id="event_id" value="<?php echo $row[0]; ?>" />	
+                                    <input type="hidden" name="openings_id" id="openings_id" value="<?php echo $row[0]; ?>" />	
                                     <input type="hidden" name="cat_id" id="cat_id" value="<?php echo $row[4]; ?>" />
                     
                                 
@@ -233,14 +233,14 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="event_title" name="event_title" placeholder="Name" value="<? echo $row[2];?>">
+                                            <input type="text" class="form-control" id="openings_title" name="openings_title" placeholder="Name" value="<? echo $row[2];?>">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-2 control-label">Date</label>
                                         <div class="col-sm-10">
-                                            <input type="date" class="form-control" id="event_date" name="event_date" placeholder="Date" value="<? echo $row['event_date'];?>">
+                                            <input type="date" class="form-control" id="openings_date" name="openings_date" placeholder="Date" value="<? echo $row['openings_date'];?>">
                                         </div>
                                     </div>
   
@@ -258,18 +258,18 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                                         </div>
                                     </div>
                                     
-                                    <div class="form-group" >
+                                    <div class="form-group" style="display:none">
                                         <label for="inputEmail3" class="col-sm-12 control-label">Image</label>
                                         <div class="col-sm-4">
-                                            <input type="file" id="frontimg" name="frontimg" class="dropify" data-default-file="<? if($row[1]!=''){echo "../event/".$row[1];}?>"/>
+                                            <input type="file" id="frontimg" name="frontimg" class="dropify" data-default-file="<? if($row[1]!=''){echo "../openings/".$row[1];}?>"/>
                                             <? if($row[1]!=''){?>
-                                                <a href="event_upload.php?id=<?php echo $row[0]; ?>&ProImage=Del" class="btn btn-lighten-danger" onClick="return confirm('Are you sure want to delete?');">Delete</a>
+                                                <a href="openings_upload.php?id=<?php echo $row[0]; ?>&ProImage=Del" class="btn btn-lighten-danger" onClick="return confirm('Are you sure want to delete?');">Delete</a>
                                             <? } ?>
                                             <input type="hidden" id="frontimg2" name="frontimg2" value="<?php echo $row[1]?>"  />
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group" style="display:none">
                                         <label for="inputEmail3" class="col-sm-12 control-label">Multiple Images</label>
                                         <input type="hidden" class="form-control" id="frontimg1" name="frontimg1" placeholder="Multiple Images" value="<? echo $row['multi_images']; ?>">
                                         <div class="col-sm-4">
@@ -278,7 +278,7 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                                                 <ul class="list-inline files-list">
                                                     
                                                     <?
-                                                    if(isset($_GET["event_id"]))
+                                                    if(isset($_GET["openings_id"]))
                                                     {
                                                         $image = $row['multi_images'];
                                                         
@@ -296,7 +296,7 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                                                                     <div class=" custom-control custom-switch">
                                                                         <input class="custom-control-input" type="checkbox" name="imageEdit[]" id="<?php echo $image_list[$i]; ?>" value="<?php echo $image_list[$i]; ?>">
                                                                         <label class="custom-control-label" for="<?php echo $image_list[$i]; ?>">
-                                                                            <img src="../eventF/<?php echo $image_list[$i]; ?>" class="img-fluid img-thumbnail" alt="attached-img" width="80">
+                                                                            <img src="../openingsF/<?php echo $image_list[$i]; ?>" class="img-fluid img-thumbnail" alt="attached-img" width="80">
                                                                         </label>
                                                                     </div>
                                                                 </li>
@@ -338,7 +338,7 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                                     <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-12">
                                             <button type="submit" name="updateProduct" id="updateProduct" class="btn btn-success">Update</button>
-                                            <button type="submit" name="myButton" id="myButton" class="btn btn-lighten-danger" onClick="window.location.href='eventView.php'; return false;" >Cancel</button>
+                                            <button type="submit" name="myButton" id="myButton" class="btn btn-lighten-danger" onClick="window.location.href='openingsView.php'; return false;" >Cancel</button>
                                         </div>
                                     </div>
                                     

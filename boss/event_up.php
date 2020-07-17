@@ -268,6 +268,51 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                                             <input type="hidden" id="frontimg2" name="frontimg2" value="<?php echo $row[1]?>"  />
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Multiple Images</label>
+                                        <input type="hidden" class="form-control" id="frontimg1" name="frontimg1" placeholder="Multiple Images" value="<? echo $row['multi_images']; ?>">
+                                        <div class="col-sm-4">
+                                            <input type="file" class="dropify" name="image_title[]" multiple />
+                                            <div class="attached-files mt-4">
+                                                <ul class="list-inline files-list">
+                                                    
+                                                    <?
+                                                    if(isset($_GET["event_id"]))
+                                                    {
+                                                        $image = $row['multi_images'];
+                                                        
+                                                        if($image!="" || $image!=NULL)
+                                                        {
+                                                            $image_list = explode(',',$image);
+                                                            // echo '<table>';
+                                                                $cnt = 1;
+                                                                
+                                                            for($i=0;$i<count($image_list)-1;$i++)
+                                                            {
+                                                    ?>
+                                                                <?php //echo "image name=".$image_list[$i]; ?>
+                                                                <li class="list-inline-item file-box">
+                                                                    <div class=" custom-control custom-switch">
+                                                                        <input class="custom-control-input" type="checkbox" name="imageEdit[]" id="<?php echo $image_list[$i]; ?>" value="<?php echo $image_list[$i]; ?>">
+                                                                        <label class="custom-control-label" for="<?php echo $image_list[$i]; ?>">
+                                                                            <img src="../eventF/<?php echo $image_list[$i]; ?>" class="img-fluid img-thumbnail" alt="attached-img" width="80">
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+                                                    <?php
+                                                            }
+                                                        // echo '<tr><td><input type="submit" class="btn btn-lighten-danger" name="btnDeleteImages" value="Delete Selected Images"</td></tr></table>';
+                                                        echo '<div class="row mt-2 mb-2"><div class="col-12"><input type="submit" class="btn btn-lighten-danger" name="btnDeleteImages" value="Delete Selected Images"></div></div>';
+
+                                                        }
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                    <!-- multi images -->
                                     
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-12 control-label"><span style="color:#F00; font-weight:bold;">*</span> Meta Tag Title</label>

@@ -59,20 +59,20 @@ extract($row);
                         <div class="row">
                             
                         <?
-                        /*
+                        
                         if($multi_images != "")
                         {
                             $imgs=explode(",",$multi_images);
                             for($i=0;$i<count($imgs)-1;$i++)
                             {
-                                $src="blogF/big_img/". $imgs[$i];
+                                $src="eventF/big_img/". $imgs[$i];
                         ?>
                         
                         <div class="col-md-4 col-sm-6 grid_item branding design">
                             <div class="single_portfoilo_item">
                                 <a class="example-image-link" data-lightbox="example-set" href="<?echo $src?>"><span data-gall="portfolio" data-href="<?echo $src?>" class="venobox"></span></a>
                                 <div class="portfolio_image">
-                                    <img src="<?echo $src?>" alt="<?echo $gallery_name?>" class="gallery_cat_img">
+                                    <img src="<?echo $src?>" alt="<?echo $event_title?>" class="gallery_cat_img">
                                 </div>
                             </div>
                         </div>
@@ -80,11 +80,11 @@ extract($row);
                         <?
                             }
                         }
-                        */
+                        
                         ?>
                         <?
                         for($i=1 ; $i<=10 ; $i++)
-                        {
+                        /*{
                             $src="images/event/".$i.".jpg";
                         ?>
                             <div class="col-md-4 col-sm-6 grid_item branding design">
@@ -96,7 +96,7 @@ extract($row);
                                 </div>
                             </div>
                         <?
-                        }
+                        }*/
                         ?>
 
                         </div>

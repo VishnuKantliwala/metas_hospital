@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cpanelUser/public_html/metasofsda.in/Hospital3/
+    - /bin/cp -R * $DEPLOYPATH
+    

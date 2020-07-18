@@ -111,7 +111,31 @@ if(isset($coid))
         $row1 = $cn->fetchAssoc($sql);
     }
 }
+// Health talk
+if(isset($htid))
+{
+    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_htalk` where slug='".$htid."'" );
+//	echo $cn->numRows($sql2);
+    if ($cn->numRows($sql) > 0) 
+    {
+        $row1 = $cn->fetchAssoc($sql);
+    }
+}
+
+// Rally
+if(isset($rid))
+{
+    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_rally` where slug='".$rid."'" );
+//	echo $cn->numRows($sql2);
+    if ($cn->numRows($sql) > 0) 
+    {
+        $row1 = $cn->fetchAssoc($sql);
+    }
+}
+
 ?>
+
+
 
 
     <title>| Metas Adventist Hospital |
@@ -437,7 +461,7 @@ if(isset($coid))
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
-                                        <li><a href="hr-department">HR Department</a>
+                                        <!-- <li><a href="hr-department">HR Department</a> -->
                                         <li><a href="#">HR Portal</a>
                                         <li><a href="current-openings">Current Openings</a>
 
@@ -647,7 +671,7 @@ if(isset($coid))
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
-                                <li><a href="hr-department">HR Department</a>
+                                <!-- <li><a href="hr-department">HR Department</a> -->
                                 <li><a href="#">HR Portal</a>
                                 <li><a href="current-openings">Current Openings</a>
                                 <!-- <li><a href="#">HR Portal</a>

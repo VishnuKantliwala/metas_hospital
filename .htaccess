@@ -23,7 +23,6 @@ RewriteRule ^organogram/? organogram.php [L]
 RewriteRule ^contact-us/? contact.php [L]
 RewriteRule ^accreditation/? accreditation.php [L]
 RewriteRule ^international-patients/? international_patients.php [L]
-RewriteRule ^health-talk/? health_talk.php [L]
 
 RewriteRule ^find-a-doctor/(.*)/? find-doctor.php?page=$1 [L]
 RewriteRule ^nurses-award/? nurseaward.php [L]
@@ -31,7 +30,6 @@ RewriteRule ^doctors-award/? doctoraward.php [L]
 
 RewriteRule ^health-camps/? health-checkup.php [L]
 RewriteRule ^health-awareness-programme/? health-awareness.php [L]
-RewriteRule ^rallies/? rally.php [L]
 RewriteRule ^total-health-programme/? total-health-program.php [L]
 
 RewriteRule ^patient-safety/? patient-safety.php [L]
@@ -41,8 +39,15 @@ RewriteRule ^it-excellence/? it-excellence.php [L]
 RewriteRule ^what-we-do/? what-we-do.php [L]
 RewriteRule ^newstart-programme/? newstart-programme.php [L]
 RewriteRule ^opd-schedule/? opd-schedule.php [L]
+
+RewriteRule ^health-talk/(.*)/? health_talk_detail.php?htid=$1 [L]
+RewriteRule ^health-talk/? health_talk.php [L]
+
 RewriteRule ^health-and-wellness/(.*)/? health-well-detail.php?hid=$1 [L]
 RewriteRule ^health-and-wellness/? health-well.php [L]
+
+RewriteRule ^rallies/(.*)/? rally-detail.php?rid=$1 [L]
+RewriteRule ^rallies/? rally.php [L]
 
 RewriteRule ^workshops/(.*)/? workshop-detail.php?wid=$1 [L]
 RewriteRule ^workshops/? workshop.php [L]

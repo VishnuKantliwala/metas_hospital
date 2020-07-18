@@ -109,6 +109,22 @@
                             </li>
 
                             <li>
+                                <a href="rallyView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Rally </span>
+                                    
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="htalkView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Health tallks </span>
+                                    
+                                </a>
+                            </li>
+                            
+                            <li>
                                 <a href="handwView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Health and Wellness </span>

@@ -143,7 +143,7 @@
     <script src="js/jquery.camera.min.js"></script>
 
     <?
-    $page_arr = array(17, 26, 28, 30, 33, 34, 35);
+    $page_arr = array(13, 17, 26, 28, 30, 33, 34, 35);
     if(in_array ($page_id, $page_arr))
     {
     ?>

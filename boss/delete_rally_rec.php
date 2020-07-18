@@ -8,12 +8,12 @@ $id=$_GET['id'];
 
 $page = $_GET['page'];
 	// second product table 
-	$sql=  $cn->selectdb("select * from tbl_handw where handw_id=$id");
+	$sql=  $cn->selectdb("select * from tbl_rally where rally_id=$id");
 	while($row = mysqli_fetch_assoc($sql))
 	{
 		//image
-		@unlink('../handw/big_img/'.$row['image_name']);
-		@unlink('../handw/'.$row['image_name']);
+		@unlink('../rally/big_img/'.$row['image_name']);
+		@unlink('../rally/'.$row['image_name']);
 		//end of image
 
 		//multiple images
@@ -23,16 +23,16 @@ $page = $_GET['page'];
 		{
 			//print_r($image_list);die;
 			$new_image_list = '';
-			@unlink('../handwF/big_img/'.$rowF);
-			@unlink('../handwF/'.$rowF);
+			@unlink('../rallyF/big_img/'.$rowF);
+			@unlink('../rallyF/'.$rowF);
 		}
 		
 		
 	}
 
-	$cn->selectdb("delete from tbl_handw where handw_id=$id");
+	$cn->selectdb("delete from tbl_rally where rally_id=$id");
 
 	//$cn->Deletedata($tablename,$primarykey,$id);
-	header("location: handwView.php?page=$page");
+	header("location: rallyView.php?page=$page");
 
 ?>

@@ -8,12 +8,12 @@ $id=$_GET['id'];
 
 $page = $_GET['page'];
 	// second product table 
-	$sql=  $cn->selectdb("select * from tbl_handw where handw_id=$id");
+	$sql=  $cn->selectdb("select * from tbl_htalk where htalk_id=$id");
 	while($row = mysqli_fetch_assoc($sql))
 	{
 		//image
-		@unlink('../handw/big_img/'.$row['image_name']);
-		@unlink('../handw/'.$row['image_name']);
+		@unlink('../htalk/big_img/'.$row['image_name']);
+		@unlink('../htalk/'.$row['image_name']);
 		//end of image
 
 		//multiple images
@@ -23,16 +23,16 @@ $page = $_GET['page'];
 		{
 			//print_r($image_list);die;
 			$new_image_list = '';
-			@unlink('../handwF/big_img/'.$rowF);
-			@unlink('../handwF/'.$rowF);
+			@unlink('../htalkF/big_img/'.$rowF);
+			@unlink('../htalkF/'.$rowF);
 		}
 		
 		
 	}
 
-	$cn->selectdb("delete from tbl_handw where handw_id=$id");
+	$cn->selectdb("delete from tbl_htalk where htalk_id=$id");
 
 	//$cn->Deletedata($tablename,$primarykey,$id);
-	header("location: handwView.php?page=$page");
+	header("location: htalkView.php?page=$page");
 
 ?>

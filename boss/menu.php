@@ -44,6 +44,13 @@
                             </li>
 
                             <li>
+                                <a href="video2.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Video </span>
+                                </a>
+                            </li>
+
+                            <li>
                                 <a href="doctorCatView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Doctor </span>

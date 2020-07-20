@@ -23,7 +23,26 @@ include 'header.php'; ?>
 
     <div class="hero-video-area">
         <div id="divOverlay"></div>
-        <video class="bgVideo" id="videoBg" preload="auto" loop autoplay muted webkit-playsinline playsinline></video>
+        <video class="bgVideo" id="videoBg" preload="auto" loop autoplay muted webkit-playsinline playsinline>
+            <?
+            $sqlVideoSlider = $cn->selectdb("select video_file from tbl_video2 where video_id = 1");
+            if( $cn->numRows($sqlVideoSlider) > 0 )
+            {
+                $rowVideoSlider = $cn->fetchAssoc($sqlVideoSlider);
+                extract($rowVideoSlider);
+                ?>
+                <!-- <source src="video.mp4" type="video/mp4"/> -->
+                <source src="<?echo $video_file?>" type="video/mp4"/>    
+                <?
+            }
+            else
+            {
+            ?>
+            <source src="video.mp4" type="video/mp4"/>
+            <?
+            }
+            ?>
+        </video>
     </div>
     <div class="hero-images-area">
         <div class="hero-images-area-inner"></div>

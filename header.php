@@ -145,6 +145,13 @@ if(isset($rid))
     <meta name="keywords" content="<?echo $row1['meta_tag_keywords']?>">
     <meta name="title" content="<?echo $row1['meta_tag_title']?>">
 
+    <meta property="og:site_name" content="Metas Adventist Hospital">
+    <meta property="og:title" content="Metas Adventist Hospital" />
+    <meta property="og:description" content="<?echo $row1['meta_tag_description']?> " />
+    <meta property="og:image" itemprop="image" content="<?echo $_SERVER['HTTP_HOST']?>/favicon/big_img/<?echo $image_name?>">
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1594536757" />
+
 
     <meta name="shareOpts"
         content="{&#34;TweetText&#34;:&#34;{WEBPAGE_TITLE},&#34;,&#34;TweetURL&#34;:&#34;{WEBSITE_FULL_URL}&#34;,&#34;TweetVia&#34;:&#34;intSchools&#34;,&#34;EmailSubject&#34;:&#34;SHARED : {WEBPAGE_TITLE} &#34;,&#34;EmailBody&#34;:&#34;I saw this page and thought you may like to see it too: {WEBSITE_FULL_URL}&#34;,&#34;FacebookURL&#34;:&#34;{WEBSITE_FULL_URL}&#34;}">

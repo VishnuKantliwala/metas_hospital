@@ -9316,7 +9316,7 @@ var HomepageLandingScreenExperience = {
         var videoToInsert = (getWindowWidth() < 768) ? mobileVideos[0] : homepageVideos[0];
         var Video = '<source src="' + videoToInsert.video + '" type="video/mp4">';
 
-        $('.bgVideo').append(Video);
+        // $('.bgVideo').append(Video);
 
         var video = document.getElementById('videoBg');
 

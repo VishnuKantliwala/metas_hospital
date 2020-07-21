@@ -182,7 +182,7 @@ extract($row);
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-xs-12 col-sm-6 left_side v_middle client_padding">
-                <span class="business_man title_icon icofont icofont-man-in-glasses"></span>
+                <!-- <span class="business_man title_icon icofont icofont-man-in-glasses"></span> -->
                 <h3 class="sucess">Centres of Excellence</h3>
             </div>
 
@@ -237,7 +237,7 @@ if( $cn->numRows($sqlHandwPage) > 0 )
                         <span><?echo $slug ?></span>
                     </div>
                     <div class="title">
-                        <h1> <span class="title_word_2"><?echo $page_name ?></span> </h1>
+                        <h1> <span class="title_word_2"><a href="health-and-wellness"><?echo $page_name ?></a></span> </h1>
                     </div>
                 </div><!-- /SECTION TITLE ENDS -->
             </div>
@@ -258,9 +258,9 @@ if( $cn->numRows($sqlHandwPage) > 0 )
             <div class="col-md-4 col-sm-6">
                 <div class="single_service reveal animated" data-reveal-anim="scaleIn" data-anim-delay="0"
                     data-anim-duration="0.3s">
-                    <span class="service_icon">
+                    <!-- <span class="service_icon">
                         <img src="handw/big_img/<?echo $image_name?>" alt="<?echo $handw_title?>" class="service_img">
-                    </span>
+                    </span> -->
                     <div class="service_title ">
                         <a href="<?echo $href?>">
                             <h4 style="line-height: 27px;" class="list-title"><?echo $handw_title ?></h4>
@@ -351,7 +351,7 @@ if( $cn->numRows($sqlDoctorsPage) > 0 )
                         <span><?echo $slug ?></span>
                     </div>
                     <div class="title">
-                        <h1>OUR <span class="title_word_2"> <?echo $page_name ?></span></h1>
+                        <h1>OUR <span class="title_word_2"> <a href="find-a-doctor/1"><?echo $page_name ?></a></span></h1>
                     </div>
                 </div><!-- /SECTION TITLE ENDS -->
             </div>
@@ -433,7 +433,7 @@ if( $cn->numRows($sqlBlogsPage) > 0 )
                         <span><?echo $slug ?></span>
                     </div>
                     <div class="title">
-                        <h1> <span class="title_word_2"><?echo $page_name ?></span></h1>
+                        <h1> <span class="title_word_2"><a href="blogs"><?echo $page_name ?></a></span></h1>
                     </div>
                 </div><!-- /SECTION TITLE ENDS -->
             </div>
@@ -508,7 +508,7 @@ if( $cn->numRows($sqlTestimonialPage) > 0 )
                         <span><?echo $slug ?></span>
                     </div>
                     <div class="title">
-                        <h1>What <span class="title_word_2"><?echo $page_name ?></span></h1>
+                        <h1> <span class="title_word_2"><?echo $page_name ?></span></h1>
                     </div>
                 </div><!-- /SECTION TITLE ENDS -->
             </div>

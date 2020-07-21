@@ -62,7 +62,7 @@
                                 </ul>
                             </li>
 
-                            <li>
+                            <!-- <li>
                                 <a >
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Awards </span>
@@ -71,6 +71,18 @@
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="nurseawardsView.php"> Nurse Awards </a></li>
                                     <li><a href="doctorawardsView.php"> Doctor Awards </a></li>
+                                </ul>
+                            </li> -->
+
+                            <li>
+                                <a >
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Initiatives </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="campView.php">  Health check up camps </a></li>
+                                    <li><a href="programmeView.php"> Awareness Programme </a></li>
                                 </ul>
                             </li>
                             

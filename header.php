@@ -319,7 +319,7 @@ if(isset($rid))
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
-                                                        <li><a href="health-camps">Health Check Up Camps</a>
+                                                        <li><a href="health-checkup-camps">Health Check Up Camps</a>
                                                         <li><a href="health-awareness-programme">Health Awareness Programme</a>
                                                         
                                                         
@@ -535,7 +535,7 @@ if(isset($rid))
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
-                                                <li><a href="health-camps">Health Check Up Camps</a>
+                                                <li><a href="health-checkup-camps">Health Check Up Camps</a>
                                                         <li><a href="health-awareness-programme">Health Awareness Programme</a>
                                                 <!-- <li><a href="total-health-programme">Total Health Programme</a> -->
 

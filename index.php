@@ -416,7 +416,7 @@ if( $cn->numRows($sqlDoctorsPage) > 0 )
 }
 ?>
 <?
-$sqlBlogsPage = $cn->selectdb("select slug, page_name, page_desc, image, page_id from tbl_page where page_id =42");
+$sqlBlogsPage = $cn->selectdb("select slug, page_name, page_desc, image, page_id from tbl_page where page_id =43");
 if( $cn->numRows($sqlBlogsPage) > 0 )
 {
 
@@ -491,7 +491,7 @@ if( $cn->numRows($sqlBlogsPage) > 0 )
 ?>
 
 <?
-$sqlTestimonialPage = $cn->selectdb("select slug, page_name, page_desc, image, page_id from tbl_page where page_id =43");
+$sqlTestimonialPage = $cn->selectdb("select slug, page_name, page_desc, image, page_id from tbl_page where page_id =44");
 if( $cn->numRows($sqlTestimonialPage) > 0 )
 {
 

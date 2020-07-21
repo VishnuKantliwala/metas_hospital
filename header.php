@@ -235,8 +235,8 @@ if(isset($rid))
                                             href="tel:<?echo $helpline_no ?>"><?echo $helpline_no ?></a></li>
                                     <li> <span class="icofont icofont-telephone"></span> Landline Number : <a
                                             href="tel:<?echo $landline_no ?>"><?echo $landline_no ?></a></li>
-                                    <li> <span class="icofont icofont-user-alt-4"></span> <a href="#"> Alumni</a></li>
-                                    <li> <span class="icofont icofont-globe-alt"></span> <a href="#"> Location </a></li>
+                                    <li> <span class="icofont icofont-user-alt-4"></span> <a href="javascript:void(0)"> Alumni</a></li>
+                                    <li> <span class="icofont icofont-globe-alt"></span> <a href="javascript:void(0)"> Location </a></li>
                                     <?
                                         $sql = $cn->selectdb("select * from tbl_socialmedia Order by recordListingID");
                                         while($row = $cn->fetchAssoc($sql))
@@ -252,7 +252,7 @@ if(isset($rid))
                         </div>
                         <div class="col-lg-2 col-md-2">
                             <div class="search_bar">
-                                <form action="#" class="tiny_search">
+                                <form action="javascript:void(0)" class="tiny_search">
                                     <input type="text" placeholder="Search..." class="form-control">
                                     <button type="submit" class="tiny_search_btn"><span
                                             class="icofont icofont-search"></span></button>
@@ -296,14 +296,14 @@ if(isset($rid))
                         </li>
 
 
-                        <li><a href="#">About Us</a>
+                        <li><a href="javascript:void(0)">About Us</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
                                         <li><a href="who-we-are">Who We Are</a>
-                                        <li><a href="#">Administrative Body</a>
+                                        <li><a href="javascript:void(0)">Administrative Body</a>
                                         <li><a href="accreditation">Accreditation</a>
-                                        <li><a href="#">Corporate</a>
+                                        <li><a href="javascript:void(0)">Corporate</a>
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
@@ -315,7 +315,7 @@ if(isset($rid))
                                                     </ul>
                                                 </div>
                                             </div>
-                                        <li><a href="#">Initiatives</a>
+                                        <li><a href="javascript:void(0)">Initiatives</a>
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
@@ -334,13 +334,13 @@ if(isset($rid))
                                 </div>
                             </div>
 
-                        <li><a href="#">Patient Care</a>
+                        <li><a href="javascript:void(0)">Patient Care</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
                                         <li><a href="find-a-doctor/1">Find a Doctor</a>
                                         <li><a href="opd-schedule">OPD Schedule</a>
-                                        <li><a href="#">Clinical Quality</a>
+                                        <li><a href="javascript:void(0)">Clinical Quality</a>
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
@@ -351,7 +351,7 @@ if(isset($rid))
                                                 </div>
                                             </div>
 
-                                        <!-- <li><a href="#">Lab Reports</a> -->
+                                        <!-- <li><a href="javascript:void(0)">Lab Reports</a> -->
                                         <li><a href="javascript:void(0)">International Patients</a>
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
@@ -362,7 +362,7 @@ if(isset($rid))
                                             </div>
 
 
-                                        <li><a href="#">Chaplaincy</a>
+                                        <li><a href="javascript:void(0)">Chaplaincy</a>
                                             <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
                                                     <ul>
@@ -409,7 +409,7 @@ if(isset($rid))
                                     </ul>
                                 </div>
                             </div>
-                        <li><a href="#">Media</a>
+                        <li><a href="javascript:void(0)">Media</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
@@ -419,7 +419,7 @@ if(isset($rid))
                                     </ul>
                                 </div>
                             </div>
-                        <li><a href="#">Academics & Research</a>
+                        <li><a href="javascript:void(0)">Academics & Research</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
@@ -454,7 +454,7 @@ if(isset($rid))
                             <li class="no-menu"><a href="project-category">Project</a>
                             <div class="menu-display-table"></div>
                         </li>
-                        <li><a href="#">Blog</a>
+                        <li><a href="javascript:void(0)">Blog</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
@@ -464,12 +464,12 @@ if(isset($rid))
                                     </ul>
                                 </div>
                             </div>
-                        <li><a href="#">Career</a>
+                        <li><a href="javascript:void(0)">Career</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
-                                        <!-- <li><a href="hr-department">HR Department</a> -->
-                                        <li><a href="#">HR Portal</a>
+                                        <li><a href="hr-department">HR Department</a>
+                                        <!-- <li><a href="javascript:void(0)">HR Portal</a> -->
                                         <li><a href="current-openings">Current Openings</a>
 
                                     </ul>
@@ -502,7 +502,7 @@ if(isset($rid))
                 </div><span></span>
             </div>
 
-            <a href="#" class="sticky-mobile-brandlg"></a>
+            <a href="javascript:void(0)" class="sticky-mobile-brandlg"></a>
             <div class="t-menu-bg"></div>
             <ul class="main-menu-items">
 
@@ -512,14 +512,14 @@ if(isset($rid))
                 </li>
 
 
-                <li><a href="#">About Us</a>
+                <li><a href="javascript:void(0)">About Us</a>
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
                                 <li><a href="who-we-are">Who We Are</a>
-                                <li><a href="#">Administrative Body</a>
+                                <li><a href="javascript:void(0)">Administrative Body</a>
                                 <li><a href="accreditation">Accreditation</a>
-                                <li><a href="#">Corporate</a>
+                                <li><a href="javascript:void(0)">Corporate</a>
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
@@ -531,7 +531,7 @@ if(isset($rid))
                                             </ul>
                                         </div>
                                     </div>
-                                <li><a href="#">Initiatives</a>
+                                <li><a href="javascript:void(0)">Initiatives</a>
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
@@ -546,13 +546,13 @@ if(isset($rid))
                         </div>
                     </div>
 
-                <li><a href="#">Patient Care</a>
+                <li><a href="javascript:void(0)">Patient Care</a>
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
                                 <li><a href="find-a-doctor/1">Find a Doctor</a>
                                 <li><a href="opd-schedule">OPD Schedule</a>
-                                <li><a href="#">Clinical Quality</a>
+                                <li><a href="javascript:void(0)">Clinical Quality</a>
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
@@ -563,7 +563,7 @@ if(isset($rid))
                                         </div>
                                     </div>
 
-                                <!-- <li><a href="#">Lab Reports</a> -->
+                                <!-- <li><a href="javascript:void(0)">Lab Reports</a> -->
                                 <li><a href="javascript:void(0)">International Patients</a>
                                     <div class="menu-display-table">
                                                 <div class="menu-display-table-cell">
@@ -574,7 +574,7 @@ if(isset($rid))
                                             </div>
 
 
-                                <li><a href="#">Chaplaincy</a>
+                                <li><a href="javascript:void(0)">Chaplaincy</a>
                                     <div class="menu-display-table">
                                         <div class="menu-display-table-cell">
                                             <ul>
@@ -598,7 +598,7 @@ if(isset($rid))
                         </div>
                     </div>
 
-                <li><a href="#">Centres of Excellence</a>
+                <li><a href="javascript:void(0)">Centres of Excellence</a>
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
@@ -619,7 +619,7 @@ if(isset($rid))
                             </ul>
                         </div>
                     </div>
-                <li><a href="#">Media</a>
+                <li><a href="javascript:void(0)">Media</a>
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
@@ -629,7 +629,7 @@ if(isset($rid))
                             </ul>
                         </div>
                     </div>
-                <li><a href="#">Academics & Research</a>
+                <li><a href="javascript:void(0)">Academics & Research</a>
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
@@ -664,7 +664,7 @@ if(isset($rid))
                     <li class="no-menu"><a href="project-category">Project</a>
                             <div class="menu-display-table"></div>
                         </li>
-                <li><a href="#">Blog</a>
+                <li><a href="javascript:void(0)">Blog</a>
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
@@ -674,14 +674,14 @@ if(isset($rid))
                             </ul>
                         </div>
                     </div>
-                <li><a href="#">Career</a>
+                <li><a href="javascript:void(0)">Career</a>
                     <div class="menu-display-table">
                         <div class="menu-display-table-cell">
                             <ul>
-                                <!-- <li><a href="hr-department">HR Department</a> -->
-                                <li><a href="#">HR Portal</a>
+                                <li><a href="hr-department">HR Department</a>
+                                <!-- <li><a href="javascript:void(0)">HR Portal</a> -->
                                 <li><a href="current-openings">Current Openings</a>
-                                <!-- <li><a href="#">HR Portal</a>
+                                <!-- <li><a href="javascript:void(0)">HR Portal</a>
                                 <li><a href="javascript:void(0)">Current Openings</a> -->
 
                             </ul>
@@ -693,91 +693,91 @@ if(isset($rid))
             </ul>
             <!--ul class="main-menu-items">
              
-            <li><a href="#">Home</a></li>
+            <li><a href="javascript:void(0)">Home</a></li>
                             
                         
-            <li><a href="#">About Us</a>
+            <li><a href="javascript:void(0)">About Us</a>
                 <div class="menu-display-table">
                     <div class="menu-display-table-cell">
                         <ul>
-                            <li><a href="#">Corporate</a>
+                            <li><a href="javascript:void(0)">Corporate</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
-                                        <li><a href="#">Organogram</a>
-                                        <li><a href="#">Nurses Award</a>
-                                        <li><a href="#">Doctors Award</a>
+                                        <li><a href="javascript:void(0)">Organogram</a>
+                                        <li><a href="javascript:void(0)">Nurses Award</a>
+                                        <li><a href="javascript:void(0)">Doctors Award</a>
                                         
                                     </ul>
                                 </div>
                             </div>
-                            <li><a href="#">Initiatives</a>
+                            <li><a href="javascript:void(0)">Initiatives</a>
                                 <div class="menu-display-table">
                                     <div class="menu-display-table-cell">
                                         <ul>
-                                            <li><a href="#">Health Camps</a>
-                                            <li><a href="#">Total Health Programme</a>
+                                            <li><a href="javascript:void(0)">Health Camps</a>
+                                            <li><a href="javascript:void(0)">Total Health Programme</a>
                                             
                                         </ul>
                                     </div>
                                 </div>
                             
-                            <li><a href="#">Who We Are</a>
-                            <li><a href="#">Administrative Body</a>
-                            <li><a href="#">Accreditation</a>
+                            <li><a href="javascript:void(0)">Who We Are</a>
+                            <li><a href="javascript:void(0)">Administrative Body</a>
+                            <li><a href="javascript:void(0)">Accreditation</a>
                            
                         </ul>
                     </div>
                 </div>
                
-            <li><a href="#">Patient Care</a>
+            <li><a href="javascript:void(0)">Patient Care</a>
                 <div class="menu-display-table">
                     <div class="menu-display-table-cell">
                         <ul>
-                            <li><a href="#">Find a Doctor</a>
-                            <li><a href="#">OPD Schedule</a>
-                            <li><a href="#">Clinical Quality</a>
+                            <li><a href="javascript:void(0)">Find a Doctor</a>
+                            <li><a href="javascript:void(0)">OPD Schedule</a>
+                            <li><a href="javascript:void(0)">Clinical Quality</a>
                             <div class="menu-display-table">
                                 <div class="menu-display-table-cell">
                                     <ul>
-                                        <li><a href="#">Patient Safety</a>
-                                        <li><a href="#">Infection Control</a>
-                                        <li><a href="#">IT Excellence</a>
+                                        <li><a href="javascript:void(0)">Patient Safety</a>
+                                        <li><a href="javascript:void(0)">Infection Control</a>
+                                        <li><a href="javascript:void(0)">IT Excellence</a>
                                     </ul>
                                 </div>
                             </div>
                             
-                            <li><a href="#">Lab Reports</a>
-                            <li><a href="#">International Patients</a>
+                            <li><a href="javascript:void(0)">Lab Reports</a>
+                            <li><a href="javascript:void(0)">International Patients</a>
                         </ul>
                     </div>
                 </div>
                   
-                    <li><a href="#">Centres of Excellence</a>
+                    <li><a href="javascript:void(0)">Centres of Excellence</a>
                         <div class="menu-display-table">
                             <div class="menu-display-table-cell">
                                 <ul>
-                                    <li><a href="#">Orthopaedic</a></li>
-                                    <li><a href="#">Paediatrics</a></li>
-                                    <li><a href="#">Diabetology</a></li>
+                                    <li><a href="javascript:void(0)">Orthopaedic</a></li>
+                                    <li><a href="javascript:void(0)">Paediatrics</a></li>
+                                    <li><a href="javascript:void(0)">Diabetology</a></li>
                                    
                                 </ul>
                             </div>
                         </div>
-                        <li><a href="#">Media</a></li>
-                        <li><a href="#">Academics & Research</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Chaplaincy</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="javascript:void(0)">Media</a></li>
+                        <li><a href="javascript:void(0)">Academics & Research</a></li>
+                        <li><a href="javascript:void(0)">Blog</a></li>
+                        <li><a href="javascript:void(0)">Chaplaincy</a></li>
+                        <li><a href="javascript:void(0)">Contact Us</a></li>
         </ul-->
 
         </div>
     </div>
     </div>
     <div class="template-header">
-        <a href="#" class="desktop-logo-btn-large" title=""></a>
-        <a href="#" class="desktop-logo-btn" title=""></a>
-        <a href="#" class="mobile-logo-btn" title=""></a>
+        <a href="javascript:void(0)" class="desktop-logo-btn-large" title=""></a>
+        <a href="javascript:void(0)" class="desktop-logo-btn" title=""></a>
+        <a href="javascript:void(0)" class="mobile-logo-btn" title=""></a>
         <div class="open-menu round-btn-icon" title="Open Menu">
             <div>
                 <div class="one"></div>

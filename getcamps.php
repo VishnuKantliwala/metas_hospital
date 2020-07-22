@@ -39,7 +39,7 @@ if ($cn->numRows($sql1) > 0)
             </div>
             
 
-            <p class="blog_text list-desc list-desc--camp" style="border-top: 1px solid #473516;margin-top:10px">  
+            <p class="blog_text list-desc list-desc--camp" style="border-top: 1px solid #445ba1;margin-top:10px">  
                                   <?echo strip_tags($caption) ?></p>
 
             <div class="read_more" >

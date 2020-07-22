@@ -115,7 +115,7 @@
 
                 <div class="row">
                     <div class="col-md-12  col-sm-12 contact_form"
-                        style="padding: 18px 35px 25px;border-top: 5px solid #9f7939;">
+                        style="padding: 18px 35px 25px;border-top: 5px solid #4aa0c7;">
                         
                         <form id="appointmentForm" class="message_form">
                             <input required name="app_name" type="text" placeholder="Name" style="margin-bottom: 15px;">

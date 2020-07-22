@@ -63,7 +63,7 @@ if( $cn->numRows($sqlDoctorCategory) > 0 )
 #customers-teams<?echo $i; ?> .item h2{
 	font-size:17px !important;
 	font-weight:600 !important;
-    color:#9f7939;
+    color:#445ba1;
 }
 #customers-teams<?echo $i; ?> .item .title{
 	font-size:14px;

@@ -49,7 +49,7 @@ include 'header.php'; ?>
     </div>
 </div>
 
-<marquee width="100%" direction="left" height="30px" style="color:#fff;background-color:#996c2b">
+<marquee width="100%" direction="left" height="30px" style="color:#fff;background-color:#4f6dcd">
     Metas Adventist Hospital, Surat
 </marquee>
 
@@ -384,7 +384,7 @@ if( $cn->numRows($sqlDoctorsPage) > 0 )
                         <div class="single_testimonial">
                             <div class="images">
                                 <img class="home-doc" src="doctor/big_img/<?echo $doctor_image?>" alt="<?echo $doctor_name ?>"
-                                    style="border-bottom: 2px solid #996c2b;border-radius: 25px;">
+                                    style="border-bottom: 2px solid #4f6dcd;border-radius: 25px;">
                             </div>
                             <h4><?echo $doctor_name ?></h4>
                             <span><?echo $cat_name ?></span>

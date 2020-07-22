@@ -31,7 +31,7 @@ extract($row);
 <style>
 .proDesc ul li:before {
     content: "\ed88";
-    color: #9f7939;
+    color: #445ba1;
     font-family: 'IcoFont' !important;
     display: inline-block;
     margin-left: 1.4em;

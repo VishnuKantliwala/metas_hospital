@@ -3049,7 +3049,7 @@ ul.main-menu-items>li>a.contact-icon-link:before {
 .dsa-LG_GB_close-menu-white:after,
 .round-btn-icon.close-menu div:after {
     display: inline-block;
-    color:#222;
+    color:#445ba1;
     content: "";
     width: 14px;
     height: 14px;
@@ -3898,7 +3898,7 @@ html.no-touch .nav-right-btn:hover:after {
     left: 0;
     width: 100%;
     height: 50%;
-    background: #222;
+    background: #445ba1;
     z-index: 1;
     transition: opacity .4s linear;
     -webkit-transition: opacity .4s linear
@@ -3983,7 +3983,7 @@ html.no-touch .halfButtonLarge:hover .top-half {
     left: 0;
     width: 100%;
     height: 50%;
-    background: #222;
+    background: #445ba1;
     z-index: 1;
     transition: opacity .4s linear;
     -webkit-transition: opacity .4s linear
@@ -4075,7 +4075,7 @@ html.no-touch .halfButton:hover .top-half {
     left: 0;
     width: 100%;
     height: 50%;
-    background: #222;
+    background: #445ba1;
     z-index: 1;
     transition: opacity .4s linear;
     -webkit-transition: opacity .4s linear
@@ -4111,7 +4111,7 @@ html.no-touch .halfButton:hover .top-half {
 .templateRotatingBtn>span:not(.halfButtonRotating) {
     transition: color .2s ease;
     -webkit-transition: color .2s ease;
-    color: #222;
+    color: #445ba1;
     margin-left: 7px;
     margin-right: 3px;
     font-size: 15px;
@@ -4123,22 +4123,22 @@ html.no-touch .halfButton:hover .top-half {
 }
 
 .templateRotatingBtn:link {
-    color: #222;
+    color: #445ba1;
     text-decoration: none
 }
 
 .templateRotatingBtn:visited {
-    color: #222;
+    color: #445ba1;
     text-decoration: none
 }
 
 html.no-touch .templateRotatingBtn:hover {
-    color: #222;
+    color: #445ba1;
     text-decoration: none
 }
 
 html.no-touch .templateRotatingBtn:hover span {
-    color: #222
+    color: #445ba1
 }
 
 html.no-touch .templateRotatingBtn:hover .halfButtonRotating {
@@ -4147,7 +4147,7 @@ html.no-touch .templateRotatingBtn:hover .halfButtonRotating {
 }
 
 .templateRotatingBtn:active {
-    color: #222;
+    color: #445ba1;
     text-decoration: none
 }
 
@@ -4191,7 +4191,7 @@ html.no-touch .templateRotatingBtn:hover .halfButtonRotating {
 }
 
 html.no-touch .round-btn-icon:hover div {
-    background: #222;
+    background: #445ba1;
 }
 
 html.no-touch .round-btn-icon:hover div>div {
@@ -4220,7 +4220,7 @@ html.no-touch .round-btn-icon:hover div:after {
 .round-btn-icon.open-menu div>div {
     width: 18px;
     height: 2px;
-    background: #222;
+    background: #445ba1;
     margin: 0 auto 3px auto;
     transition: all .2s ease;
     -webkit-transition: all .2s ease
@@ -4304,7 +4304,7 @@ html.no-touch .round-btn-icon:hover div:after {
     left: 0;
     width: 100%;
     height: 50px;
-    background: #9f7939
+    background: #4aa0c7
 }
 
 .template-header-sticky .close-menu {
@@ -4325,7 +4325,7 @@ html.no-touch .round-btn-icon:hover div:after {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: #9f7939;
+    background: #4aa0c7;
     opacity: 0;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -4337,7 +4337,7 @@ html.no-touch .round-btn-icon:hover div:after {
     position: absolute;
     top: -100%;
     left: 0;
-    background: #222;
+    background: #445ba1;
     height: 50px;
     width: 100%;
     backface-visibility: hidden;
@@ -4480,7 +4480,7 @@ html.no-touch .mobile-sticky-buttons .search-this:hover:before {
 }
 
 html.no-touch .mobile-sticky-buttons>a.mobile-padlock:hover {
-    background: #222
+    background: #445ba1
 }
 
 html.no-touch .mobile-sticky-buttons>a.mobile-padlock:hover:before {
@@ -4554,7 +4554,7 @@ html.no-touch .mobile-sticky-buttons>a.contact-icon-link:hover:before {
 .header-right-buttons a:hover {
     color: #fff;
     text-decoration: none;
-    background: #222
+    background: #445ba1
 }
 
 .header-right-buttons a:active {
@@ -4582,7 +4582,7 @@ html.no-touch .mobile-sticky-buttons>a.contact-icon-link:hover:before {
 }
 
 html.no-touch .header-right-buttons a.search-this:hover {
-    background: #222
+    background: #445ba1
 }
 
 .header-right-buttons a.ib-partner {
@@ -4662,7 +4662,7 @@ html.no-touch .header-right-buttons a.ib-partner:hover:after {
 .bottom-left-links a:hover {
     color: #fff;
     text-decoration: none;
-    background: #222
+    background: #445ba1
 }
 
 .bottom-left-links a:active {
@@ -4696,7 +4696,7 @@ html.no-touch .header-right-buttons a.ib-partner:hover:after {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(to bottom, #9f7a3a 0%, #222 100%);
+    background: #4aa0c7;
     opacity: .9
 }
 
@@ -4728,7 +4728,7 @@ html.touch .template-main-menu .template-main-menu-scroll-able {
 .template-main-menu .template-main-menu-links {
     height: 50px;
     margin-top: 90px;
-    background: #222;
+    background: #445ba1;
     font-family: "Montserrat", sans-serif
 }
 
@@ -5197,17 +5197,17 @@ ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a {
 ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a:link {
     color: #fff;
     text-decoration: none;
-    background: #222
+    background: #445ba1
 }
 
 ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a:visited {
     color: #fff;
     text-decoration: none;
-    background: #222
+    background: #445ba1
 }
 
 html.no-touch ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a:hover {
-    color: #222;
+    color: #445ba1;
     text-decoration: none;
     background: #fff
 }
@@ -5215,11 +5215,11 @@ html.no-touch ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a:hove
 ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a:active {
     color: #fff;
     text-decoration: none;
-    background: #222
+    background: #445ba1
 }
 
 ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a.current {
-    color: #222;
+    color: #445ba1;
     text-decoration: none;
     background: #fff
 }
@@ -5287,17 +5287,17 @@ ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li>div div ul li a {
 ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li>div div ul li a:link {
     color: #fff;
     text-decoration: none;
-    background: #5e5252
+    background: #4f6dcd
 }
 
 ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li>div div ul li a:visited {
     color: #fff;
     text-decoration: none;
-    background: #5e5252
+    background: #4f6dcd
 }
 
 html.no-touch ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li>div div ul li a:hover {
-    color: #5e5252;
+    color: #4f6dcd;
     text-decoration: none;
     background: #fff
 }
@@ -5305,11 +5305,11 @@ html.no-touch ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li>div di
 ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li>div div ul li a:active {
     color: #fff;
     text-decoration: none;
-    background: #5e5252
+    background: #4f6dcd
 }
 
 ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li>div div ul li a.current {
-    color: #5e5252;
+    color: #4f6dcd;
     text-decoration: none;
     background: #fff
 }
@@ -5360,7 +5360,7 @@ ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li>div div ul li a.curr
 .mobile-menu-content-under-fold .mobile-menu-quick-links a:hover {
     color: #fff;
     text-decoration: none;
-    background: #222
+    background: #445ba1
 }
 
 .mobile-menu-content-under-fold .mobile-menu-quick-links a:active {
@@ -5371,7 +5371,7 @@ ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li>div div ul li a.curr
 .mobile-menu-content-under-fold .mobile-menu-quick-links a.current {
     color: #fff;
     text-decoration: none;
-    background: #222
+    background: #445ba1
 }
 
 .mobile-menu-content-under-fold .mobile-menu-quick-links span {
@@ -5551,7 +5551,7 @@ html.no-touch .mobile-menu-content-under-fold a.mobile-ib-gsa:hover {
         opacity: 1
     }
     .template-main-menu .t-menu-bg {
-        background: #222;
+        background: #445ba1;
         height: 75px
     }
     .template-main-menu .template-main-menu-links {
@@ -5607,20 +5607,20 @@ html.no-touch .mobile-menu-content-under-fold a.mobile-ib-gsa:hover {
         display: block
     }
     ul.main-menu-items>li>a:link {
-        background: #222
+        background: #445ba1
     }
     ul.main-menu-items>li>a:visited {
-        background: #222
+        background: #445ba1
     }
     html.no-touch ul.main-menu-items>li>a:hover {
-        background: #222;
+        background: #445ba1;
         color: #fff
     }
     ul.main-menu-items>li>a:active {
-        background: #222
+        background: #445ba1
     }
     ul.main-menu-items>li>a.current {
-        background: #222;
+        background: #445ba1;
         color: #fff
     }
     ul.main-menu-items>li.has-child>a:before {
@@ -5667,20 +5667,20 @@ html.no-touch .mobile-menu-content-under-fold a.mobile-ib-gsa:hover {
         display: block
     }
     ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a:link {
-        background: #5e5252
+        background: #4f6dcd
     }
     ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a:visited {
-        background: #5e5252
+        background: #4f6dcd
     }
     html.no-touch ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a:hover {
-        background: #5e5252;
+        background: #4f6dcd;
         color: #fff
     }
     ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a:active {
-        background: #5e5252
+        background: #4f6dcd
     }
     ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li a.current {
-        background: #5e5252;
+        background: #4f6dcd;
         color: #fff
     }
     ul.main-menu-items>li>div>div.menu-display-table-cell>ul>li.has-child>a.current:after {
@@ -5732,7 +5732,7 @@ html.no-touch .mobile-menu-content-under-fold a.mobile-ib-gsa:hover {
         left: 50%;
         height: 28px;
         width: 2px;
-        background: #9f7939;
+        background: #4aa0c7;
         margin-left: -1px
     }
     ul.main-menu-items>li>div div.menu-display-table-cell>ul>li>div div ul li {
@@ -5806,7 +5806,7 @@ html.no-touch .mobile-menu-content-under-fold a.mobile-ib-gsa:hover {
     .round-btn-icon.close-menu {
         width: 48px;
         height: 48px;
-        color:#222;
+        color:#445ba1;
     }
     .template-header .mobile-sticky-buttons {
         width: 50px
@@ -6046,7 +6046,7 @@ html.no-touch .template-footer .connect-area-footer .connect-icons a:hover:after
     top: 0;
     left: 0;
     z-index: -1;
-    background: #222;
+    background: #445ba1;
     width: 100%;
     height: 325px
 }
@@ -6298,7 +6298,7 @@ html.no-touch .template-footer .footer-map .select-campus .ok-go.success:hover {
 }
 
 html.no-touch .template-footer .footer-map .select-campus .ok-go:hover {
-    border-color: #222
+    border-color: #445ba1
 }
 
 html.no-touch .template-footer .footer-map .select-campus .ok-go:hover:before {
@@ -6382,7 +6382,7 @@ html.no-touch .template-footer .footer-map .select-campus .ok-go:hover:after {
 html.no-touch .template-footer .footer-links-area .footer-column>a:hover {
     color: #fff;
     text-decoration: none;
-    background: #222
+    background: #445ba1
 }
 
 .template-footer .footer-links-area .footer-column>a:active {
@@ -6393,7 +6393,7 @@ html.no-touch .template-footer .footer-links-area .footer-column>a:hover {
 .template-footer .footer-links-area .footer-column>a.current {
     color: #fff;
     text-decoration: none;
-    background: #222
+    background: #445ba1
 }
 
 .template-footer .footer-links-area .footer-column>a.tel-link {
@@ -6612,7 +6612,7 @@ html.no-touch .template-footer .credits-area a.gsa:hover:after {
 
 .connect-area-mobile .connect-title {
     text-align: center;
-    color: #222;
+    color: #445ba1;
     font-size: 16px;
     font-weight: bold;
     line-height: 16px;
@@ -6753,7 +6753,7 @@ html.no-touch .connect-area-mobile .connect-icons a:hover:after {
 }
 
 .mobile-buttons-credits .footer-column .footer-column-title {
-    color: #222;
+    color: #445ba1;
     font-size: 20px;
     line-height: 20px;
     font-weight: bold;
@@ -6790,7 +6790,7 @@ html.no-touch .connect-area-mobile .connect-icons a:hover:after {
 html.no-touch .mobile-buttons-credits .footer-column>a:hover {
     color: #fff;
     text-decoration: none;
-    background: #222
+    background: #445ba1
 }
 
 .mobile-buttons-credits .footer-column>a:active {
@@ -6801,7 +6801,7 @@ html.no-touch .mobile-buttons-credits .footer-column>a:hover {
 .mobile-buttons-credits .footer-column>a.current {
     color: #fff;
     text-decoration: none;
-    background: #222
+    background: #445ba1
 }
 
 .mobile-buttons-credits .footer-column>a.tel-link {
@@ -7433,7 +7433,7 @@ html.no-touch .related-story:hover .rollover-layer .slide-up-layer {
 }
 
 .related-story.events .rollover-layer:before {
-    background: #222
+    background: #445ba1
 }
 
 .related-story.twitter .rollover-layer:before {
@@ -7630,7 +7630,7 @@ html.no-touch .related-story .rollover-layer .slide-up-layer .media-title a:hove
 }
 
 html.no-touch .upcoming-event-template:hover .event-date {
-    background: #222
+    background: #445ba1
 }
 
 html.no-touch .upcoming-event-template:hover .event-rollover {
@@ -7640,7 +7640,7 @@ html.no-touch .upcoming-event-template:hover .event-rollover {
 .upcoming-event-template .event-date {
     transition: background .3s linear;
     -webkit-transition: background .3s linear;
-    background: #222;
+    background: #445ba1;
     color: #fff;
     padding-top: 9px;
     box-sizing: border-box;
@@ -7728,7 +7728,7 @@ html.no-touch .upcoming-event-template:hover .event-rollover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #222;
+    background: #445ba1;
     z-index: 3;
     border-top-right-radius: 50px;
     opacity: 0;
@@ -7813,7 +7813,7 @@ html.no-touch .upcoming-event-template .event-rollover .d-table .d-table-cell>a:
 }
 
 .upcoming-event-template .event-rollover .d-table .d-table-cell>a .halfButtonRotating .center-btn {
-    background: #222
+    background: #445ba1
 }
 
 body>.hp-nav-left {
@@ -8120,7 +8120,7 @@ html.no-touch .alert-wrapper .alert-body .alert-bg .alert-main-text-area .templa
     top: 0;
     left: 0;
     width: 100%;
-    background: #9f7a3a;
+    background: #4aa0c7;
 }
 
 .hero-image-area .book-your-place {
@@ -8231,8 +8231,8 @@ html.no-touch .hero-image-area .book-your-place .slick-dots li:hover {
     -moz-box-sizing: border-box;
     border-top-color: #8eb9e6;
     border-right-color: #8eb9e6;
-    border-left-color: #222;
-    border-bottom-color: #222;
+    border-left-color: #445ba1;
+    border-bottom-color: #445ba1;
     height: 100%;
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
@@ -8442,7 +8442,7 @@ html.no-touch .hero-image-area .hero-video-area .hero-video-area-button:hover {
     position: relative;
     height: 550px;
     overflow: hidden;
-    background: #222;
+    background: #445ba1;
     font-family: "Montserrat", sans-serif
 }
 
@@ -8647,7 +8647,7 @@ html.no-touch .why-this-school .left-area .d-table .d-table-cell .why-this-schoo
 }
 
 html.no-touch .rotator-navigation .rotate-left:hover {
-    background: #222
+    background: #445ba1
 }
 
 html.no-touch .rotator-navigation .rotate-left:hover:before {
@@ -8693,7 +8693,7 @@ html.no-touch .rotator-navigation .rotate-left:hover:after {
 }
 
 html.no-touch .rotator-navigation .rotate-right:hover {
-    background: #222
+    background: #445ba1
 }
 
 html.no-touch .rotator-navigation .rotate-right:hover:before {
@@ -8901,7 +8901,7 @@ html.no-touch .rotator-carousel-wrapper .rotator-slide:hover .rotator-slide-imag
 }
 
 .our-stories-area .stories-top-wrapper .stories-title-area .stories-title {
-    color: #222;
+    color: #445ba1;
     font-size: 50px;
     line-height: 60px;
     text-transform: capitalize
@@ -8928,7 +8928,7 @@ html.no-touch .rotator-carousel-wrapper .rotator-slide:hover .rotator-slide-imag
 }
 
 .our-stories-area .stories-top-wrapper .connect-area .connect-title {
-    color: #222;
+    color: #445ba1;
     font-size: 16px;
     font-weight: bold;
     line-height: 16px;
@@ -9067,7 +9067,7 @@ html.no-touch .our-stories-area .stories-top-wrapper .connect-area .connect-icon
 
 .related-stories-area .loader {
     margin: 50px auto;
-    border: 2px solid #222;
+    border: 2px solid #445ba1;
     border-right-color: transparent
 }
 
@@ -9109,7 +9109,7 @@ html.no-touch .our-stories-area .stories-top-wrapper .connect-area .connect-icon
     height: 46px;
     display: block;
     border-radius: 46px;
-    color: #222;
+    color: #445ba1;
     z-index: 1;
     font-family: "Lato", sans-serif;
     font-weight: 300;
@@ -9134,7 +9134,7 @@ html.no-touch .our-stories-area .stories-top-wrapper .connect-area .connect-icon
 .all-stories-area .input-area-right .sign-up {
     z-index: 2;
     cursor: pointer;
-    border: 6px solid #222;
+    border: 6px solid #445ba1;
     width: 34px;
     height: 34px;
     border-radius: 100%;
@@ -9203,7 +9203,7 @@ html.no-touch .all-stories-area .input-area-right .sign-up.error:hover {
 }
 
 html.no-touch .all-stories-area .input-area-right .sign-up:hover {
-    border-color: #222
+    border-color: #445ba1
 }
 
 html.no-touch .all-stories-area .input-area-right .sign-up:hover:before {
@@ -9224,7 +9224,7 @@ html.no-touch .all-stories-area .input-area-right .sign-up:hover:after {
 }
 
 .upcoming-events-area .upcoming-events-title {
-    color: #222;
+    color: #445ba1;
     font-size: 50px;
     line-height: 60px;
     width: 864px;
@@ -9247,7 +9247,7 @@ html.no-touch .all-stories-area .input-area-right .sign-up:hover:after {
 
 .upcoming-events-area .upcoming-events-carousel .loader {
     margin: 100px auto;
-    border: 2px solid #222;
+    border: 2px solid #445ba1;
     border-right-color: transparent
 }
 
@@ -9278,7 +9278,7 @@ html.no-touch .all-stories-area .input-area-right .sign-up:hover:after {
 }
 
 .upcoming-events-area .upcoming-events-carousel.carouselOn .upcoming-event-template.no-url .event-date {
-    background: #222!important
+    background: #445ba1!important
 }
 
 .upcoming-events-area .upcoming-events-carousel.carouselOn .events-prev-nav {

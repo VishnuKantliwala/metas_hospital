@@ -63,7 +63,7 @@ extract($row);
                 <div class="col-md-4 col-sm-4 col-xs-12 col-md-offset-0 pull-left">
 
                     <div class="widget reveal animated" data-reveal-anim="fadeInLeft" style="margin-top:0px;border: 0px">
-                    <img src="workshop/big_img/<?echo $image_name?>" alt="<?echo $workshop_title?>" style="border-radius: 20px;"> 
+                    <img src="workshop/big_img/<?echo $image_name?>" alt="<?echo $workshop_title?>" style="width:100%;border-radius: 20px;"> 
                     </div>
 
                     <div class="widget reveal animated" data-reveal-anim="fadeInLeft" style="margin-top:20px">

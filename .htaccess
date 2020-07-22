@@ -102,11 +102,17 @@ RewriteRule ^cancellation-policy/? cancellation_policy.php [L]
 RewriteRule ^faqs/? faqs.php [L]
 
 
-# RewriteEngine On
-# RewriteCond %{HTTP_HOST} !=""
-# RewriteCond %{HTTP_HOST} !^www\. [NC]
-# RewriteCond %{HTTPS}s ^on(s)|
-# RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+#WWW STARTS
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !=""
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+#WWW END
 
 Options All -Indexes
 <files .htaccess>

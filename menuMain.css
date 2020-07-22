@@ -5737,7 +5737,7 @@ html.no-touch .mobile-menu-content-under-fold a.mobile-ib-gsa:hover {
     }
     ul.main-menu-items>li>div div.menu-display-table-cell>ul>li>div div ul li {
         margin-bottom: 0;
-        background: #a38080;
+        background: #91a1d3;
         transition: background .3s ease;
         -webkit-transition: background .3s ease
     }
@@ -5748,7 +5748,7 @@ html.no-touch .mobile-menu-content-under-fold a.mobile-ib-gsa:hover {
         background: #fff!important
     }
     ul.main-menu-items>li>div div.menu-display-table-cell>ul>li>div div ul li:nth-child(even) {
-        background: #ab9595
+        background: #91a1d385
     }
     ul.main-menu-items>li>div div.menu-display-table-cell>ul>li>div div ul li a {
         margin: 0;

@@ -37,19 +37,35 @@
                             </li>
 
                             <li>
-                                <a href="logoView.php">
+                                <a href="pageView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Logo </span>
+                                    <span> Information </span>
                                 </a>
                             </li>
-
                             <li>
-                                <a href="video2.php">
+                                <a href="teamView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Video </span>
+                                    <span> Administrative Body </span>
                                 </a>
                             </li>
-
+                            <li>
+                                <a href="accreditation.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Accreditation </span>
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a >
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Initiatives </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="campView.php">  Health check up camps </a></li>
+                                    <li><a href="programmeView.php"> Awareness Programme </a></li>
+                                </ul>
+                            </li>
                             <li>
                                 <a href="doctorCatView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
@@ -74,17 +90,7 @@
                                 </ul>
                             </li> -->
 
-                            <li>
-                                <a >
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Initiatives </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="campView.php">  Health check up camps </a></li>
-                                    <li><a href="programmeView.php"> Awareness Programme </a></li>
-                                </ul>
-                            </li>
+                            
                             
                             <li>
                                 <a href="projectCatView.php">
@@ -98,107 +104,6 @@
                                 </ul>
                             </li>
 
-
-                            <li>
-                                <a href="projectCatView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Project </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="projectCatView.php"> Category </a></li>
-                                    <li><a href="projectView.php"> Project </a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="openingsView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Openings </span>
-                                    
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="serviceView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Centre of Excellence </span>
-                                    
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="rallyView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Rally </span>
-                                    
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="htalkView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Health tallks </span>
-                                    
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="handwView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Health and Wellness </span>
-                                    
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="eventView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Events </span>
-                                    
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="courseView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Courses </span>
-                                    
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="workshopView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Workshops </span>
-                                    
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="blogView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Blogs </span>
-                                    
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="accreditation.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Accreditation </span>
-                                    
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="health_talk.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Health talk </span>
-                                    
-                                </a>
-                            </li>
-
                             <li>
                                 <a href="international_patients.php">
                                     <i class="mdi mdi-view-dashboard"></i>
@@ -208,27 +113,24 @@
                             </li>
 
                             <li>
-                                <a href="downloadCatView.php">
+                                <a href="javascript:void(0)">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Download </span>
+                                    <span> Health care </span>
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="downloadCatView.php"> Category </a></li>
-                                    <li><a href="downloadView.php"> Download </a></li>
+                                    <li><a href="htalkView.php"> Health tallks </a></li>
+                                    <li><a href="handwView.php">  Health and Wellness </a></li>
+                                    <li><a href="rallyView.php">  Rally </a></li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="videoCatView.php">
+                                <a href="serviceView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Videos </span>
-                                    <span class="menu-arrow"></span>
+                                    <span> Centre of Excellence </span>
+                                    
                                 </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="videoCatView.php"> Category </a></li>
-                                    <li><a href="videoView.php"> Videos </a></li>
-                                </ul>
                             </li>
 
                             <li>
@@ -244,80 +146,67 @@
                             </li>
 
                             <li>
-                                <a href="careerView.php">
+                                <a href="videoView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Dynamic Menu </span>
+                                    <span> Videos </span>                                    
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Academics & research </span>
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="dmenuView.php">Category</a></li>
-                                    <li><a href="submenuView.php">Menu</a></li>
+                                    <li><a href="courseView.php"> Courses </a></li>
+                                    <li><a href="workshopView.php"> Workshops </a></li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="careerView.php">
+                                <a href="projectCatView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Career </span>
+                                    <span> Project </span>
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="careerView.php">Career's</a></li>
-                                    <li><a href="careerInfoView.php">Applicants</a></li>
+                                    <li><a href="projectCatView.php"> Category </a></li>
+                                    <li><a href="projectView.php"> Project </a></li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="categoryview.php">
+                                <a href="javascript:void(0)">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Product </span>
+                                    <span> Blogs </span>
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="categoryview.php">Category</a></li>
-                                    <li><a href="productView.php">Product</a></li>
+                                    <li><a href="blogView.php"> News </a></li>
+                                    <li><a href="eventView.php"> Events </a></li>
                                 </ul>
                             </li>
+
+                            <li>
+                                <a href="openingsView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Openings </span>
+                                    
+                                </a>
+                            </li>
+
+
                             
-                            <li>
-                                <a href="sliderView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Slider </span>
-                                </a>
-                            </li>
+                            
 
-                            <li>
-                                <a href="pageView.php">
+                            <!-- <li>
+                                <a href="health_talk.php">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Information </span>
+                                    <span> Health talk </span>
+                                    
                                 </a>
-                            </li>
-
-                            <li>
-                                <a href="contactView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Contact </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="contactView.php">Contact</a></li>
-                                    <li><a href="contact_infoView.php">Contact Information</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="faviconView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Favicon </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="clientView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Client </span>
-                                </a>
-                            </li>
+                            </li> -->
 
                             <li>
                                 <a href="testimonialView.php">
@@ -327,36 +216,39 @@
                             </li>
 
                             <li>
-                                <a href="teamView.php">
+                                <a href="contactView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Administrative Body </span>
+                                    <span> Contact </span>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="faqView.php">
+                                <a href="logoView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span> FAQ's </span>
+                                    <span> Logo </span>
+                                </a>
+                            </li>                            
+
+                            <li>
+                                <a href="video2.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span>Home Video </span>
                                 </a>
                             </li>
+
+                            <li>
+                                <a href="faviconView.php">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Favicon </span>
+                                </a>
+                            </li>
+
 
                             <li>
                                 <a href="socialView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Socialmedia </span>
                                 </a>
-                            </li>
-
-                            <li>
-                                <a href="newsletterView.php">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Newsletter </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="newsletterView.php">NewsLetters</a></li>
-                                    <li><a href="newslettersubscriberView.php">Email</a></li>
-                                </ul>
                             </li>
 
                             <li>

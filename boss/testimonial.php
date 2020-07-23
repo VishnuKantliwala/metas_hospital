@@ -139,7 +139,7 @@ $con->connectdb();
                                         </div>
                                        
                                         <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Image</label>
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Image (17:18)</label>
                                             <div class="col-sm-4">
                                                 <input type="file" id="image_title" name="image_title" class="dropify" />
                                             </div>

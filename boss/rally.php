@@ -211,7 +211,7 @@ else{
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Image</label>
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Image (27 : 20)</label>
                                         <div class="col-sm-4">
                                             <input type="file" id="frontimg" name="frontimg" class="dropify" />
                                         </div>

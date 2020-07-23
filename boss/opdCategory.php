@@ -153,7 +153,7 @@ else
                                     <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-10">
                                             <button type="submit" name="addCategory" id="addCategory" class="btn btn-success">Add</button>
-                                            <button type="submit" name="myButton" id="myButton" class="btn btn-lighten-danger" onClick="window.location.href='serviceCatView.php'; return false;" >Cancel</button>
+                                            <button type="submit" name="myButton" id="myButton" class="btn btn-lighten-danger" onClick="window.location.href='opdCatView.php'; return false;" >Cancel</button>
                                         </div>
                                     </div>
                                     

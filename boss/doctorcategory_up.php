@@ -125,7 +125,7 @@ $pageID= 'page20';
                                             </div>
                                         </div>
 										
-										<div class="form-group">
+										<div class="form-group" style="display:none">
                                             <label for="inputEmail3" class="col-sm-12 control-label">Image</label>
                                             <div class="col-sm-4">
 											    <input type="file" id="frontimg" name="frontimg" class="dropify" data-default-file="<? if($row[4]!=''){echo "../doctorcategory/".$row[4];}?>"/>

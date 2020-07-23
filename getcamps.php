@@ -24,7 +24,7 @@ if ($cn->numRows($sql1) > 0)
         <!-- left image -->
         <div class="col-md-12 col-xs-12 col-sm-6">
             <div class="blog_image pt-10" style="    margin-bottom: 10px;">
-                <img class="health-talk-img bb-3" src="camp/big_img/<?echo $image_name?>" alt="<?echo $camp_title?>" style="   border-radius:  30px 0px ;">
+                <img class="health-camp-img bb-3" src="camp/big_img/<?echo $image_name?>" alt="<?echo $camp_title?>" style="   border-radius:  30px 0px ;">
             </div>
             
         </div>

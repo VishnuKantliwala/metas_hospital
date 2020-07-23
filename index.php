@@ -56,7 +56,7 @@ include 'header.php'; ?>
 
 <!-- MAIN PART -->
 <?
-$sql = $cn->selectdb("select slug, page_name, page_desc, image, page_id from tbl_page where page_id =3");
+$sql = $cn->selectdb("select slug, page_name, page_desc, image, page_id from tbl_page where page_id =53");
 $row = $cn->fetchAssoc($sql);
 extract($row);
 ?>

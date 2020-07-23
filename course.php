@@ -53,7 +53,7 @@ extract($row);
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9 col-sm-6 v_middle">
+                <div class="col-md-9 col-sm-6 col-xs-12 v_middle" style="overflow-x:scroll">
                    <!-- SECTION TITLE -->
                     
 

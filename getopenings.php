@@ -28,11 +28,11 @@ if ($cn->numRows($sql1) > 0)
                 <h4><?echo $openings_title ?></h4>
             </a>
         </div>
-        <div class="service_description list-desc">
+        <div class="service_description list-desc myDESC">
             <p><?echo strip_tags($description);?>...</p>
             
         </div>
-        <span class="recent_post_meta">Posting date: <?echo $date ?></span>
+        <span class="recent_post_meta color2"><strong>Posting date:</strong> <?echo $date ?></span>
         <div class="read_more my_read_more pl-0">
             <a href="<?echo $href?>">Read More <span class="icofont icofont-long-arrow-right"></span></a>
         </div>
@@ -47,3 +47,4 @@ if ($cn->numRows($sql1) > 0)
     }
 					
 ?>
+

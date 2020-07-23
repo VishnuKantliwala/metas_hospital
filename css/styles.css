@@ -252,7 +252,7 @@
 }
 
 .my_desc table tbody tr:first-child td  {
-    background-color: #4aa0c7 !important;
+    background-color: #4f6dcd !important;
 }
 
 .my_desc--vtable table tbody tr:first-child  {
@@ -375,7 +375,7 @@
 }
 
 .btn__pdfs {
-    background-color: #4aa0c7;
+    background-color: #445ba1;
     border-radius: 15px;
     color: #fff !important;
     font-size: 20px;
@@ -403,7 +403,7 @@
     color: #fff;
 }
 .btn__pdfs:hover {
-    background-color: #445ba1;
+    background-color: #4aa0c7;
     color: #fff;
     border-left: 3px solid #4aa0c7 !important;
 }  
@@ -648,6 +648,6 @@
 
 @media only screen and (max-width: 600px) {
     .header-div{
-        background:#222 !important;
+        background:#445ba1 !important
     }
 }

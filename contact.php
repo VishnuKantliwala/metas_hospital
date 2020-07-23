@@ -44,8 +44,8 @@ if ($cn->numRows($sqlContact) > 0)
 
                    
 
-                    <div class="col-md-4 col-sm-4">
-                        <div class="about_us_point">
+                <div class="col-md-4 col-sm-4" style="padding-right:0px;padding-left:0px">
+                    <div class="about_us_point backcolor1" style="padding:10px 20px; height:240px;">
                             <h4 class="about_us_point_title"> <span class="icofont icofont-map-pins"></span> Location</h4>
 
                             <p class="point_in_detail">
@@ -54,8 +54,8 @@ if ($cn->numRows($sqlContact) > 0)
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-4">
-                        <div class="about_us_point">
+                    <div class="col-md-4 col-sm-4" style="padding-right:0px;padding-left:0px">
+                    <div class="about_us_point backcolor2" style="padding:10px 20px; height:240px;">
                             <h4 class="about_us_point_title"><span class="icofont icofont-iphone"></span> Phone</h4>
 
                             <p class="point_in_detail">
@@ -64,7 +64,8 @@ if ($cn->numRows($sqlContact) > 0)
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-4 col-sm-4" style="padding-right:0px;padding-left:0px">
+                    <div class="about_us_point backcolor3" style="padding:10px 20px; height:240px;">
                         <div class="about_us_point">
                             <h4 class="about_us_point_title"><span class="icofont icofont-envelope"></span> Email</h4>
 

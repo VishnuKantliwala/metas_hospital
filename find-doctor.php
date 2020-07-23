@@ -127,7 +127,7 @@ if( $cn->numRows($sqlDoctorCategory) > 0 )
     text-align: center;
     left: 0px;
     top: 30%;
-    background: #222 !important;
+    background: #4f6dcd !important;
     color: #fff !important;
     width: 30px;
     height: 30px;
@@ -146,7 +146,7 @@ if( $cn->numRows($sqlDoctorCategory) > 0 )
     left: inherit;
     right: 0px;
     top: 30%;
-    background: #222 !important;
+    background: #4f6dcd !important;
     color: #fff !important;
     width: 30px;
     height: 30px;

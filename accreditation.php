@@ -29,7 +29,7 @@ extract($row);
                     
                     <div class="widget reveal animated  mt-0" data-reveal-anim="fadeInRight">
                         <div class="widget_heading">
-                            <h4><?echo $page_name ?></h4>
+                            <h4 class="backcolor2"><?echo $page_name ?></h4>
                         </div>
                         <?
                         $sqlAccreditation = $cn->selectdb("SELECT `description`, `pdf_file` from tbl_pdf where pdf_id = 1 ");

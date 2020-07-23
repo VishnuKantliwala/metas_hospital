@@ -87,9 +87,9 @@ extract($row);
 
                 <!-- ABOUT US CONTENT-->
                 <div class="about_us_text">
-                    <?echo $page_desc ?>
+                   <p class="color1"> <?echo strip_tags($page_desc); ?> </p>
                     <div class="read_more">
-                        <a href="who-we-are">Read More <span class="icofont icofont-long-arrow-right"></span></a>
+                        <a href="who-we-are" class="color2">Read More <span class="icofont icofont-long-arrow-right"></span></a>
                     </div>
                 </div><!-- /ABOUT US CONTENT ENDS -->
             </div>
@@ -109,8 +109,8 @@ extract($row);
             {
                 extract($rowExtraAbout);
             ?>
-                <div class="col-md-4 col-sm-4">
-                    <div class="about_us_point">
+                <div class="col-md-4 col-sm-4" style="padding-right:0px;padding-left:0px">
+                    <div class="about_us_point <?php if($i==0){ echo 'backcolor1';} elseif($i==1){ echo 'backcolor2';} elseif($i==2){ echo 'backcolor3';} ?>" style="padding:10px 20px; height:240px;">
                         <h4 class="about_us_point_title"><span class="icofont <?echo $icons[$i]?>"></span>
                             <?echo $title ?>
                         </h4>
@@ -386,8 +386,8 @@ if( $cn->numRows($sqlDoctorsPage) > 0 )
                                 <img class="home-doc" src="doctor/big_img/<?echo $doctor_image?>" alt="<?echo $doctor_name ?>"
                                     style="border-bottom: 2px solid #4f6dcd;border-radius: 25px;">
                             </div>
-                            <h4><?echo $doctor_name ?></h4>
-                            <span><?echo $cat_name ?></span>
+                            <h4 class="color2"><?echo $doctor_name ?></h4>
+                            <span class="color1"><?echo $cat_name ?></span>
                         </div>
                         <?
                             }
@@ -463,13 +463,13 @@ if( $cn->numRows($sqlBlogsPage) > 0 )
                             </a>
                         </div>
                         <div class="price" style="text-align: left;padding-left: 20px;">
-                            <h3> <?echo $blog_name ?></h3>
+                            <h3 class="color1"> <?echo $blog_name ?></h3>
                             
                         </div>
                         <div class="price_feature">
                             <p class="blog_text list-desc list-desc--workshop "><?echo strip_tags($description) ?></p>
                         </div>
-                        <a href="<?echo $href?>" class="btn arrow_btn btn_pricing"><span class="btn-text" data-hover="Read More">Read
+                        <a href="<?echo $href?>" class="btn arrow_btn btn_pricing backcolor2"><span class="btn-text" data-hover="Read More">Read
                                 More</span></a>
                     </div>
                 </div>
@@ -539,7 +539,7 @@ if( $cn->numRows($sqlTestimonialPage) > 0 )
                                 </div>
                                 <span class="single_line"></span>
                                 <div class="client_name">
-                                    <h4><?echo $image_title ?></h4>
+                                    <h4 class="color2"><?echo $image_title ?></h4>
                                 </div>
                             </div>
                             <div class="shaped_border"></div>

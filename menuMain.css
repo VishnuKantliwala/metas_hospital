@@ -10084,10 +10084,38 @@ html.no-touch .events-prev-nav-mobile:hover:after {
         display: block
     }
 }
+ul.main-menu-items>li.no-menu>a:before
+{
+    display: none !important;
+}
+
+.color1{
+    color:#4aa0c7 !important;
+
+}
+
+.color2{
+    color:#4f6dcd !important;
+
+}
+
+.color3{
+    color:#445ba1 !important;
+
+}
 
 
+.backcolor1{
+    background:#4aa0c7 !important;
 
+}
 
+.backcolor2{
+    background:#4f6dcd !important;
 
+}
 
+.backcolor3{
+    background:#445ba1 !important;
 
+}

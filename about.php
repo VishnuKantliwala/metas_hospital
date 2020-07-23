@@ -47,7 +47,7 @@ extract($row);
 
               <!-- ABOUT US CONTENT-->
               <div class="about_us_text">
-                  <?echo $page_desc ?>
+              <p class="color1"> <?echo strip_tags($page_desc); ?> </p>
                   
               </div><!-- /ABOUT US CONTENT ENDS -->
           </div>
@@ -67,13 +67,17 @@ extract($row);
             {
                 extract($rowExtraAbout);
             ?>
-            <div class="col-md-4 col-sm-4">
-                <div class="about_us_point">
-                    <h4 class="about_us_point_title"><span class="icofont <?echo $icons[$i]?>"></span> <?echo $title ?></h4>
+           <div class="col-md-4 col-sm-4" style="padding-right:0px;padding-left:0px">
+                    <div class="about_us_point <?php if($i==0){ echo 'backcolor1';} elseif($i==1){ echo 'backcolor2';} elseif($i==2){ echo 'backcolor3';} ?>" style="padding:10px 20px; height:240px;">
+                        <h4 class="about_us_point_title"><span class="icofont <?echo $icons[$i]?>"></span>
+                            <?echo $title ?>
+                        </h4>
 
-                    <p class="point_in_detail">  <?echo strip_tags($small_desc) ?></p>
+                        <p class="point_in_detail">
+                            <?echo strip_tags($small_desc) ?>
+                        </p>
+                    </div>
                 </div>
-            </div>
             <?
                 $i++;
             }

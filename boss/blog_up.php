@@ -252,7 +252,7 @@ while($rowC=mysqli_fetch_assoc($sqlC))
                                     
                                     
                                     <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-12 control-label">Image</label>
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Image (1 : 1)</label>
                                         <div class="col-sm-4">
                                             <input type="file" id="frontimg" name="frontimg" class="dropify" data-default-file="<? if($row['blog_image']!=''){echo "../blog/".$row['blog_image'];}?>"/>
                                             <? if($row['blog_image']!=''){?>

@@ -184,7 +184,7 @@ if(isset($_GET["Image"]))
                                         </div>
 										
 										<div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Image</label>
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Image Image (17:18)</label>
                                             <div class="col-sm-4">
                                                 <input type="file" id="image_title" name="image_title" class="dropify" data-default-file="<? if($row['image_name']!=''){ echo '../testimonial/'.$row['image_name'];}?>" />
 												

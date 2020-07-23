@@ -137,7 +137,7 @@ if(isset($_POST['updateFavicon']))
 									?>
 									    <input id="logo_id" name="logo_id" type="hidden" value="<?php echo $row[0]; ?>"/>
                                         <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Image</label>
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Image (1:1)</label>
                                             <div class="col-sm-4">
 											    <input type="file" id="frontimg" name="frontimg" class="dropify" data-default-file="<? if($row[1]!=''){echo "../logo/".$row[1];}?>"/>
                                             </div>

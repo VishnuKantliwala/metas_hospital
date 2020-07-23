@@ -123,7 +123,7 @@ else
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-12 control-label">Image</label>
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Image (37 : 27)</label>
                                         <div class="col-sm-4">
                                             <input type="file" id="frontimg" name="frontimg" class="dropify" />
                                         </div>
@@ -153,7 +153,7 @@ else
                                     <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-10">
                                             <button type="submit" name="addCategory" id="addCategory" class="btn btn-success">Add</button>
-                                            <button type="submit" name="myButton" id="myButton" class="btn btn-lighten-danger" onClick="window.location.href='serviceCatView.php'; return false;" >Cancel</button>
+                                            <button type="submit" name="myButton" id="myButton" class="btn btn-lighten-danger" onClick="window.location.href='projectCatView.php'; return false;" >Cancel</button>
                                         </div>
                                     </div>
                                     

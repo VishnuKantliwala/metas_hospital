@@ -194,7 +194,7 @@ else
                                             <a href='page_copy.php?id=<?php echo $page_id ?>&page=<? echo isset($_GET['page']);?>'><i class="fa fa-copy"></i></a>
                                             
                                             </td>
-                                            <td><a href='page.php?page_id=<?php echo $page_id; ?>&page=<?  if (isset($_GET['page']) && !empty($_GET['page'])) echo $_GET['page'];?>'><i class="fa fa-edit"></i></a></td>
+                                            <td><a href='page.php?page_id=<?php echo $page_id; ?>&page=<?  if (isset($_GET['page']) && !empty($_GET['page'])) echo $_GET['page'];?>&parentid=<?echo $parentid?>'><i class="fa fa-edit"></i></a></td>
                                             <td><a href='page_upload.php?Del=del&page_id=<?php echo $page_id; ?>&page=<?  if (isset($_GET['page']) && !empty($_GET['page'])) echo $_GET['page'];?>' onClick="return confirm('Are you sure want to delete?');"><i class="fa fa-trash"></i></a></td>
                                             
                                         </tr>

@@ -246,7 +246,7 @@ if( $cn->numRows($sqlDoctorCategory) > 0 )
                     <div class="item">
                         <div class="shadow-effect">
                         
-                            <img class="img-circle" src="doctor/big_img/<?echo $doctor_image?>" alt="<?echo $doctor_name ?>" />
+                            <img class="img-circle doctor_img" src="doctor/big_img/<?echo $doctor_image?>" alt="<?echo $doctor_name ?>" />
                      
                             <h2><?echo $doctor_name ?></h2>
                             <p class="title">

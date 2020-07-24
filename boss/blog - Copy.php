@@ -7,9 +7,11 @@ if(!isset($_SESSION['user']))
 include_once("../connect.php");
 $cn=new connect();
 $cn->connectdb();
-$pageID= 'page20';
 
-$query = $cn->selectdb('SELECT * FROM tbl_project_category');
+$pageID= 'page9';
+
+
+$query = $cn->selectdb('SELECT * FROM tbl_blogcategory');
 if(mysqli_num_rows($query)>0)
 {
     while ($row = mysqli_fetch_assoc($query))
@@ -57,11 +59,11 @@ else{
                                 
                                 if($value['cat_parent_id'] == 0 && in_array($key, $parentMenuIds))
                                 {
-                                    echo '<li data-jstree='.'{"opened":true}'.'><a href="projectcategory.php?id=' . $key . '">' . $value['cat_name'] . '</a>';
+                                    echo '<li data-jstree='.'{"opened":true}'.'><a href="category.php?id=' . $key . '">' . $value['cat_name'] . '</a>';
                                 }
                                 else if($value['cat_parent_id'] != 0 && in_array($key, $parentMenuIds))
                                 {
-                                    echo '<li data-jstree='.'{"opened":true}'.'><a href="projectcategory.php?id=' . $key . '">' . $value['cat_name'] . '</a>';
+                                    echo '<li data-jstree='.'{"opened":true}'.'><a href="category.php?id=' . $key . '">' . $value['cat_name'] . '</a>';
                                 }
                                 else
                                 {
@@ -80,7 +82,6 @@ else{
                         if ($has_childs === true) echo '</ul>';
                 }			
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
     
@@ -91,7 +92,6 @@ else{
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
         <!-- App favicon -->
                 <?$sqlF = $cn->selectdb("select * from tbl_favicon where fav_id= 1 ");
             $rowF = mysqli_fetch_assoc($sqlF);
@@ -138,7 +138,7 @@ else{
                 </li>
 
                 <li>
-                    <h4 class="page-title-main">Project</h4>
+                    <h4 class="page-title-main">Blog</h4>
                 </li>
     
             </ul>
@@ -162,11 +162,11 @@ else{
                     <div class="row">
                         <div class="col-12">
                             <div class="card-box">
-                                <h4 class="mt-0 header-title">Project Form</h4>
-                                <form class="form-horizontal" method="post" action="project_upload.php" id="myform" name="myform" enctype="multipart/form-data">
+                                <h4 class="mt-0 header-title">New Blog Form</h4>
+                                <form class="form-horizontal" method="post" action="blog_upload.php" id="myform" name="myform" enctype="multipart/form-data">
                                     
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-12 control-label">Category List</label>
+                                    <div class="form-group" style="display:none">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Category List</label>
                                         <div class="col-sm-12">
                                             <div class="panel-body">
                                                 <div id="basicTree">
@@ -184,85 +184,81 @@ else{
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Slug</label>
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Slug</label>
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug">
                                         </div>
                                     </div>
 
-                                    <div class="form-group" style="display:none">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Date</label>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Blog Name</label>
                                         <div class="col-sm-12">
-                                            <input type="text" class="form-control" id="date" name="date" placeholder="Date">
-                                        </div>
-                                    </div>
-                                    <div class="form-group" style="display:none">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Month</label>
-                                        <div class="col-sm-12">
-                                            <input type="text" class="form-control" id="month" name="month" placeholder="Month">
-                                        </div>
-                                    </div>
-                                    <div class="form-group" style="display:none">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Year</label>
-                                        <div class="col-sm-12">
-                                            <input type="text" class="form-control" id="year" name="year" placeholder="Year">
+                                            <input type="text" class="form-control" id="blog_name" name="blog_name" placeholder="Blog Name">
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-12 control-label">Name</label>
+                                    <!-- <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Blog Tags(Separate with ,(comma) )</label>
                                         <div class="col-sm-12">
-                                            <input type="text" class="form-control" id="project_name" name="project_name" placeholder="Name">
+                                            <input type="text" class="form-control" id="tags" name="tags" placeholder="Blog Tags">
                                         </div>
-                                    </div>										
-                                    
+                                    </div> -->
                                     
                                     <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-12 control-label">Description</label>
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Overview</label>
                                         <div class="col-sm-12">
-                                            <textarea type="text" class="ckeditor" id="description" name="description" placeholder="Description"></textarea>
+                                            <textarea class="ckeditor" id="description" name="description" rows="10"></textarea>
                                         </div>
                                     </div>
                                     
+                                    
                                     <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-12 control-label">Image (37 : 27)</label>
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Image (1 : 1)</label>
                                         <div class="col-sm-4">
                                             <input type="file" id="frontimg" name="frontimg" class="dropify"/>
                                         </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Multiple Images</label>
+                                    
+                                    <div class="form-group" >
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Multiple Images</label>
                                         <div class="col-sm-4">
-                                            <input type="file" id="image_title" name="image_title[]" multiple  class="dropify"/>
+                                            <input type="file" id="image_title" name="image_title[]" multiple class="dropify"/>
                                         </div>
                                     </div>
+
+                                    <!-- <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Home Page</label>
+                                        <div class="col-sm-12">
+                                            <input type="checkbox" id="home_page" name="home_page" />
+                                            (Check if YES)    
+                                        </div>
+                                    </div> -->
 
                                     <div class="form-group" style="display:none">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">PDF File</label>
-                                        <div class="col-sm-12">
-                                            <input type="file" id="download_file" name="download_file[]" class="dropify" accept="application/pdf" multiple />
+                                        <label for="inputEmail3" class="col-sm-12 control-label">PDF File</label>
+                                        <div class="col-sm-4">
+                                            <input type="file" id="download_file" name="download_file" class="dropify"/>
                                         </div>
                                     </div>
-
-                                    <div class="form-group" style="display:none">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Project Video</label>
-                                        <div class="col-sm-12">
-                                            <textarea cols="5" rows="5" class="form-control" id="project_video" name="project_video" placeholder="Embeded code of the video"></textarea>
-                                        </div>
-                                    </div>
-
+                                    
                                     <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-12 control-label"><span style="color:#F00; font-weight:bold;">*</span>  Meta tag title</label>
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Tags (Tag1, Tag2, ...)</label>
+                                        <div class="col-sm-12">
+                                            <textarea class="form-control" id="blog_video" name="blog_video" rows="10" placeholder="Enter tags here."></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-12 control-label"><span style="color:#F00; font-weight:bold;">*</span> Meta Tag Title</label>
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" id="meta_tag_title" name="meta_tag_title" placeholder="Meta Tag Title" >
                                         </div>
                                     </div>
-                                        
+                                    
                                     <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-12 control-label">Meta tag Description</label>
+                                        <label for="inputEmail3" class="col-sm-12 control-label">Meta Tag Description</label>
                                         <div class="col-sm-12">
-                                            <input type="text" cols="5" rows="5" class="form-control" id="meta_tag_description" name="meta_tag_description" placeholder="Meta Tag Description" ></input>
+                                            <textarea cols="5" rows="5" class="form-control" id="meta_tag_description" name="meta_tag_description" placeholder="Meta Tag Description" ></textarea>
                                         </div>
                                     </div>
                                     
@@ -275,12 +271,13 @@ else{
                                     
                                     <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-10">
-                                            <button type="submit" name="addProject" id="addProject" class="btn btn-success">Add</button>
-                                            <button type="submit" name="myButton" id="myButton" class="btn btn-lighten-danger" onClick="window.location.href='projectView.php'; return false;" >Cancel</button>
+                                            <button type="submit" name="addProduct" id="addProduct" class="btn btn-success">Add</button>
+                                            <button type="submit" name="myButton" id="myButton" class="btn btn-lighten-danger" onClick="window.location.href='blogView.php'; return false;" >Cancel</button>
                                         </div>
                                     </div>
-                                    
+										
                                 </form>
+                                
                             </div>
                         </div>
                     </div>
@@ -298,20 +295,21 @@ else{
     <script src="assets/libs/dropify/dropify.min.js"></script>
 
     <!-- form-upload init -->
-    <script src="assets/js/pages/form-fileupload.init.js"></script>    
-
+    <script src="assets/js/pages/form-fileupload.init.js"></script>
+    
     <!-- ckeditor -->
     <script src="assets/libs/ckeditor/ckeditor.js"></script>
-
-    <!-- Tree view js -->
-    <script src="assets/libs/treeview/jstree.min.js?v=<?echo time();?>"></script>
-    <script src="assets/js/pages/treeview.init.js?v=<?echo time();?>"></script>
 
     <!-- App js -->
     <script src="assets/js/app.min.js"></script>
     
     <!-- Init js-->
     <script src="assets/js/pages/form-advanced.init.js"></script>
+    
+    <!-- Tree view js -->
+    <script src="assets/libs/treeview/jstree.min.js?v=<?echo time();?>"></script>
+    <script src="assets/js/pages/treeview.init.js?v=<?echo time();?>"></script>
+    
 
 </body>
 

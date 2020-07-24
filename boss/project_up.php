@@ -225,21 +225,21 @@ global $finalarray;
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group" style="display:none">
                                         <label for="inputEmail3" class="col-sm-12 control-label">Date</label>
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" id="date" name="date" placeholder="Date" value="<?php echo $row[13]; ?>">
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group" style="display:none">
                                         <label for="inputEmail3" class="col-sm-12 control-label">Month</label>
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" id="month" name="month" placeholder="Month" value="<?php echo $row[14]; ?>">
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group" style="display:none">
                                         <label for="inputEmail3" class="col-sm-12 control-label">Year</label>
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" id="year" name="year" placeholder="Year" value="<?php echo $row[15]; ?>">
@@ -316,7 +316,7 @@ global $finalarray;
                                     <!-- multi images -->
 
                                     <!-- pdf -->
-                                    <div class="form-group">
+                                    <div class="form-group" style="display:none">
                                         <label for="inputEmail3" class="col-sm-12 control-label">PDF File</label>
                                         <input type="hidden" class="form-control" id="frontpdf" name="frontpdf" placeholder="Multiple pdfs" value="<? echo $row['pdf_file']; ?>">
                                         <div class="col-sm-12">
@@ -380,7 +380,7 @@ global $finalarray;
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group" style="display:none">
                                         <label for="inputEmail3" class="col-sm-12 control-label">project Video</label>
                                         <div class="col-sm-12">
                                             <textarea cols="5" rows="5" class="form-control" id="project_video" name="project_video" placeholder="Embeded code of the video"><?php echo $row[16]?></textarea>

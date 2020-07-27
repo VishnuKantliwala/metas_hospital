@@ -87,6 +87,11 @@ RewriteRule ^apply-now/? apply-now.php [L]
 RewriteRule ^current-openings/(.*)/? current-opening-detail.php?coid=$1 [L]
 RewriteRule ^current-openings/? current-opening.php [L]
 
+RewriteRule ^alumni-list/(.*)/? alumni-detail.php?aid=$1 [L]
+RewriteRule ^alumni-list/? alumni.php [L]
+
+RewriteRule ^alumni-registration/? alumni-registration.php [L]
+
 
 RewriteRule ^faculty/(.*)/? faculty.php?tid=$1 [L]
 RewriteRule ^course-category/(.*)/? course_categories.php?cid=$1 [L]

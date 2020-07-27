@@ -3191,12 +3191,12 @@ input[type=search] {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    input[type=date],
+    /* input[type=date],
     input[type=time],
     input[type=datetime-local],
     input[type=month] {
         line-height: 34px
-    }
+    } */
     .input-group-sm input[type=date],
     .input-group-sm input[type=time],
     .input-group-sm input[type=datetime-local],

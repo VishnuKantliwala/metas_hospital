@@ -188,6 +188,20 @@
     overflow: hidden;
     object-fit: cover;     
 }
+.alumni_img {
+    border-bottom: 2px solid #445ba1;
+    border-radius: 25px;
+    height: 270px;
+    object-fit: cover;
+    overflow: hidden;
+    width:100%;
+}
+.alumni_img--detail
+{
+    border-bottom: 5px solid #445ba1;
+    width: 270px;
+    border-radius: 50%;
+}
 
 .list-active ::after
 {
@@ -358,6 +372,9 @@
 .bb-3 {
     border-bottom: 3px solid #445ba1 !important;
 }
+.br-2 {
+    border-right: 1px solid #445ba1 !important;
+}
 .color-link {
     color: #4aa0c7 !important;
 }
@@ -446,6 +463,11 @@
     margin: 30px 30px 30px 0;
     float: left;
   }
+.default-font {
+    color: #777 !important;
+    line-height: 30px !important;
+    font-family: "poppinsRegular",sans-serif !important;
+}
   .container__text {
     display: inline;
   }
@@ -455,11 +477,20 @@
   .pl-10 {
       padding-left: 10px;
   }
+  .pl-35 {
+    padding-left: 35px !important;;
+  }
   .pl-0 {
     padding-left: 0px;
   }
   .p-10 {
       padding: 10px 5px !important;
+  }
+  .p-0 {
+    padding: 0px !important;
+  }
+  .m-0 {
+    margin: 0px !important;   
   }
   .my_ddl
     {
@@ -513,6 +544,9 @@
     }
     .mt-0 {
         margin-top: 0px !important;
+    }
+    .br-2 {
+        border-right: none !important;
     }
     .pt-m-10 {
         padding-top: 10px !important;

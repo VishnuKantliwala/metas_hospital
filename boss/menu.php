@@ -216,6 +216,18 @@
                             </li>
 
                             <li>
+                                <a href="javascript:void(0)">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Alumni </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="alumniView.php"> Alumni </a></li>
+                                    <li><a href="alumniRequestView.php"> Registers </a></li>
+                                </ul>
+                            </li>
+
+                            <li>
                                 <a href="contactView.php">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Contact </span>

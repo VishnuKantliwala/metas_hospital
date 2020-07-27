@@ -133,7 +133,42 @@ if(isset($rid))
     }
 }
 
+// Alumni
+if(isset($aid))
+{
+    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_alumni` where slug='".$aid."'" );
+//	echo $cn->numRows($sql2);
+    if ($cn->numRows($sql) > 0) 
+    {
+        $row1 = $cn->fetchAssoc($sql);
+    }
+}
+
+
+// Camps
+if(isset($camp_id))
+{
+    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_camp` where slug='".$camp_id."'" );
+//	echo $cn->numRows($sql2);
+    if ($cn->numRows($sql) > 0) 
+    {
+        $row1 = $cn->fetchAssoc($sql);
+    }
+}
+
+// Programmes
+if(isset($programme_id))
+{
+    $sql = $cn->selectdb("SELECT  `meta_tag_title`, `meta_tag_description`, `meta_tag_keywords` FROM  `tbl_programme` where slug='".$programme_id."'" );
+//	echo $cn->numRows($sql2);
+    if ($cn->numRows($sql) > 0) 
+    {
+        $row1 = $cn->fetchAssoc($sql);
+    }
+}
+
 ?>
+
 
 
 
@@ -145,12 +180,7 @@ if(isset($rid))
     <meta name="keywords" content="<?echo $row1['meta_tag_keywords']?>">
     <meta name="title" content="<?echo $row1['meta_tag_title']?>">
 
-    <meta property="og:site_name" content="Metas Adventist Hospital">
-    <meta property="og:title" content="Metas Adventist Hospital" />
-    <meta property="og:description" content="<?echo $row1['meta_tag_description']?> " />
-    <meta property="og:image" itemprop="image" content="<?echo $_SERVER['HTTP_HOST']?>/favicon/big_img/<?echo $image_name?>">
-    <meta property="og:type" content="website" />
-    <meta property="og:updated_time" content="1594536757" />
+    
 
 
     <meta name="shareOpts"
@@ -167,11 +197,19 @@ if(isset($rid))
     {
         $rowFav = $cn->fetchAssoc($sqlFav);
         extract($rowFav);
-        ?>
+    ?>
     <link href="favicon/big_img/<?echo $image_name?>" rel="shortcut icon" type="image/png">
     <?
     }
     ?>
+    <meta property="og:site_name" content="Metas Adventist Hospital">
+    <meta property="og:title" content="Metas Adventist Hospital" />
+    <meta property="og:description" content="<?echo $row1['meta_tag_description']?> " />
+    <meta property="og:image" itemprop="image" content="<?echo $_SERVER['HTTP_HOST']?>/favicon/big_img/<?echo $image_name?>">
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1594536757" />
+
+
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 
@@ -235,7 +273,7 @@ if(isset($rid))
                                             href="tel:<?echo $helpline_no ?>"><?echo $helpline_no ?></a></li>
                                     <li> <span class="icofont icofont-telephone"></span> Landline Number : <a
                                             href="tel:<?echo $landline_no ?>"><?echo $landline_no ?></a></li>
-                                    <li> <span class="icofont icofont-user-alt-4"></span> <a href="javascript:void(0)"> Alumni</a></li>
+                                    <li> <span class="icofont icofont-user-alt-4"></span> <a href="alumni-list"> Alumni</a></li>
                                     <li> <span class="icofont icofont-globe-alt"></span> <a href="javascript:void(0)"> Location </a></li>
                                     <?
                                         $sql = $cn->selectdb("select * from tbl_socialmedia Order by recordListingID");

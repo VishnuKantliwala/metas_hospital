@@ -147,7 +147,7 @@ extract($row);
                                 </ul>
 
                                 <blockquote style="text-align:left">
-                                    Current Position
+                                    Current Profession
                                 </blockquote>
                                 <ul class="pl-35 default-font">
                                     <li>

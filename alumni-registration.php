@@ -105,7 +105,7 @@ extract($row);
                             </div>
                             <div class="row m-0">
                                 <div class="col-md-4">
-                                    <input type="text" placeholder="Current Position" name="current_position" required>
+                                    <input type="text" placeholder="Current Profession" name="current_position" required>
                                 </div>
                                 <div class="col-md-4">
                                     <input type="text" placeholder="Course" name="course" required>

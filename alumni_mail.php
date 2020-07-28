@@ -117,7 +117,7 @@ $cn->connectdb();
     
     $html.= "<tr><td>Marital Status : </td><td>".$marital_status."</td></tr>";
     $html.= "<tr><td>Year of completion : </td><td>".$year_of_completion."</td></tr>";
-    $html.= "<tr><td>Current Position : </td><td>".$current_position."</td></tr>";
+    $html.= "<tr><td>Current Profession : </td><td>".$current_position."</td></tr>";
     $html.= "<tr><td>Course : </td><td>".$course."</td></tr>";
     $html.= "<tr><td>Picture : </td><td>".$image_file_link."</td></tr></table>";
     
